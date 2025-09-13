@@ -211,7 +211,8 @@
         "r": true,
         "markdownlint": true,
         "biome": true,
-        "fish": true
+        "fish": true,
+        "xml": true
     },
     "formatter": "auto",
     "lsp": {
