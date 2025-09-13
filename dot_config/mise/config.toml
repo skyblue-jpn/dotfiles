@@ -1,0 +1,17 @@
+[tools]
+"npm:@biomejs/biome" = "latest"
+"pipx:ty" = "latest"
+python = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+uv = "latest"
+usage = "latest"
+bun = "latest"
+cargo-binstall = "latest"
+
+[settings]
+experimental = true
+python.uv_venv_auto = true
+pipx.uvx = true
+npm.bun = true
+cargo.binstall = true

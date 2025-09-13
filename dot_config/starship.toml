@@ -1,0 +1,251 @@
+format = """
+[](#601c52)\
+$os\
+$username\
+[](fg:#601c52 bg:#9A348E)\
+$hostname\
+[](fg:#9A348E bg:#DA627D)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$lua\
+$nodejs\
+$nim\
+$python\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$conda\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+$time\
+[](fg:#33658A)
+$shell\
+"""
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+disabled = false
+format = "[ $user ]($style)"
+show_always = true
+style_root = "bg:#601c52"
+style_user = "bg:#601c52"
+
+[hostname]
+format = "[$ssh_symbol]($style)[ $hostname ]($style)"
+ssh_only = false
+style = "bg:#9A348E"
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+disabled = false  # Disabled by default
+style = "bg:#601c52"
+
+[os.symbols]
+AIX = " "
+Alpaquita = " "
+AlmaLinux = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+Bluefin = "󰬜 "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = " "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = "󰣭 "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = "☁️ "
+openEuler = "󰫈 "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+RedHatEnterprise = " "
+Redhat = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = "🔷 "
+Unknown = " "
+Uos = "🐲 "
+Void = " "
+Windows = " "
+
+[shell]
+bash_indicator = " "
+cmd_indicator = " "
+disabled = false
+elvish_indicator = "󰘧 "
+fish_indicator = "󰈺 "
+format = "[ $indicator ]($style)"
+ion_indicator = " "
+nu_indicator = "nu"
+powershell_indicator = " "
+tcsh_indicator = "Tc"
+unknown_indicator = " "
+xonsh_indicator = "@ "
+zsh_indicator = "%_"
+
+[directory]
+format = "[ $path ]($style)"
+style = "bg:#DA627D"
+truncation_length = 5
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[c]
+detect_extensions = ["c", "cc", "cpp", "css", "cxx", "h", "hpp", "hxx", "tcc"]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[conda]
+format = "[ $symbol $environment ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[docker_context]
+format = "[ $symbol $context ]($style) $path"
+style = "bg:#06969A"
+symbol = " "
+
+[elixir]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[elm]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[git_branch]
+format = "[ $symbol $branch ]($style)"
+style = "bg:#FCA17D"
+symbol = ""
+
+[git_status]
+format = "[$all_status$ahead_behind ]($style)"
+style = "bg:#FCA17D"
+
+[golang]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[gradle]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+
+[haskell]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[java]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[julia]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[lua]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[nodejs]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = ""
+
+[nim]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = "󰆥 "
+
+[python]
+detect_extensions = ["ipynb", "py", "qmd"]
+format = '[ $symbol ($version)( \($virtualenv\)) ]($style)'
+style = "bg:#86BBD8"
+symbol = " "
+
+[rlang]
+detect_extensions = ["R", "Rd", "Rmd", "Rproj", "Rsx", "qmd"]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = "󰟔 "
+
+[ruby]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = "󰴭 "
+
+[rust]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = ""
+
+[scala]
+format = "[ $symbol ($version) ]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[time]
+disabled = false
+format = "[   $time ]($style)"
+style = "bg:#33658A"
+time_format = "%R"  # Hour:Minute Format
