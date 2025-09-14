@@ -14,6 +14,15 @@
 chezmoi init --apply skyblue-jpn
 ```
 
+## Post-installation
+
+run the scripts which are extended in `~/scripts` directory.
+and run the following command to install some packages via mise.
+
+```sh
+mise install
+```
+
 ## Author
 
 👤 **skyblue-jpn**
