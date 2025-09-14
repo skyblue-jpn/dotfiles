@@ -8,6 +8,7 @@ uv = "latest"
 usage = "latest"
 bun = "latest"
 cargo-binstall = "latest"
+"npm:json-sort-cli" = "latest"
 
 [settings]
 experimental = true
