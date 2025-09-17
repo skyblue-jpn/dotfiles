@@ -5,7 +5,7 @@ sudo pacman -S gtk-engine-murrine
 
 # Setting up GTK themes
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
-cd ./Catppuccin-GTK-Theme
+cd ./Catppuccin-GTK-Theme/themes
 ./install.sh --tweaks macchiato macos outline float black -t mauve -l -s compact
 cd ..
 rm -rf Catppuccin-GTK-Theme

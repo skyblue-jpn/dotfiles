@@ -27,7 +27,7 @@ cp /etc/fstab /etc/fstab.bak
 # Add entry to /etc/fstab if it doesn't already exist
 if ! grep -q "$UUID" /etc/fstab; then
   echo "Adding $PARTITION to /etc/fstab"
-  echo "UUID=$UUID $MOUNT_POINT lowntfs-3g defaults,uid=1000,gid=1000,dmask=027,fmask=137 0 0" >>/etc/fstab
+  echo "UUID=$UUID $MOUNT_POINT lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000 0 0" >>/etc/fstab
 else
   echo "Entry for $PARTITION already exists in /etc/fstab"
 fi

@@ -13,7 +13,7 @@ fi
 # Update system and all packages including AUR packages
 paru -Syyu --noconfirm
 # Install desired packages from ./pkglist.txt
-paru -S --needed - <./pkglist.txt
+paru -S --needed --noconfirm - <./pkglist.txt
 # Clean up any unnecessary packages
 paru -Rns $(paru -Qdtq) --noconfirm
 # Clear the package cache
