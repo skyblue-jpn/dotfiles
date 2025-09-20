@@ -10,6 +10,7 @@ cava
 cbonsai
 chezmoi
 cmatrix
+eza
 fastfetch
 fcitx5
 fcitx5-configtool
@@ -20,6 +21,7 @@ fcitx5-mozc-ut
 fcitx5-qt
 fish
 floorp-bin
+gcc-fortran
 ghostty
 gimp
 github-cli
@@ -64,6 +66,7 @@ reflector
 sl
 starship
 sudo-rs
+tectonic
 topgrade
 ttf-hackgen
 ttf-opensans
@@ -74,10 +77,12 @@ uutils-findutils
 ventoy-bin
 vim
 vlc
+waydroid
 xdg-user-dirs-gtk
 xed
 xplayer
 xviewer
 yazi-git
+zathura-pdf-mupdf
 zed
 zoom

@@ -25,14 +25,17 @@
     "html": true,
     "ini": true,
     "latex": true,
+    "ltex": true,
+    "markdown-oxide": true,
     "markdownlint": true,
     "nix": true,
     "r": true,
     "rainbow-csv": true,
     "ruff": true,
     "tombi": true,
-    "ty": false,
-    "xml": true
+    "ty": true,
+    "xml": true,
+    "yaml": true
   },
   "auto_update": true,
   "base_keymap": "VSCode",
@@ -40,11 +43,6 @@
   "buffer_font_family": "HackGen Console NF",
   "buffer_font_size": 14,
   "buffer_line_height": "comfortable",
-  "chat_panel": {
-    "button": "always",
-    "default_width": 240,
-    "dock": "right"
-  },
   "close_on_file_delete": false,
   "collaboration_panel": {
     "button": true,
@@ -140,8 +138,21 @@
         }
       }
     },
+    "LaTeX": {
+      "formatter": {
+        "external": {
+          "arguments": [
+            "--stdin"
+          ],
+          "command": "tex-fmt"
+        }
+      }
+    },
     "Markdown": {
-      "remove_trailing_whitespace_on_save": false
+      "formatter": "prettier",
+      "language_servers": [
+        "markdown-oxide"
+      ]
     },
     "Python": {
       "format_on_save": "on",
@@ -205,6 +216,9 @@
           "name": "biome"
         }
       }
+    },
+    "YAML": {
+      "formatter": "language_server"
     }
   },
   "linked_edits": true,
@@ -227,10 +241,52 @@
         }
       }
     },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "args": [
+              "-X",
+              "compile",
+              "%f",
+              "--untrusted",
+              "--synctex",
+              "--keep-logs",
+              "--keep-intermediates"
+            ],
+            "executable": "tectonic",
+            "forwardSearchAfter": true,
+            "onSave": true
+          }
+        }
+      }
+    },
     "ty": {
       "settings": {
+        "binary": {
+          "arguments": [
+            "server"
+          ],
+          "path": "ty"
+        },
         "ty": {
           "disableLanguageServices": true
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "format": {
+            "enable": true,
+            "singleQuote": false
+          },
+          "keyOrdering": true,
+          "schemas": {
+            "http://json.schemastore.org/composer": [
+              "/*"
+            ]
+          }
         }
       }
     }

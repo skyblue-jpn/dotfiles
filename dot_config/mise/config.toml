@@ -1,18 +1,35 @@
 [tools]
-"npm:@biomejs/biome" = "latest"
+"cargo:tex-fmt" = "latest"
+"npm:json-sort-cli" = "latest"
+"pipx:radian" = "latest"
 "pipx:ty" = "latest"
-python = "latest"
-shellcheck = "latest"
-shfmt = "latest"
-uv = "latest"
-usage = "latest"
+biome = "latest"
 bun = "latest"
 cargo-binstall = "latest"
-"npm:json-sort-cli" = "latest"
+java = "latest"
+python = "system"
+r = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+usage = "latest"
+uv = "latest"
 
 [settings]
 experimental = true
-python.uv_venv_auto = true
-pipx.uvx = true
-npm.bun = true
-cargo.binstall = true
+jobs = 10
+plugin_autoupdate_last_check_duration = "1d"
+
+[settings.cargo]
+binstall = true
+
+[settings.npm]
+bun = true
+
+[settings.pipx]
+uvx = true
+
+[settings.python]
+uv_venv_auto = true
+
+[env]
+R_EXTRA_CONFIGURE_OPTIONS = "--enable-R-shlib --with-cairo"

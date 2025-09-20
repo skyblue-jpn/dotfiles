@@ -1,0 +1,30 @@
+[
+  {
+    "bindings": {
+      "ctrl-space": null
+    },
+    "context": "Workspace"
+  },
+  {
+    "bindings": {},
+    "context": "Editor && vim_mode == insert"
+  },
+  {
+    "bindings": {
+      "shift-space": "editor::ShowCompletions"
+    },
+    "context": "Editor"
+  },
+  {
+    "bindings": {
+      "shift-space": "git::StageAll"
+    },
+    "context": "GitPanel"
+  },
+  {
+    "bindings": {
+      "shift-space": "git::StageAll"
+    },
+    "context": "GitDiff > Editor"
+  }
+]

@@ -1,0 +1,51 @@
+# .radian_profile
+
+# --- Appearance ---
+
+# Attempt to approximate Catppuccin Macchiato colors using ANSI escape codes.
+
+# Prompt for the main R console (Lavender-like).
+options(radian.prompt = "\033[38;5;183mR> \033[0m")
+
+# Prompt for shell mode (Teal-like).
+options(radian.shell_prompt = "\033[38;5;114m#!>\033[0m ")
+
+# Prompt for browse mode (Gold-like).
+options(radian.browse_prompt = "\033[38;5;214mBrowse[{}]>\033[0m ")
+
+# Prompt for Vi mode (Sky-like).
+options(radian.vi_mode_prompt = "\033[38;5;147m[{}]\033[0m ")
+
+# --- Keybindings ---
+
+# Use Vim editing mode.
+options(radian.editing_mode = "vi")
+# Show Vi mode prompt.
+options(radian.show_vi_mode_prompt = TRUE)
+
+# --- Usability Enhancements ---
+
+# History Settings
+options(radian.global_history_file = "~/.radian_history")
+options(radian.local_history_file = ".radian_history")
+options(radian.history_search_no_duplicates = TRUE)
+options(radian.history_search_ignore_case = TRUE)
+options(radian.history_size = 10000)
+
+# Auto-completion Settings
+options(radian.auto_complete_delay = 0.2)
+options(radian.completion_prefix_length = 2)
+options(radian.completion_timeout = 0.05)
+options(radian.complete_while_typing = TRUE)
+options(radian.show_match_paren = TRUE)
+options(radian.highlight_matching_bracket = TRUE)
+options(radian.completion_adding_spaces_around_equals = TRUE)
+
+# Code Editing Settings
+options(radian.auto_indentation = TRUE)
+options(radian.tab_size = 4)
+options(radian.auto_match = TRUE)
+options(radian.auto_suggest = TRUE)
+options(radian.line_wrap = TRUE)
+options(radian.auto_width = TRUE)
+options(radian.insert_new_line = TRUE)
