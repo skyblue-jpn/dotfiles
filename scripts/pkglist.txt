@@ -67,7 +67,7 @@ sl
 starship
 sudo-rs
 tectonic
-topgrade
+topgrade-git
 ttf-hackgen
 ttf-opensans
 ufw
@@ -84,5 +84,5 @@ xplayer
 xviewer
 yazi-git
 zathura-pdf-mupdf
-zed
+zed-preview
 zoom
