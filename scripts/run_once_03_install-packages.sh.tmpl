@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+# Install paru if not already installed
+# Check if paru is installed
+if ! command -v paru &>/dev/null; then
+  # Install paru
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+  cd ..
+  rm -rf paru
+fi
+
+paru -S --needed rustup
+rustup default stable
+# Install cargo utilities if not already installed
+# Check if cargo-update is installed
+# Install cargo-update and cargo-cache
+if ! command -v cargo-update &>/dev/null; then
+  cargo install cargo-update
+fi
+if ! command -v cargo-cache &>/dev/null; then
+  cargo install cargo-cache
+fi
+
+# Install desired packages from pkglist.txt
+paru -Syyu --needed --noconfirm - <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
+# Clean up any unnecessary packages
+paru -Rns $(paru -Qdtq) --noconfirm
+# Clear the package cache
+paru -Sc --noconfirm
+
+mise install
+waydroid init
+# End of script

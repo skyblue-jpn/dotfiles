@@ -1,3 +1,5 @@
-./biome.json
+biome.json
 LICENSE
 README.md
+dconf/settings.ini
+package-lists/pkglist.txt

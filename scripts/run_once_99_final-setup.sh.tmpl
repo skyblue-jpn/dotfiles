@@ -1,0 +1,12 @@
+# !/bin/bash
+# This script is run after all files have been deployed and is used to set up executable files and other configurations.
+
+set -eufo pipefail
+
+sudo timedatectl set-local-rtc 1
+
+fish_config theme save "Catppuccin Macchiato"
+
+bat cache --build
+
+topgrade

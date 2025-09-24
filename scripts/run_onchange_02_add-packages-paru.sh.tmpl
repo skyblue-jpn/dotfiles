@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# package-lists/pkglist.txt のハッシュ値: {{ include "package-lists/pkglist.txt" | sha256sum }}
+
+set -eufo pipefail
+
+echo "📦 Installing packages from pkglist.txt..."
+paru -Syu --needed --noconfirm - < "{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
+echo "✅ Package installation complete."

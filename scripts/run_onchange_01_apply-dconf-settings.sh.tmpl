@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# dconf/settings.ini のハッシュ値: {{ include "dconf/settings.ini" | sha256sum }}
+
+set -eufo pipefail
+
+echo "🚀 Applying dconf settings..."
+dconf load / < "{{ joinPath .chezmoi.sourceDir "dconf/settings.ini" }}"
+echo "✅ dconf settings applied."
