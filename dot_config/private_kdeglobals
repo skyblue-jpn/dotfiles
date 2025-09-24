@@ -1,0 +1,9 @@
+[General]
+widgetStyle=kvantum
+iconTheme=Colloid-Purple-Catppuccin-Dark
+
+[KDE]
+LookAndFeelPackage=org.kde.breezedark.desktop
+
+[Icons]
+Theme=Colloid-Purple-Catppuccin-Dark

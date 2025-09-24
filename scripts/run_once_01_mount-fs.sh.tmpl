@@ -1,44 +1,74 @@
 #!/bin/bash
+# Mount NTFS partition and update /etc/fstab if necessary.
+# PARTITION: /dev/nvme0n1p5
+# MOUNT_POINT: /media/gamedisk
 
 set -eufo pipefail
 
-# Check if the script is run as root
+# If not running as root, re-execute this script with sudo
 if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root"
-  exit
+  echo "🔒 Root privileges required. Re-running with sudo..."
+  exec sudo "$0" "$@"
 fi
+
 # Check if ntfs-3g is installed
-if ! command -v ntfs-3g &>/dev/null; then
-  echo "ntfs-3g could not be found, installing..."
+if ! pacman -Q ntfs-3g &>/dev/null; then
+  echo "🔍 ntfs-3g not found, installing..."
   pacman -Syu --noconfirm ntfs-3g
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install ntfs-3g. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ ntfs-3g is already installed."
 fi
+
 # Create mount point if it doesn't exist
 MOUNT_POINT="/media/gamedisk"
 if [ ! -d "$MOUNT_POINT" ]; then
+  echo "📁 Creating mount point at $MOUNT_POINT"
   mkdir -p "$MOUNT_POINT"
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to create mount point. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
 fi
-# Get the UUID of the NTFS partition (replace /dev/sdX1 with your actual partition)
+
+# Get the UUID of the NTFS partition
 PARTITION="/dev/nvme0n1p5"
 UUID=$(blkid -s UUID -o value "$PARTITION")
 if [ -z "$UUID" ]; then
-  echo "Could not find UUID for partition $PARTITION"
-  exit 1
+  echo "❌ Could not find UUID for partition $PARTITION. Exiting script, chezmoi apply will continue."
+  exit 0
 fi
+
 # Backup fstab before modifying
+echo "📝 Backing up /etc/fstab to /etc/fstab.bak"
 cp /etc/fstab /etc/fstab.bak
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to backup /etc/fstab. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
 # Add entry to /etc/fstab if it doesn't already exist
 if ! grep -q "$UUID" /etc/fstab; then
-  echo "Adding $PARTITION to /etc/fstab"
+  echo "➕ Adding $PARTITION to /etc/fstab"
   echo "UUID=$UUID $MOUNT_POINT lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000 0 0" >>/etc/fstab
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to add entry to /etc/fstab. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
 else
-  echo "Entry for $PARTITION already exists in /etc/fstab"
+  echo "ℹ️ Entry for $PARTITION already exists in /etc/fstab"
 fi
+
 # Mount the partition
-mount "$MOUNT_POINT"
-if [ $? -eq 0 ]; then
-  echo "$PARTITION mounted successfully at $MOUNT_POINT"
+echo "🔗 Mounting $PARTITION at $MOUNT_POINT"
+if mount "$MOUNT_POINT"; then
+  echo "✅ $PARTITION mounted successfully at $MOUNT_POINT"
 else
-  echo "Failed to mount $PARTITION"
-  exit 1
+  echo "❌ Failed to mount $PARTITION. Exiting script, chezmoi apply will continue."
+  exit 0
 fi
+
 # End of script

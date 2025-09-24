@@ -1,12 +1,58 @@
-# !/bin/bash
-# This script is run after all files have been deployed and is used to set up executable files and other configurations.
+#!/bin/bash
+# Final setup script: configure system settings and cache after deployment.
 
 set -eufo pipefail
 
+echo "🕒 Setting local RTC..."
 sudo timedatectl set-local-rtc 1
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to set local RTC. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
+echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
 fish_config theme save "Catppuccin Macchiato"
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
+# Ensure bat is installed before building cache
+if ! command -v bat &>/dev/null; then
+  echo "🔍 bat not found, installing..."
+  paru -S --needed bat
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install bat. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ bat is already installed."
+fi
+
+echo "🗃️ Building bat cache..."
 bat cache --build
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to build bat cache. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
+# Ensure topgrade is installed before running
+if ! command -v topgrade &>/dev/null; then
+  echo "🔍 topgrade not found, installing..."
+  paru -S --needed topgrade
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install topgrade. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ topgrade is already installed."
+fi
+
+echo "🔄 Running topgrade for final upgrades..."
 topgrade
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to run topgrade. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# End of script

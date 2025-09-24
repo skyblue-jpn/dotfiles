@@ -1,37 +1,99 @@
 #!/bin/bash
+# Install paru, Rust toolchain, cargo utilities, and packages from pkglist.txt.
 
 set -eufo pipefail
 
 # Install paru if not already installed
-# Check if paru is installed
 if ! command -v paru &>/dev/null; then
-  # Install paru
+  echo "🔍 paru not found, installing..."
   git clone https://aur.archlinux.org/paru.git
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to clone paru. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
   cd paru
   makepkg -si
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install paru. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
   cd ..
   rm -rf paru
+else
+  echo "✅ paru is already installed."
 fi
 
-paru -S --needed rustup
-rustup default stable
-# Install cargo utilities if not already installed
-# Check if cargo-update is installed
-# Install cargo-update and cargo-cache
-if ! command -v cargo-update &>/dev/null; then
-  cargo install cargo-update
+# Install rustup if not already installed
+if ! command -v rustup &>/dev/null; then
+  echo "🔍 rustup not found, installing..."
+  paru -S --needed rustup
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install rustup. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ rustup is already installed."
 fi
+
+echo "🔧 Setting Rust toolchain to stable..."
+rustup default stable
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to set Rust toolchain. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# Install cargo-update if not already installed
+if ! command -v cargo-update &>/dev/null; then
+  echo "📦 cargo-update not found, installing..."
+  cargo install cargo-update
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install cargo-update. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ cargo-update is already installed."
+fi
+
+# Install cargo-cache if not already installed
 if ! command -v cargo-cache &>/dev/null; then
+  echo "📦 cargo-cache not found, installing..."
   cargo install cargo-cache
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install cargo-cache. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ cargo-cache is already installed."
 fi
 
 # Install desired packages from pkglist.txt
+echo "📦 Installing packages from pkglist.txt..."
 paru -Syyu --needed --noconfirm - <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install packages from pkglist.txt. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
 # Clean up any unnecessary packages
+echo "🧹 Removing unnecessary packages..."
 paru -Rns $(paru -Qdtq) --noconfirm
+
 # Clear the package cache
+echo "🧹 Clearing package cache..."
 paru -Sc --noconfirm
 
+echo "📦 Installing with mise..."
 mise install
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to run mise install. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+echo "📱 Initializing waydroid..."
 waydroid init
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to initialize waydroid. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
 # End of script

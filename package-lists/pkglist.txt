@@ -6,7 +6,6 @@ bitwarden
 blender
 bottles
 bottom
-btop
 cachyos-gaming-applications
 cachyos-gaming-meta
 cava
@@ -30,8 +29,6 @@ fish
 fisher
 floorp-bin
 font-manager
-frameworkintegration
-frameworkintegration5
 fzf
 gcc-fortran
 ghostty
@@ -97,6 +94,7 @@ ufw
 uutils-coreutils
 uutils-diffutils
 uutils-findutils
+uutils-util-linux-git
 ventoy-bin
 vim
 vlc
@@ -108,6 +106,6 @@ xplayer
 xviewer
 yazi-git
 zathura-pdf-mupdf
-zed-preview
+zed-preview-bin
 zoom
 zoxide

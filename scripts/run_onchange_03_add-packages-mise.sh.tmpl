@@ -1,9 +1,28 @@
 #!/bin/bash
-
-# package-lists/pkglist.txt のハッシュ値: {{ include "dot_config/mise/config.toml" | sha256sum }}
+# Install packages from dot_config/mise/config.toml using mise.
+# dot_config/mise/config.toml hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
 
 set -eufo pipefail
 
+# Ensure mise is installed
+if ! command -v mise &>/dev/null; then
+  echo "🔍 mise not found, installing..."
+  paru -S --needed mise
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install mise. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ mise is already installed."
+fi
+
 echo "📦 Installing packages from mise/config.toml..."
 mise install
-echo "✅ Package installation complete."
+if [ $? -eq 0 ]; then
+  echo "✅ Package installation complete."
+else
+  echo "❌ Package installation failed. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# End of script

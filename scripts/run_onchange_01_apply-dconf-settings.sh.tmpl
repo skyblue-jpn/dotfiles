@@ -1,9 +1,28 @@
 #!/bin/bash
-
-# dconf/settings.ini のハッシュ値: {{ include "dconf/settings.ini" | sha256sum }}
+# Apply dconf settings from dconf/settings.ini.
+# dconf/settings.ini hash: {{ include "dconf/settings.ini" | sha256sum }}
 
 set -eufo pipefail
 
+# Ensure dconf is installed
+if ! command -v dconf &>/dev/null; then
+  echo "🔍 dconf not found, installing..."
+  sudo pacman -S --needed dconf
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install dconf. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ dconf is already installed."
+fi
+
 echo "🚀 Applying dconf settings..."
-dconf load / < "{{ joinPath .chezmoi.sourceDir "dconf/settings.ini" }}"
-echo "✅ dconf settings applied."
+dconf load / <"{{ joinPath .chezmoi.sourceDir "dconf/settings.ini" }}"
+if [ $? -eq 0 ]; then
+  echo "✅ dconf settings applied."
+else
+  echo "❌ Failed to apply dconf settings. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# End of script
