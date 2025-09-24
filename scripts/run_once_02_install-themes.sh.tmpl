@@ -3,7 +3,7 @@
 
 set -eufo pipefail
 
-# Prerequisites: gtk-engine-murrine
+# Prerequisite: gtk-engine-murrine
 if ! pacman -Q gtk-engine-murrine &>/dev/null; then
   echo "🔍 gtk-engine-murrine not found, installing..."
   sudo pacman -S --needed gtk-engine-murrine

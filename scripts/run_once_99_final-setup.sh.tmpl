@@ -3,15 +3,20 @@
 
 set -eufo pipefail
 
-echo "🕒 Setting local RTC..."
-sudo timedatectl set-local-rtc 1
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to set local RTC. Exiting script, chezmoi apply will continue."
-  exit 0
+echo "🕒 Checking local RTC setting..."
+if timedatectl | grep -q "RTC in local TZ: yes"; then
+  echo "ℹ️ Local RTC is already set. Skipping."
+else
+  echo "🕒 Setting local RTC..."
+  sudo timedatectl set-local-rtc 1
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to set local RTC. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
 fi
 
 echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
-fish_config theme save "Catppuccin Macchiato"
+yes | fish -c 'fish_config theme save "Catppuccin Macchiato"' || true
 if [ $? -ne 0 ]; then
   echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
   exit 0
@@ -49,7 +54,7 @@ else
 fi
 
 echo "🔄 Running topgrade for final upgrades..."
-topgrade
+topgrade --disable chezmoi
 if [ $? -ne 0 ]; then
   echo "❌ Failed to run topgrade. Exiting script, chezmoi apply will continue."
   exit 0

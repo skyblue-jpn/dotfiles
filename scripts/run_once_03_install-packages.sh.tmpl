@@ -74,10 +74,6 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-# Clean up any unnecessary packages
-echo "🧹 Removing unnecessary packages..."
-paru -Rns $(paru -Qdtq) --noconfirm
-
 # Clear the package cache
 echo "🧹 Clearing package cache..."
 paru -Sc --noconfirm
