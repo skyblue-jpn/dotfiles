@@ -90,7 +90,11 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "📱 Initializing waydroid..."
-waydroid init
+if [ "$EUID" -ne 0 ]; then
+  sudo waydroid init
+else
+  waydroid init
+fi
 if [ $? -ne 0 ]; then
   echo "❌ Failed to initialize waydroid. Exiting script, chezmoi apply will continue."
   exit 0
