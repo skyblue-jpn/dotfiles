@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install display manager (SDDM) Plymouth and GRUB themes
+# This script sets up the boot screen with SDDM, Plymouth, and GRUB themes.
 
 set -eufo pipefail
 
@@ -120,12 +120,12 @@ else
 fi
 # Set GRUB theme to catppuccin-macchiato
 # Check if the theme is already set
-if ! grep -q 'GRUB_THEME="/boot/grub/themes/catppuccin-macchiato/theme.txt"' /etc/default/grub; then
+if ! grep -q 'GRUB_THEME="/usr/share/grub/themes/catppuccin-macchiato/theme.txt"' /etc/default/grub; then
   echo "🎨 Setting GRUB theme to catppuccin-macchiato..."
   # Remove existing GRUB_THEME line if it exists
   sudo sed -i '/^GRUB_THEME=/d' /etc/default/grub
   # Add the new GRUB_THEME line
-  echo 'GRUB_THEME="/boot/grub/themes/catppuccin-macchiato/theme.txt"' | sudo tee -a /etc/default/grub
+  echo 'GRUB_THEME="/usr/share/grub/themes/catppuccin-macchiato/theme.txt"' | sudo tee -a /etc/default/grub
   if [ $? -ne 0 ]; then
     echo "❌ Failed to set GRUB theme. Exiting script, chezmoi apply will continue."
     exit 0
@@ -133,6 +133,25 @@ if ! grep -q 'GRUB_THEME="/boot/grub/themes/catppuccin-macchiato/theme.txt"' /et
 else
   echo "✅ GRUB theme is already set to catppuccin-macchiato."
 fi
+# Set tty theme to catppuccin-macchiato
+# Edit /etc/default/grub and append the theme kernel options to GRUB_CMDLINE_LINUX if not already present
+# Check if the options are already set
+if ! grep -q 'vt.default_red=36,237,166,238,138,245,139,184,91,237,166,238,138,245,139,165' /etc/default/grub; then
+  echo "🎨 Setting GRUB tty theme to catppuccin-macchiato..."
+  # Remove existing vt.default_red, vt.default_grn, vt.default_blu options if they exist
+  sudo sed -i 's/vt\.default_red=[^ ]*//g' /etc/default/grub
+  sudo sed -i 's/vt\.default_grn=[^ ]*//g' /etc/default/grub
+  sudo sed -i 's/vt\.default_blu=[^ ]*//g' /etc/default/grub
+  # Append the new options to GRUB_CMDLINE_LINUX
+  sudo sed -i '/^GRUB_CMDLINE_LINUX=/ s/"$/ vt.default_red=36,237,166,238,138,245,139,184,91,237,166,238,138,245,139,165 vt.default_grn=39,135,218,212,173,189,213,192,96,135,218,212,173,189,213,173 vt.default_blu=58,150,149,159,244,230,202,224,120,150,149,159,244,230,202,203"/' /etc/default/grub
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to set GRUB tty theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ GRUB tty theme is already set to catppuccin-macchiato."
+fi
+
 # Update GRUB configuration to apply theme
 echo "🔄 Updating GRUB configuration to apply theme..."
 sudo grub-mkconfig -o /boot/grub/grub.cfg
