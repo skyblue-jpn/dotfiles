@@ -70,6 +70,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+opentabletdriver
 pavucontrol
 pay-respects
 peaclock
@@ -93,6 +94,7 @@ tectonic
 topgrade-git
 ttf-hackgen
 ttf-opensans
+typobuster
 ufw
 uutils-coreutils
 uutils-diffutils
@@ -104,7 +106,6 @@ vlc
 waydroid
 waydroid-helper
 xdg-user-dirs-gtk
-xed
 xplayer
 xviewer
 yazi-git

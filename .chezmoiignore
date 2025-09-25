@@ -1,5 +1,5 @@
 biome.json
 LICENSE
 README.md
-dconf/settings.ini
-package-lists/pkglist.txt
+dconf/
+package-lists/
