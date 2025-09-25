@@ -6,7 +6,7 @@ set -eufo pipefail
 # Prerequisite: gtk-engine-murrine
 if ! pacman -Q gtk-engine-murrine &>/dev/null; then
   echo "🔍 gtk-engine-murrine not found, installing..."
-  sudo pacman -S --needed gtk-engine-murrine
+  sudo pacman -S --noconfirm --needed gtk-engine-murrine
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install gtk-engine-murrine. Exiting script, chezmoi apply will continue."
     exit 0

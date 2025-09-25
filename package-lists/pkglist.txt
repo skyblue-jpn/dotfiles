@@ -62,6 +62,9 @@ linux-cachyos-lts-headers
 mise
 navi
 ncurses
+nemo
+nemo-fileroller
+nemo-preview
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
