@@ -1,27 +1,7 @@
 #!/bin/bash
-# Install paru, Rust toolchain, cargo utilities, and packages from pkglist.txt.
+# Install Rust toolchain, cargo utilities, and packages from pkglist.txt.
 
 set -eufo pipefail
-
-# Install paru if not already installed
-if ! command -v paru &>/dev/null; then
-  echo "🔍 paru not found, installing..."
-  git clone https://aur.archlinux.org/paru.git
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to clone paru. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-  cd paru
-  makepkg -si
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to install paru. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-  cd ..
-  rm -rf paru
-else
-  echo "✅ paru is already installed."
-fi
 
 # Install rustup if not already installed
 if ! command -v rustup &>/dev/null; then
@@ -42,28 +22,20 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-# Install cargo-update if not already installed
-if ! command -v cargo-update &>/dev/null; then
-  echo "📦 cargo-update not found, installing..."
-  cargo install cargo-update
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to install cargo-update. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ cargo-update is already installed."
+# Install cargo-update
+echo "📦 Installing cargo-update..."
+cargo install cargo-update
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install cargo-update. Exiting script, chezmoi apply will continue."
+  exit 0
 fi
 
-# Install cargo-cache if not already installed
-if ! command -v cargo-cache &>/dev/null; then
-  echo "📦 cargo-cache not found, installing..."
-  cargo install cargo-cache
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to install cargo-cache. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ cargo-cache is already installed."
+# Install cargo-cache
+echo "📦 Installing cargo-cache..."
+cargo install cargo-cache
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install cargo-cache. Exiting script, chezmoi apply will continue."
+  exit 0
 fi
 
 # Install desired packages from pkglist.txt

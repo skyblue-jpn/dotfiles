@@ -15,6 +15,18 @@ else
   fi
 fi
 
+echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
+fish -c fisher install catppuccin/fish
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install Catppuccin theme. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+yes | fish -c 'fish_config theme save "Catppuccin Macchiato"' || true
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
 # Ensure bat is installed before building cache
 if ! command -v bat &>/dev/null; then
   echo "🔍 bat not found, installing..."
@@ -50,13 +62,6 @@ echo "🔄 Running topgrade for final upgrades..."
 topgrade --disable chezmoi
 if [ $? -ne 0 ]; then
   echo "❌ Failed to run topgrade. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-
-echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
-yes | fish -c 'fish_config theme save "Catppuccin Macchiato"' || true
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
   exit 0
 fi
 

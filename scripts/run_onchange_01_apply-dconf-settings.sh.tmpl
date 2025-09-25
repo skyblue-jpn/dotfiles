@@ -7,7 +7,7 @@ set -eufo pipefail
 # Ensure dconf is installed
 if ! command -v dconf &>/dev/null; then
   echo "🔍 dconf not found, installing..."
-  sudo pacman -S --needed dconf
+  paru -S --needed dconf
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install dconf. Exiting script, chezmoi apply will continue."
     exit 0

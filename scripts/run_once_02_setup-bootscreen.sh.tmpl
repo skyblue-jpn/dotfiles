@@ -1,0 +1,144 @@
+#!/bin/bash
+# Install display manager (SDDM) Plymouth and GRUB themes
+
+set -eufo pipefail
+
+# Installing SDDM and Plymouth if not already installed
+if ! pacman -Q sddm plymouth &>/dev/null; then
+  echo "🔍 SDDM or Plymouth not found, installing..."
+  paru -S --noconfirm --needed sddm plymouth
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install SDDM or Plymouth. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ SDDM and Plymouth are already installed."
+fi
+
+# Installing SDDM themes
+# Download catppuccin-sddm-theme-macchiato from AUR if not already installed
+if ! pacman -Q catppuccin-sddm-theme-macchiato &>/dev/null; then
+  echo "🔍 catppuccin-macchiato theme not found, installing..."
+  paru -S --noconfirm --needed catppuccin-sddm-theme-macchiato
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install catppuccin-macchiato theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ catppuccin-macchiato theme is already installed."
+fi
+# Set SDDM theme to catppuccin-macchiato
+# Check if the theme is already set
+if ! grep -q "Current=catppuccin-macchiato-mauve" /etc/sddm.conf; then
+  echo "🎨 Setting SDDM theme to catppuccin-macchiato..."
+  # Add or update the Theme line in the [Theme] section
+  # If the [Theme] section does not exist, create it
+  # If the Current line exists, update it; otherwise, add it
+  if ! grep -q "^\[Theme\]" /etc/sddm.conf; then
+    echo "[Theme]" | sudo tee -a /etc/sddm.conf
+  fi
+  # Remove existing Current line if it exists
+  sudo sed -i '/^Current=/d' /etc/sddm.conf
+  # Add the new Current line
+  sudo sed -i '/^\[Theme\]/a Current=catppuccin-macchiato-mauve' /etc/sddm.conf
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to set SDDM theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ SDDM theme is already set to catppuccin-macchiato."
+fi
+# Enable SDDM to start on boot
+if ! systemctl is-enabled sddm &>/dev/null; then
+  echo "🚀 Enabling SDDM to start on boot..."
+  sudo systemctl enable sddm
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to enable SDDM. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ SDDM is already enabled to start on boot."
+fi
+# Start SDDM service if not already running
+if ! systemctl is-active sddm &>/dev/null; then
+  echo "▶️ Starting SDDM service..."
+  sudo systemctl start sddm
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to start SDDM service. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ SDDM service is already running."
+fi
+
+# Installing Plymouth themes
+# Download plymouth-theme-catppuccin-macchiato from AUR if not already installed
+if
+  ! pacman -Q plymouth-theme-catppuccin-macchiato-git &
+  >/dev/null
+then
+  echo "🔍 plymouth catppuccin-macchiato theme not found, installing..."
+  paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install plymouth catppuccin-macchiato theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ plymouth catppuccin-macchiato theme is already installed."
+fi
+# Set Plymouth theme to catppuccin-macchiato
+# Check if the theme is already set
+if ! plymouth-set-default-theme -l | grep -q "catppuccin-macchiato"; then
+  echo "🎨 Setting Plymouth theme to catppuccin-macchiato..."
+  sudo plymouth-set-default-theme -R catppuccin-macchiato
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to set Plymouth theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ Plymouth theme is already set to catppuccin-macchiato."
+fi
+# Update initramfs to apply Plymouth theme
+echo "🔄 Updating initramfs to apply Plymouth theme..."
+sudo mkinitcpio -P
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to update initramfs. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# Installing GRUB themes
+# Download catppuccin-macchiato-grub-theme-git from AUR if not already installed
+if ! pacman -Q catppuccin-macchiato-grub-theme-git &>/dev/null; then
+  echo "🔍 catppuccin-macchiato GRUB theme not found, installing..."
+  paru -S --noconfirm --needed catppuccin-macchiato-grub-theme-git
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install catppuccin-macchiato GRUB theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ catppuccin-macchiato GRUB theme is already installed."
+fi
+# Set GRUB theme to catppuccin-macchiato
+# Check if the theme is already set
+if ! grep -q 'GRUB_THEME="/boot/grub/themes/catppuccin-macchiato/theme.txt"' /etc/default/grub; then
+  echo "🎨 Setting GRUB theme to catppuccin-macchiato..."
+  # Remove existing GRUB_THEME line if it exists
+  sudo sed -i '/^GRUB_THEME=/d' /etc/default/grub
+  # Add the new GRUB_THEME line
+  echo 'GRUB_THEME="/boot/grub/themes/catppuccin-macchiato/theme.txt"' | sudo tee -a /etc/default/grub
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to set GRUB theme. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ GRUB theme is already set to catppuccin-macchiato."
+fi
+# Update GRUB configuration to apply theme
+echo "🔄 Updating GRUB configuration to apply theme..."
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to update GRUB configuration. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+# End of script
