@@ -6,7 +6,7 @@ set -eufo pipefail
 # Install rustup if not already installed
 if ! command -v rustup &>/dev/null; then
   echo "🔍 rustup not found, installing..."
-  paru -S --needed rustup
+  paru -S --noconfirm --needed rustup
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install rustup. Exiting script, chezmoi apply will continue."
     exit 0
@@ -43,7 +43,7 @@ fi
 
 # Install desired packages from pkglist.txt
 echo "📦 Installing packages from pkglist.txt..."
-paru -Syyu --needed --noconfirm - <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
+paru -Syyu --noconfirm --needed <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install packages from pkglist.txt. Exiting script, chezmoi apply will continue."
   exit 0

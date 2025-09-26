@@ -36,7 +36,7 @@ fi
 # Ensure bat is installed before building cache
 if ! command -v bat &>/dev/null; then
   echo "🔍 bat not found, installing..."
-  paru -S --needed bat
+  paru -S --noconfirm --needed bat
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install bat. Exiting script, chezmoi apply will continue."
     exit 0
@@ -55,7 +55,7 @@ fi
 # Ensure topgrade is installed before running
 if ! command -v topgrade &>/dev/null; then
   echo "🔍 topgrade not found, installing..."
-  paru -S --needed topgrade
+  paru -S --noconfirm --needed topgrade
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install topgrade. Exiting script, chezmoi apply will continue."
     exit 0

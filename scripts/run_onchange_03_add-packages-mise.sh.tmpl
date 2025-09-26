@@ -7,7 +7,7 @@ set -eufo pipefail
 # Ensure mise is installed
 if ! command -v mise &>/dev/null; then
   echo "🔍 mise not found, installing..."
-  paru -S --needed mise
+  paru -S --noconfirm --needed mise
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install mise. Exiting script, chezmoi apply will continue."
     exit 0

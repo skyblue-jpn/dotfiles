@@ -5,7 +5,7 @@
 set -eufo pipefail
 
 echo "📦 Installing packages from pkglist.txt..."
-paru -Syu --needed --noconfirm - <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
+paru -Syu --noconfirm --needed - <"{{ joinPath .chezmoi.sourceDir "package-lists/pkglist.txt" }}"
 if [ $? -eq 0 ]; then
   echo "✅ Package installation complete."
 else

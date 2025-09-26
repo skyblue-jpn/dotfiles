@@ -59,17 +59,6 @@ if ! systemctl is-enabled sddm &>/dev/null; then
 else
   echo "✅ SDDM is already enabled to start on boot."
 fi
-# Start SDDM service if not already running
-if ! systemctl is-active sddm &>/dev/null; then
-  echo "▶️ Starting SDDM service..."
-  sudo systemctl start sddm
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to start SDDM service. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ SDDM service is already running."
-fi
 
 # Installing Plymouth themes
 # Download plymouth-theme-catppuccin-macchiato from AUR if not already installed

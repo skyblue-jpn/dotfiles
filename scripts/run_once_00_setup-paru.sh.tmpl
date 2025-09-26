@@ -5,8 +5,8 @@ set -euo pipefail
 
 # Update mirror list to use the fastest mirrors
 echo "Updating mirror list..."
-sudo pacman -Sy --noconfirm reflector
-sudo reflector --country Japan --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Sy --noconfirm --needed reflector
+# sudo reflector
 sudo systemctl enable reflector.service
 
 # Update the package database and upgrade all packages
