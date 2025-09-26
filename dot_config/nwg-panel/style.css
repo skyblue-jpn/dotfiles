@@ -2,115 +2,118 @@
 
 /* Recommended if panel "height"  unset or smaller then your theme default button height */
 button {
-    margin: 2px;
-    background: none;
-    border: none
+  margin: 2px;
+  background: none;
+  border: none;
 }
 
 /* SwayTaskBar and SwayWorkspaces use custom widgets, that need this and the next name
    to highlight currently focused task / workspace. */
 #task-box {
-    padding-left: 4px;
-    padding-right: 4px
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #task-box-focused {
-    background-color: rgba(255, 255, 255, 0.12);
-    padding-left: 4px;
-    padding-right: 4px
+  background-color: rgba(147, 154, 183, 0.12);
+  padding-left: 4px;
+  padding-right: 4px;
 }
-
 
 /***** MODIFY TO YOUR TASTE *****/
 
 /* Default custom button */
 #button-custom {
-    background: rgba(0, 0, 0, 0.0);
-    border: 0
+  background: rgba(0, 0, 0, 0);
+  border: 0;
 }
 
 #button-custom:hover {
-    border: none;
-    border-radius: 3px;
-    background: #cd7ebf;
-    color: #fff
+  border: none;
+  border-radius: 3px;
+  background: rgba(198, 160, 246, 1);
+  color: rgba(202, 211, 245, 1);
 }
 
 /* Top panel in sample config uses this name */
 #panel-top {
-    background: #101010;
-    border-radius: 0;
-    color: #eeeeee
+  background: rgba(24, 25, 38, 1);
+  border-radius: 0;
+  color: rgba(202, 211, 245, 1);
 }
 
 /* Bottom panel in sample config uses this name */
 #panel-bottom {
-    background: #3b4559;
-    border-radius: 0;
-    color: #eeeeee
+  background: rgba(36, 39, 58, 1);
+  border-radius: 0;
+  color: rgba(202, 211, 245, 1);
 }
 
 /* Controls window in sample config uses this name */
 #controls-window {
-    border-radius: 10px;
-    background: #31373A;
-    color: #eeeeee
+  border-radius: 10px;
+  background: rgba(30, 32, 48, 1);
+  color: rgba(202, 211, 245, 1);
 }
 
 /* Executors usually behave better in monospace fonts */
 #executor-label {
-    font-family: DejaVu Sans Mono, monospace
+  font-family:
+    DejaVu Sans Mono,
+    monospace;
 }
 
 /* and so does the Clock */
 #clock {
-    font-family: DejaVu Sans Mono, monospace;
-    font-size: 16px
+  font-family:
+    DejaVu Sans Mono,
+    monospace;
+  font-size: 16px;
 }
 
 /* Sample executor-weather uses "css-name": "weather" */
 #weather {
-    font-size: 16px
+  font-size: 16px;
 }
 
 /* dwl-tags module */
 #dwl-tag-box {
-    padding-top: 4px;
-    padding-bottom: 4px
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #dwl-tag-occupied {
-    font-family: monospace;
-    color: #eee;
-    background-color: #006699;
-    padding-left: 3px;
-    padding-right: 3px;
+  font-family: monospace;
+  color: rgba(202, 211, 245, 1);
+  background-color: rgba(138, 173, 244, 1);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 #dwl-tag-free {
-    font-family: monospace;
-    color: #eee;
-    background-color: rgba(32, 50, 90, 1.0);
-    padding-left: 3px;
-    padding-right: 3px;
+  font-family: monospace;
+  color: rgba(202, 211, 245, 1);
+  background-color: rgba(32, 50, 90, 1);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 #dwl-tag-urgent {
-    font-family: monospace;
-    color: #eee;
-    background-color: #ee6600;
-    padding-left: 3px;
-    padding-right: 3px;
+  font-family: monospace;
+  color: rgba(202, 211, 245, 1);
+  background-color: rgba(245, 169, 127, 1);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 #dwl-tag-selected {
-    border: 2px solid #81a1c1;
+  border: 2px solid rgba(145, 215, 227, 1);
 }
 
 /* Selected (hovered) UI elements */
 *:selected {
-    border: none;
-    border-radius: 3px;
-    background: #cd7ebf;
-    color: #fff
+  border: none;
+  border-radius: 3px;
+  background: rgba(198, 160, 246, 1);
+  color: rgba(202, 211, 245, 1);
 }
