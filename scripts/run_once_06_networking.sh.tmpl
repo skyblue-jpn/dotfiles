@@ -4,9 +4,15 @@
 set -euo pipefail
 
 # Enable IP forwarding
+echo "Enabling IP forwarding and configuring UFW..."
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo ufw allow 53
 sudo ufw allow 67
 sudo ufw default allow FORWARD
+sudo ufw enable
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to enable UFW or set IP forwarding. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
 # End of script

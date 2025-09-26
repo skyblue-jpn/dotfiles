@@ -26,7 +26,12 @@ if [ $? -ne 0 ]; then
   echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
   exit 0
 fi
+echo "🐟 Changing default shell to fish..."
 chsh -s /bin/fish
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to change default shell. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
 # Ensure bat is installed before building cache
 if ! command -v bat &>/dev/null; then
