@@ -5,7 +5,7 @@ set -euo pipefail
 
 # Install Hyprland and dependencies
 echo "🔄 Installing Hyprland and dependencies..."
-paru -S --noconfirm --needed hyprland uwsm nwg-shell nwg-dock-hyprland nwg-bar
+paru -S --noconfirm --needed hyprland uwsm nwg-shell nwg-dock-hyprland nwg-bar xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install Hyprland and dependencies. Exiting script, chezmoi apply will continue."
   exit 0

@@ -15,6 +15,9 @@ else
   echo "✅ rustup is already installed."
 fi
 
+# Reload shell environment to recognize rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 echo "🔧 Setting Rust toolchain to stable..."
 rustup default stable
 if [ $? -ne 0 ]; then

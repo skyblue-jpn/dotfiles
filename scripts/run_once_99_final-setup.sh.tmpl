@@ -16,7 +16,7 @@ else
 fi
 
 echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
-fish -c fisher install catppuccin/fish
+fish -c "fisher install catppuccin/fish"
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install Catppuccin theme. Exiting script, chezmoi apply will continue."
   exit 0
@@ -26,6 +26,7 @@ if [ $? -ne 0 ]; then
   echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
   exit 0
 fi
+chsh -s /bin/fish
 
 # Ensure bat is installed before building cache
 if ! command -v bat &>/dev/null; then
