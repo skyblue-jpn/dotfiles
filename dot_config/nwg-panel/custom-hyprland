@@ -1,227 +1,307 @@
 [
   {
-    "name": "top",
-    "output": "",
-    "layer": "top",
-    "position": "top",
-    "height": 30,
-    "homogeneous": true,
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "padding-horizontal": 0,
-    "padding-vertical": 0,
-    "spacing": 2,
+    "brightness-slider": {},
+    "button-clipman": {
+      "command": "nwg-clipman",
+      "css-name": "button-custom",
+      "icon": "nwg-clipman",
+      "icon-size": 16,
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Clipboard history [S]+V"
+    },
+    "button-help": {
+      "command": "nwg-shell-help",
+      "css-name": "button-custom",
+      "icon": "help-about",
+      "icon-size": 16,
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Show/hide help [S]+F1"
+    },
+    "button-launcher": {
+      "command": "nwg-drawer",
+      "css-name": "button-custom",
+      "icon": "grid",
+      "icon-size": 16,
+      "label": "",
+      "label-position": "right",
+      "tooltip": "Application drawer [S]+D"
+    },
+    "clock": {
+      "angle": 0,
+      "calendar-css-name": "calendar-window",
+      "calendar-icon-size": 24,
+      "calendar-interval": 60,
+      "calendar-margin-horizontal": 0,
+      "calendar-margin-vertical": 0,
+      "calendar-on": true,
+      "calendar-path": "",
+      "calendar-placement": "top",
+      "css-name": "clock",
+      "format": "%a, %d. %b  %H:%M:%S",
+      "interval": 1,
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "root-css-name": "root-clock",
+      "tooltip-date-format": true,
+      "tooltip-text": ""
+    },
     "controls": "right",
-    "items-padding": 0,
-    "css-name": "panel-top",
-    "icons": "light",
-    "modules-left": [
-      "button-launcher",
-      "hyprland-workspaces"
-    ],
-    "modules-center": [
-      "clock"
-    ],
-    "modules-right": [
-      "executor-cpuav",
-      "executor-cpubar",
-      "hyprland-submap",
-      "scratchpad",
-      "tray",
-      "button-help",
-      "button-clipman"
-    ],
-    "sway-taskbar": {},
     "controls-settings": {
       "alignment": "right",
+      "angle": 0,
+      "backlight-controller": "brightnessctl",
+      "backlight-device": "",
+      "battery-low-interval": 3,
+      "battery-low-level": 0,
+      "click-closes": true,
+      "commands": {
+        "battery": "",
+        "bluetooth": "blueman-manager",
+        "net": "nm-connection-editor"
+      },
       "components": [
         "brightness",
         "battery",
         "volume",
         "processes",
-        "readme"
+        "readme",
+        "per-app-volume"
       ],
-      "commands": {
-        "battery": "",
-        "net": "nm-connection-editor",
-        "bluetooth": "blueman-manager"
-      },
+      "css-name": "controls-window",
       "custom-items": [
         {
-          "name": "Wallpapers",
+          "cmd": "azote",
           "icon": "azote",
-          "cmd": "azote"
+          "name": "Wallpapers"
         },
         {
-          "name": "GTK settings",
+          "cmd": "nwg-look",
           "icon": "nwg-look",
-          "cmd": "nwg-look"
+          "name": "GTK settings"
         },
         {
-          "name": "Displays",
+          "cmd": "nwg-displays",
           "icon": "nwg-displays",
-          "cmd": "nwg-displays"
+          "name": "Displays"
         },
         {
-          "name": "Panel settings",
+          "cmd": "nwg-panel-config",
           "icon": "nwg-panel",
-          "cmd": "nwg-panel-config"
+          "name": "Panel settings"
         },
         {
-          "name": "Shell settings",
+          "cmd": "nwg-shell-config",
           "icon": "nwg-shell-config",
-          "cmd": "nwg-shell-config"
+          "name": "Shell settings"
+        },
+        {
+          "cmd": "zeditor ~/.local/share/chezmoi/",
+          "icon": "configure",
+          "name": "Manual configuration"
         }
       ],
+      "hover-opens": false,
+      "icon-size": 18,
+      "interval": 1,
+      "leave-closes": true,
       "menu": {
-        "name": "Exit",
         "icon": "system-shutdown-symbolic",
         "items": [
           {
-            "name": "Lock",
-            "cmd": "nwg-lock"
+            "cmd": "nwg-lock",
+            "name": "Lock"
           },
           {
-            "name": "Exit Hyprland session",
-            "cmd": "nwg-dialog -p exit-hyprland -c \"hyprctl dispatch exit\""
+            "cmd": "nwg-dialog -p exit-hyprland -c \"hyprctl dispatch exit\"",
+            "name": "Exit Hyprland session"
           },
           {
-            "name": "Restart",
-            "cmd": "nwg-dialog -p reboot -c \"systemctl reboot\""
+            "cmd": "nwg-dialog -p reboot -c \"systemctl reboot\"",
+            "name": "Restart"
           },
           {
-            "name": "Shutdown",
-            "cmd": "nwg-dialog -p poweroff -c \"systemctl -i poweroff\""
+            "cmd": "nwg-dialog -p poweroff -c \"systemctl -i poweroff\"",
+            "name": "Shutdown"
           }
-        ]
+        ],
+        "name": "Exit"
       },
-      "show-values": false,
-      "interval": 1,
-      "icon-size": 18,
-      "hover-opens": false,
-      "leave-closes": true,
-      "click-closes": true,
-      "css-name": "controls-window",
       "net-interface": "wlo1",
-      "system-shutdown-symbolic": "system-shutdown",
       "output-switcher": true,
-      "window-width": 320,
-      "window-margin": 6,
-      "battery-low-level": 0,
-      "backlight-device": "",
-      "backlight-controller": "brightnessctl",
+      "per-app-volume": false,
+      "processes-label": "Processes",
+      "readme-label": "README",
       "root-css-name": "controls-overview",
+      "show-battery": true,
+      "show-brightness": true,
+      "show-values": false,
+      "show-volume": true,
+      "system-shutdown-symbolic": "system-shutdown",
+      "window-margin": 6,
       "window-margin-horizontal": 4,
       "window-margin-vertical": 4,
-      "angle": 0.0
+      "window-width": 320
     },
-    "playerctl": {},
-    "clock": {
-      "format": "%a, %d. %b  %H:%M:%S",
-      "interval": 1,
-      "on-right-click": "",
-      "tooltip-text": "",
-      "on-left-click": "",
-      "on-middle-click": "",
-      "on-scroll-up": "",
-      "on-scroll-down": "",
-      "css-name": "clock"
-    },
-    "width": "auto",
-    "sway-workspaces": {},
-    "hyprland-workspaces": {
-      "num-ws": 10,
-      "show-icon": true,
-      "image-size": 16,
-      "show-name": true,
-      "name-length": 20,
-      "show-empty": true,
-      "mark-content": true,
-      "show-names": true,
-      "mark-floating": true,
-      "angle": 0.0,
-      "mark-xwayland": true
-    },
-    "menu-start": "off",
-    "menu-start-settings": {},
+    "css-name": "panel-top",
+    "dwl-tags": {},
+    "exclusive-zone": true,
     "executor-cpuav": {
-      "script": "gopsuinfo -i a",
-      "tooltip-text": "average CPU load",
-      "on-left-click": "nwg-processes",
-      "on-middle-click": "",
-      "on-right-click": "",
-      "on-scroll-up": "",
-      "on-scroll-down": "",
-      "root-css-name": "",
-      "css-name": "",
-      "icon-placement": "right",
-      "icon-size": 16,
-      "interval": 3
-    },
-    "executor-cpubar": {
-      "script": "gopsuinfo -c g",
-      "tooltip-text": "",
-      "on-left-click": "",
-      "on-middle-click": "",
-      "on-right-click": "",
-      "on-scroll-up": "",
-      "on-scroll-down": "",
-      "root-css-name": "",
+      "angle": 0,
       "css-name": "",
       "icon-placement": "left",
       "icon-size": 16,
-      "interval": 3
-    },
-    "dwl-tags": {},
-    "tray": {
-      "icon-size": 16,
-      "root-css-name": "tray",
-      "inner-css-name": "inner-tray",
-      "smooth-scrolling-threshold": 0
-    },
-    "swaync": {
-      "tooltip-text": "Notifications",
-      "on-left-click": "swaync-client -t",
+      "interval": 2,
+      "on-left-click": "nwg-processes",
       "on-middle-click": "",
       "on-right-click": "",
-      "on-scroll-up": "",
       "on-scroll-down": "",
-      "root-css-name": "root-executor",
+      "on-scroll-up": "",
+      "root-css-name": "",
+      "script": "gopsuinfo -i a",
+      "sigrt": 34,
+      "tooltip-text": "CPU average load",
+      "use-sigrt": false
+    },
+    "executor-cpubar": {
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 2,
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "script": "gopsuinfo -c g",
+      "tooltip-text": ""
+    },
+    "executor-drives": {
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 15,
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "script": "gopsuinfo -i n",
+      "tooltip-text": ""
+    },
+    "executor-memory": {
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 5,
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "script": "gopsuinfo -i m",
+      "tooltip-text": ""
+    },
+    "executor-temp": {
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 5,
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "script": "gopsuinfo -i t",
+      "tooltip-text": ""
+    },
+    "height": 30,
+    "homogeneous": true,
+    "hyprland-submap": {
+      "angle": 0,
+      "css-name": "executor-label",
+      "icon-size": 16,
+      "show-default": false,
+      "show-icon": true
+    },
+    "hyprland-taskbar": {},
+    "hyprland-workspaces": {
+      "angle": 0,
+      "image-size": 16,
+      "mark-content": true,
+      "mark-floating": true,
+      "mark-xwayland": true,
+      "name-length": 20,
+      "num-ws": 10,
+      "show-empty": true,
+      "show-icon": true,
+      "show-name": true,
+      "show-names": true
+    },
+    "icons": "light",
+    "items-padding": 0,
+    "keyboard-layout": {},
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-top": 0,
+    "menu-start": "off",
+    "menu-start-settings": {},
+    "modules-center": ["clock"],
+    "modules-left": ["button-launcher", "hyprland-workspaces"],
+    "modules-right": [
+      "executor-cpuav",
+      "executor-temp",
+      "scratchpad",
+      "tray",
+      "button-help",
+      "button-clipman"
+    ],
+    "monitor": "",
+    "name": "top",
+    "niri-taskbar": {},
+    "openweather": {},
+    "output": "",
+    "padding-horizontal": 0,
+    "padding-vertical": 0,
+    "pinned": {},
+    "playerctl": {},
+    "position": "top",
+    "random-wallpaper": {},
+    "run-if-output-absent": [],
+    "run-if-output-exist": [],
+    "scratchpad": {},
+    "sigrt": 64,
+    "spacing": 2,
+    "start-hidden": false,
+    "sway-mode": {},
+    "sway-taskbar": {},
+    "sway-workspaces": {},
+    "swaync": {
+      "always-show-icon": true,
       "css-name": "executor",
       "icon-placement": "left",
       "icon-size": 16,
       "interval": 1,
-      "always-show-icon": true
+      "on-left-click": "swaync-client -t",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-down": "",
+      "on-scroll-up": "",
+      "root-css-name": "root-executor",
+      "tooltip-text": "Notifications"
     },
-    "exclusive-zone": true,
-    "openweather": {},
-    "brightness-slider": {},
-    "button-launcher": {
-      "command": "nwg-drawer",
-      "icon": "grid",
-      "label": "",
-      "label-position": "right",
-      "tooltip": "Application drawer [Alt]+F1",
-      "css-name": "button-custom",
-      "icon-size": 16
+    "tray": {
+      "icon-size": 16,
+      "inner-css-name": "inner-tray",
+      "root-css-name": "tray",
+      "smooth-scrolling-threshold": 0
     },
-    "button-help": {
-      "command": "nwg-shell-help",
-      "icon": "help-about",
-      "label": "",
-      "label-position": "right",
-      "tooltip": "Show/hide help [S]+F1",
-      "css-name": "button-custom",
-      "icon-size": 16
-    },
-    "button-clipman": {
-      "command": "nwg-clipman",
-      "icon": "nwg-clipman",
-      "label": "",
-      "label-position": "right",
-      "tooltip": "Clipboard history [Alt]+c",
-      "css-name": "button-custom",
-      "icon-size": 16
-    }
+    "use-sigrt": false,
+    "width": "auto",
+    "width-as-percentage": false
   }
 ]

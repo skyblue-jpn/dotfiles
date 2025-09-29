@@ -104,11 +104,9 @@
   "sleep-timeout": 1800,
   "resume-cmd": "",
   "before-sleep": "",
-  "backgrounds-custom-path": "",
-  "backgrounds-use-custom-path": false,
-  "background-dirs": [
-    "/usr/share/backgrounds/nwg-shell"
-  ],
+  "backgrounds-custom-path": "/home/celeste/Pictures",
+  "backgrounds-use-custom-path": true,
+  "background-dirs": [],
   "background-dirs-once-set": false,
   "unsplash-width": 1920,
   "unsplash-height": 1080,

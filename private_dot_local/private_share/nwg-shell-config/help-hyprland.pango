@@ -1,41 +1,71 @@
-<span face="monospace"><b>[S]*+t/[S]+F2</b> ..................... Terminal
-<b>[S]+W</b> .......................... Web browser
-<b>[S]+E</b> .......................... Text editor
-<b>[S]+F</b> ......................... File manager
-<b>[Alt]+D</b> ..................... Dock show/hide
-<b>[Alt]+F1</b> ................ Application drawer
-<b>[Alt]+c</b> .................. Clipboard history
-<b>[S]+F1</b> ...................... Show/hide help
-⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼
-<b>[Alt]+Q/[Alt]+F4</b> ............... Kill window
-<b>[S]+X</b> ............................ Exit menu
-<b>[S]+L</b> .......................... Lock screen
-<b>[S]+[Shift]+C</b> .............. Reload Hyprland
-<b>[S]+[Shift]+M</b> ................ Exit Hyprland
-⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼
-<b>[S]+LMB</b> ........................ Move window
-<b>[S]+RMB</b> ...................... Resize window
-<b>[S]+r</b> .... Resize Submap (Esc/Enter to exit)
-<b>[S]+number</b> ................ Switch workspace
-<b>[S]+[Shift]+number</b> ....... Move to workspace
-<b>[S]+arrow</b> ....................... Move focus
-<b>[S]+scroll</b> ....... Scroll through workspaces
-<b>[S]+Space</b> .................. Toggle floating
-<b>[S]+[Shift]+F</b> ................... Fullscreen
-<b>[S]+I</b> ........................... Pin window
-<b>[S]+[Shift]+Z</b> .... Move to special workspace
-<b>[S]+Z</b> ............. Toggle special workspace
-Dwindle⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼
-<b>[Alt]+Tab</b> ..................... Toggle split
-<b>[S]+P</b> ............................... Pseudo
-Master⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼
-<b>[S]+A</b> ....................... Focus previous
-<b>[S]+S</b> ....................... Swap w/ master
-<b>[S]+D</b> ........................... Focus next
-⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼⎼
-<b>PrtScr</b> .......................... Screenshot
-<b>[Ctrl]+PrtScr</b> ........... Screenshot display
-<b>[Shift]+[Ctrl]+PrtScr</b> ........ S-shot region
-<b>[S]+[Shift]+[Ctrl]+PrtScr</b> .... S-shot window</span>
+<span face="monospace">
 
-<span face="monospace" size="small">*[S] = Super/Win key</span>
+<span foreground="#8aadf4"><u><b>■ System Actions</b></u></span>
+<span foreground="#f5bde6"><b>[S]+Shift+R</b></span>    .................... Reload Hyprland
+<span foreground="#f5bde6"><b>[S]+Q</b></span>          .................... Kill window
+<span foreground="#f5bde6"><b>[S]+Shift+E</b></span>    .................... Exit Hyprland
+<span foreground="#f5bde6"><b>Ctrl+Alt+L</b></span>     .................... Lock screen
+
+<span foreground="#8aadf4"><u><b>■ Application Launchers</b></u></span>
+<span foreground="#f5bde6"><b>[S]+D</b></span>          .................... Launcher
+<span foreground="#f5bde6"><b>[S]+Enter/[S]+T</b></span> ................... Terminal
+<span foreground="#f5bde6"><b>[S]+B</b></span>          .................... Web browser
+<span foreground="#f5bde6"><b>[S]+E</b></span>          .................... File manager
+<span foreground="#f5bde6"><b>[S]+V</b></span>          .................... Clipboard history
+<span foreground="#f5bde6"><b>[S]+C</b></span>          .................... Text editor
+<span foreground="#f5bde6"><b>[S]+F1</b></span>         .................... Show keybinds help
+
+<span foreground="#8aadf4"><u><b>■ Dock</b></u></span>
+<span foreground="#f5bde6"><b>[Alt]+D</b></span>        .................... Dock show/hide
+
+<span foreground="#8aadf4"><u><b>■ Window Management</b></u></span>
+<span foreground="#f5bde6"><b>[S]+Space</b></span>      .................... Toggle floating
+<span foreground="#f5bde6"><b>[S]+Shift+F</b></span>    .................... Toggle fullscreen state
+<span foreground="#f5bde6"><b>[S]+F</b></span>          .................... Exit fullscreen
+
+<span foreground="#8aadf4"><u><b>■ Focus and Movement</b></u></span>
+<span foreground="#f5bde6"><b>[S]+Arrow/HJKL</b></span> .................... Move focus
+<span foreground="#f5bde6"><b>[S]+Shift+Arrow/HJKL</b></span> .............. Move window
+
+<span foreground="#8aadf4"><u><b>■ Workspace</b></u></span>
+<span foreground="#f5bde6"><b>[S]+number</b></span>     .................... Switch workspace (0=10)
+<span foreground="#f5bde6"><b>[S]+Shift+number</b></span> .................. Move window to workspace (0=10)
+<span foreground="#f5bde6"><b>[Alt]+Shift+number</b></span> ................ Move container to workspace (0=10)
+<span foreground="#f5bde6"><b>[S]+Scroll</b></span>     .................... Scroll through workspaces
+
+<span foreground="#8aadf4"><u><b>■ Mouse Window Management</b></u></span>
+<span foreground="#f5bde6"><b>[S]+LMB</b></span>        .................... Move window (mouse)
+<span foreground="#f5bde6"><b>[S]+RMB</b></span>        .................... Resize window (mouse)
+
+<span foreground="#8aadf4"><u><b>■ Pin and Dwindle Layout</b></u></span>
+<span foreground="#f5bde6"><b>[S]+I</b></span>          .................... Pin window
+<span foreground="#f5bde6"><b>[S]+P</b></span>          .................... Dwindle pseudo
+<span foreground="#f5bde6"><b>[S]+Shift+P</b></span>    .................... Dwindle togglesplit
+
+<span foreground="#8aadf4"><u><b>■ Resize Submap</b></u></span>
+<span foreground="#f5bde6"><b>[S]+R</b></span>          .................... Enter resize mode (Esc to exit)
+<span foreground="#f5bde6"><b>Arrow/HJKL</b></span>     .................... Resize window (in resize mode)
+<span foreground="#f5bde6"><b>Esc</b></span>            .................... Exit resize mode
+
+<span foreground="#8aadf4"><u><b>■ Volume and Brightness</b></u></span>
+<span foreground="#f5bde6"><b>XF86AudioLowerVolume</b></span> .............. Volume Down
+<span foreground="#f5bde6"><b>XF86AudioRaiseVolume</b></span> .............. Volume Up
+<span foreground="#f5bde6"><b>XF86AudioMute</b></span>  .................... Volume Mute
+<span foreground="#f5bde6"><b>XF86AudioMicMute</b></span> .................. Mic Mute
+<span foreground="#f5bde6"><b>XF86MonBrightnessDown</b></span> ............. Brightness Down
+<span foreground="#f5bde6"><b>XF86MonBrightnessUp</b></span> ............... Brightness Up
+
+<span foreground="#8aadf4"><u><b>■ Media Controls</b></u></span>
+<span foreground="#f5bde6"><b>XF86AudioPlay</b></span>  .................... Play/Pause
+<span foreground="#f5bde6"><b>XF86AudioNext</b></span>  .................... Next Track
+<span foreground="#f5bde6"><b>XF86AudioPrev</b></span>  .................... Previous Track
+
+<span foreground="#8aadf4"><u><b>■ Screenshot</b></u></span>
+<span foreground="#f5bde6"><b>PrtScr</b></span>         .................... Screenshot: full screen
+<span foreground="#f5bde6"><b>Ctrl+PrtScr</b></span>    .................... Screenshot: focused display
+<span foreground="#f5bde6"><b>Shift+Ctrl+PrtScr</b></span> ................. Screenshot: selected region
+<span foreground="#f5bde6"><b>[S]+Shift+Ctrl+PrtScr</b></span> ............. Screenshot: focused window
+<span foreground="#f5bde6"><b>[S]+Shift+S</b></span>    .................... Screenshot: selected region
+
+</span>
+<span face="monospace" size="small" foreground="#a6da95">*[S] = Super/Win key</span>

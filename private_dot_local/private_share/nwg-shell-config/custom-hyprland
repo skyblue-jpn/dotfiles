@@ -35,7 +35,7 @@
   "dock-startup-delay": 0,
   "dock-css": "",
   "dock-on": false,
-  "swaync-positionX": "center",
+  "swaync-positionX": "right",
   "swaync-positionY": "top",
   "swaync-control-center-width": 500,
   "swaync-notification-window-width": 500,
