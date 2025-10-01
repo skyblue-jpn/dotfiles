@@ -6,6 +6,7 @@
 biome = "latest"
 bun = "latest"
 cargo-binstall = "latest"
+ghq = "latest"
 java = "latest"
 node = "latest"
 r = "latest"

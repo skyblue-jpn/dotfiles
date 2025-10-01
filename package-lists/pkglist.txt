@@ -71,6 +71,8 @@ noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
 opentabletdriver
+otf-stix
+oxidizr-arch
 pavucontrol
 pay-respects
 peaclock

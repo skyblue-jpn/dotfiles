@@ -250,8 +250,13 @@
     "margin-top": 0,
     "menu-start": "off",
     "menu-start-settings": {},
-    "modules-center": ["clock"],
-    "modules-left": ["button-launcher", "hyprland-workspaces"],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-left": [
+      "button-launcher",
+      "hyprland-workspaces"
+    ],
     "modules-right": [
       "executor-cpuav",
       "executor-temp",
@@ -264,7 +269,7 @@
     "name": "top",
     "niri-taskbar": {},
     "openweather": {},
-    "output": "",
+    "output": "All",
     "padding-horizontal": 0,
     "padding-vertical": 0,
     "pinned": {},

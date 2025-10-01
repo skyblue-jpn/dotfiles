@@ -52,6 +52,27 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
+# Setting uutils-coreutils and sudo-rs as default implementations
+echo "🔧 Setting uutils-coreutils and sudo-rs as default implementations..."
+# Ensure oxidizr-arch is installed before using
+if ! command -v oxidizr-arch &>/dev/null; then
+  echo "🔍 oxidizr-arch not found, installing..."
+  paru -S --noconfirm --needed oxidizr-arch
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install oxidizr-arch. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ oxidizr-arch is already installed."
+fi
+
+sudo oxidizr-arch use --commit --assume-yes coreutils
+sudo oxidizr-arch use --commit --assume-yes sudo
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to set default implementations. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
 # Ensure topgrade is installed before running
 if ! command -v topgrade &>/dev/null; then
   echo "🔍 topgrade not found, installing..."
