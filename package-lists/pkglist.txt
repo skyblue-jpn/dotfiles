@@ -93,6 +93,7 @@ speech-dispatcher
 starship
 sudo-rs
 tectonic
+tk
 topgrade-git
 ttf-hackgen
 ttf-opensans

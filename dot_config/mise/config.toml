@@ -30,6 +30,7 @@ bun = true
 uvx = true
 
 [settings.python]
+compile = true
 uv_venv_auto = true
 
 [env]
