@@ -21,7 +21,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-input-support
 fcitx5-lua
-fcitx5-mozc-ut
+fcitx5-mozc-ext-neologd
 fcitx5-qt
 fd
 ffmpeg
@@ -99,6 +99,7 @@ ttf-hackgen
 ttf-opensans
 typobuster
 ufw
+unityhub
 uutils-coreutils
 uutils-diffutils
 uutils-findutils

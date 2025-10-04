@@ -1,6 +1,7 @@
 [tools]
 "cargo:tex-fmt" = "latest"
 "npm:json-sort-cli" = "latest"
+"npm:openupm-cli" = "latest"
 "pipx:radian" = "latest"
 "pipx:ty" = "latest"
 biome = "latest"

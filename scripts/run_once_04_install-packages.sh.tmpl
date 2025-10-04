@@ -6,6 +6,7 @@ set -eufo pipefail
 # Install rustup if not already installed
 if ! command -v rustup &>/dev/null; then
   echo "🔍 rustup not found, installing..."
+  paru -R --noconfirm rust
   paru -S --noconfirm --needed rustup
   if [ $? -ne 0 ]; then
     echo "❌ Failed to install rustup. Exiting script, chezmoi apply will continue."
