@@ -1,0 +1,3 @@
+/home/celeste/Downloads/test004b.blend
+/home/celeste/Downloads/Untitled.blend
+/home/celeste/.local/share/chezmoi/dot_config/blender/4.5/config/userpref.blend
