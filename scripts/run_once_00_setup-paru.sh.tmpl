@@ -5,9 +5,16 @@ set -euo pipefail
 
 # Update mirror list to use the fastest mirrors
 echo "Updating mirror list..."
-sudo pacman -Sy --noconfirm --needed reflector
-# sudo reflector
-sudo systemctl enable reflector.service
+sudo pacman -Sy --noconfirm --needed rate-mirrors
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to update mirror list. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to generate new mirror list. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
 
 # Update the package database and upgrade all packages
 echo "Updating package database and upgrading packages..."

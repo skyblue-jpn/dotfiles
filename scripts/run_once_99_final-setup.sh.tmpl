@@ -52,8 +52,8 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-# Setting uutils-coreutils and sudo-rs as default implementations
-echo "🔧 Setting uutils-coreutils and sudo-rs as default implementations..."
+# Setting uutils-coreutils, uutils-findutils and sudo-rs as default implementations
+echo "🔧 Setting uutils-coreutils, uutils-findutils and sudo-rs as default implementations..."
 # Ensure oxidizr-arch is installed before using
 if ! command -v oxidizr-arch &>/dev/null; then
   echo "🔍 oxidizr-arch not found, installing..."
@@ -67,6 +67,7 @@ else
 fi
 
 sudo oxidizr-arch use --commit --assume-yes coreutils
+sudo oxidizr-arch use --commit --assume-yes findutils
 sudo oxidizr-arch use --commit --assume-yes sudo
 if [ $? -ne 0 ]; then
   echo "❌ Failed to set default implementations. Exiting script, chezmoi apply will continue."

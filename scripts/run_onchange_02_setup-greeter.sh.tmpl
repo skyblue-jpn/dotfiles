@@ -1,0 +1,44 @@
+#!/bin/bash
+# This script sets up the greeter for the user
+# This script will run when ANY of the watched files changes,
+# because their hashes are embedded below.
+
+{{- $files := list
+"dot_greetd/config.toml"
+"dot_nwg-hello/nwg-hello.json"
+"dot_nwg-hello/nwg-hello.css"
+}}
+# ---- watched file hashes (do not edit manually) ----
+{{- range $f := $files }}
+# {{$f}} sha256: {{ include $f | sha256sum }}
+{{- end }}
+# ----------------------------------------------------
+
+set -euo pipefail
+IFS=$'\n\t'
+# Installing greetd and nwg-hello if not already installed
+if ! pacman -Q greetd nwg-hello &>/dev/null; then
+  echo "🔍 greetd or nwg-hello not found, installing..."
+  paru -S --noconfirm --needed greetd nwg-hello
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install greetd or nwg-hello. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ greetd and nwg-hello are already installed."
+fi
+
+# Configuring greetd to use nwg-hello
+echo "🔧 Configuring greetd to use nwg-hello..."
+sudo install -Dm644 ~/.local/share/chezmoi/dot_greetd/config.toml /etc/greetd/config.toml
+sudo install -Dm644 ~/.local/share/chezmoi/dot_nwg-hello/nwg-hello.json /etc/nwg-hello/nwg-hello.json
+sudo install -Dm644 ~/.local/share/chezmoi/dot_nwg-hello/nwg-hello.css /etc/nwg-hello/nwg-hello.css
+
+sudo install -Dm644 ~/.local/share/chezmoi/dot_nwg-hello/bkg3_bkg5.png /etc/nwg-hello/bkg3_bkg5.png
+
+# Enable and start greetd service
+echo "🚀 Enabling and starting greetd service..."
+sudo systemctl enable greetd.service
+echo "✅ greetd has been configured and started successfully."
+
+# End of script

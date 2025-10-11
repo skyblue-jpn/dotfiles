@@ -91,6 +91,7 @@ ripgrep
 shfmt
 sl
 speech-dispatcher
+spoofdpi
 starship
 sudo-rs
 tectonic
@@ -103,7 +104,7 @@ ufw
 unityhub
 uutils-coreutils
 uutils-diffutils
-uutils-findutils
+uutils-findutils-bin
 uutils-util-linux-git
 ventoy-bin
 vim

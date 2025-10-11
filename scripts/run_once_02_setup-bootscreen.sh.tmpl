@@ -1,63 +1,18 @@
 #!/bin/bash
-# This script sets up the boot screen with SDDM, Plymouth, and GRUB themes.
+# This script sets up the boot screen with Plymouth and GRUB themes.
 
 set -eufo pipefail
 
-# Installing SDDM and Plymouth if not already installed
-if ! pacman -Q sddm plymouth &>/dev/null; then
-  echo "🔍 SDDM or Plymouth not found, installing..."
-  paru -S --noconfirm --needed sddm plymouth
+# Installing Plymouth if not already installed
+if ! pacman -Q plymouth &>/dev/null; then
+  echo "🔍 Plymouth not found, installing..."
+  paru -S --noconfirm --needed plymouth
   if [ $? -ne 0 ]; then
-    echo "❌ Failed to install SDDM or Plymouth. Exiting script, chezmoi apply will continue."
+    echo "❌ Failed to install Plymouth. Exiting script, chezmoi apply will continue."
     exit 0
   fi
 else
-  echo "✅ SDDM and Plymouth are already installed."
-fi
-
-# Installing SDDM themes
-# Download catppuccin-sddm-theme-macchiato from AUR if not already installed
-if ! pacman -Q catppuccin-sddm-theme-macchiato &>/dev/null; then
-  echo "🔍 catppuccin-macchiato theme not found, installing..."
-  paru -S --noconfirm --needed catppuccin-sddm-theme-macchiato
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to install catppuccin-macchiato theme. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ catppuccin-macchiato theme is already installed."
-fi
-# Set SDDM theme to catppuccin-macchiato
-# Check if the theme is already set
-if ! grep -q "Current=catppuccin-macchiato-mauve" /etc/sddm.conf; then
-  echo "🎨 Setting SDDM theme to catppuccin-macchiato..."
-  # Add or update the Theme line in the [Theme] section
-  # If the [Theme] section does not exist, create it
-  # If the Current line exists, update it; otherwise, add it
-  if ! grep -q "^\[Theme\]" /etc/sddm.conf; then
-    echo "[Theme]" | sudo tee -a /etc/sddm.conf
-  fi
-  # Remove existing Current line if it exists
-  sudo sed -i '/^Current=/d' /etc/sddm.conf
-  # Add the new Current line
-  sudo sed -i '/^\[Theme\]/a Current=catppuccin-macchiato-mauve' /etc/sddm.conf
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to set SDDM theme. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ SDDM theme is already set to catppuccin-macchiato."
-fi
-# Enable SDDM to start on boot
-if ! systemctl is-enabled sddm &>/dev/null; then
-  echo "🚀 Enabling SDDM to start on boot..."
-  sudo systemctl enable sddm
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to enable SDDM. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ SDDM is already enabled to start on boot."
+  echo "✅ Plymouth is already installed."
 fi
 
 # Installing Plymouth themes
