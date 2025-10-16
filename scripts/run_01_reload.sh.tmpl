@@ -1,0 +1,12 @@
+#!/bin/bash
+# Reload settings and apply dotfiles
+set -euo pipefail
+
+# Reload swaync-client if running in a sway or hyprland session
+if [ "$XDG_SESSION_TYPE" = "wayland" ] && (pgrep -x sway >/dev/null || pgrep -x hyprland >/dev/null); then
+  if pgrep -x swaync-client >/dev/null; then
+    swaync-client --reload-config --reload-css
+  fi
+fi
+
+# End of script

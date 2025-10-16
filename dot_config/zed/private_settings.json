@@ -12,7 +12,7 @@
     "enabled": true,
     "stream_edits": true
   },
-  "agent_font_size": null,
+  "agent_ui_font_size": null,
   "always_treat_brackets_as_autoclosed": false,
   "auto_indent": true,
   "auto_indent_on_paste": true,
@@ -33,9 +33,7 @@
     "nix": true,
     "r": true,
     "rainbow-csv": true,
-    "ruff": true,
     "tombi": true,
-    "ty": true,
     "xml": true,
     "yaml": true
   },
@@ -95,50 +93,66 @@
   "inline_code_actions": true,
   "languages": {
     "CSS": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      }
+      ]
     },
     "JSON": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      },
+      ],
       "tab_size": 2
     },
     "JSONC": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      },
+      ],
       "tab_size": 2
     },
     "JavaScript": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      }
+      ]
     },
     "LaTeX": {
       "formatter": {
@@ -156,10 +170,10 @@
       "format_on_save": "on",
       "formatter": [
         {
-          "code_actions": {
-            "source.fixAll.ruff": true,
-            "source.organizeImports.ruff": true
-          }
+          "code_action": "source.fixAll.ruff"
+        },
+        {
+          "code_action": "source.organizeImports.ruff"
         },
         {
           "language_server": {
@@ -183,26 +197,34 @@
       }
     },
     "TSX": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      }
+      ]
     },
     "TypeScript": {
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-      "formatter": {
-        "language_server": {
-          "name": "biome"
+      "formatter": [
+        {
+          "code_action": "source.fixAll.biome"
+        },
+        {
+          "code_action": "source.organizeImports.biome"
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
         }
-      }
+      ]
     },
     "YAML": {
       "formatter": "language_server"

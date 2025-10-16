@@ -66,5 +66,11 @@
       "text": "Notifications"
     }
   },
-  "widgets": ["buttons-grid", "mpris", "dnd", "title", "notifications"]
+  "widgets": [
+    "buttons-grid",
+    "mpris",
+    "dnd",
+    "title",
+    "notifications"
+  ]
 }

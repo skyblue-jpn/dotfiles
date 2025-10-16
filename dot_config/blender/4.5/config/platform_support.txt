@@ -1,1 +1,2 @@
 {AMD/AMD Radeon Graphics (radeonsi, renoir, ACO, DRM 3.64, 6.17.0-3-cachyos)/4.6 (Core Profile) Mesa 25.2.3-cachyos1.3}=SUPPORTED
+{AMD/AMD Radeon Graphics (radeonsi, renoir, ACO, DRM 3.64, 6.17.1-2-cachyos)/4.6 (Core Profile) Mesa 25.2.4-cachyos1.2}=SUPPORTED

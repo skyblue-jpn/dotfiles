@@ -1,32 +1,32 @@
 {
-  "session_dirs": ["/usr/share/wayland-sessions", "/usr/share/xsessions"],
-  "custom_sessions": [
-    {
-      "name": "Shell",
-      "exec": "/usr/bin/fish"
-    }
-  ],
-  "monitor_nums": [],
-  "form_on_monitors": [],
-  "delay_secs": 1,
-  "cmd-sleep": "systemctl suspend",
-  "cmd-reboot": "systemctl reboot",
-  "cmd-poweroff": "systemctl poweroff",
-  "gtk-theme": "Catppuccin-Mauve-Dark-Compact-Macchiato",
-  "gtk-icon-theme": "Colloid-Purple-Catppuccin-Dark",
-  "gtk-cursor-theme": "Colloid-dark-cursors",
-  "prefer-dark-theme": true,
-  "template-name": "",
-  "time-format": "%H:%M:%S",
-  "date-format": "%A, %d. %B",
-  "layer": "overlay",
-  "keyboard-mode": "exclusive",
-  "lang": "",
+  "avatar-border-color": "#eee",
+  "avatar-border-width": 1,
+  "avatar-circle": false,
+  "avatar-corner-radius": 15,
   "avatar-show": false,
   "avatar-size": 100,
-  "avatar-border-width": 1,
-  "avatar-border-color": "#eee",
-  "avatar-corner-radius": 15,
-  "avatar-circle": false,
-  "env-vars": []
+  "cmd-poweroff": "systemctl poweroff",
+  "cmd-reboot": "systemctl reboot",
+  "cmd-sleep": "systemctl suspend",
+  "custom_sessions": [
+    {
+      "exec": "/usr/bin/fish",
+      "name": "Shell"
+    }
+  ],
+  "date-format": "%A, %d. %B",
+  "delay_secs": 1,
+  "env-vars": [],
+  "form_on_monitors": [],
+  "gtk-cursor-theme": "Colloid-dark-cursors",
+  "gtk-icon-theme": "Colloid-Purple-Catppuccin-Dark",
+  "gtk-theme": "Catppuccin-Mauve-Dark-Compact-Macchiato",
+  "keyboard-mode": "exclusive",
+  "lang": "",
+  "layer": "overlay",
+  "monitor_nums": [],
+  "prefer-dark-theme": true,
+  "session_dirs": ["/usr/share/wayland-sessions", "/usr/share/xsessions"],
+  "template-name": "",
+  "time-format": "%H:%M:%S"
 }
