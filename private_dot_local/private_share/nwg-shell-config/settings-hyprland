@@ -10,7 +10,7 @@
   "terminal": "ghostty",
   "file-manager": "nemo",
   "editor": "zeditor",
-  "browser": "floorp",
+  "browser": "zen-browser",
   "panel-preset": "custom-hyprland",
   "panel-custom": "",
   "show-on-startup": false,

@@ -1,4 +1,4 @@
-export BROWSER="floorp"
+export BROWSER="zen-browser"
 export EDITOR="helix"
 export GTK_IM_MODULE="fcitx"
 export INPUT_METHOD="fcitx"

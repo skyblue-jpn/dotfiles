@@ -27,7 +27,7 @@ fd
 ffmpeg
 fish
 fisher
-floorp-bin
+#floorp-bin
 font-manager
 fzf
 gcc-fortran
@@ -117,5 +117,6 @@ xviewer
 yazi-git
 zathura-pdf-mupdf
 zed-preview-bin
+zen-browser-bin
 zoom
 zoxide
