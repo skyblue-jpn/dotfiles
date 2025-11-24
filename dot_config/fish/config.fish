@@ -3,8 +3,8 @@ mise activate fish | source
 zoxide init fish | source
 fzf --fish | source
 pay-respects fish --alias | source
-batman --export-env | source
-eval (batpipe)
+# batman --export-env | source
+# eval (batpipe)
 
 alias cd "z"
 alias ci "zi"

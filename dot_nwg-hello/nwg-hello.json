@@ -26,7 +26,10 @@
   "layer": "overlay",
   "monitor_nums": [],
   "prefer-dark-theme": true,
-  "session_dirs": ["/usr/share/wayland-sessions", "/usr/share/xsessions"],
+  "session_dirs": [
+    "/usr/share/wayland-sessions",
+    "/usr/share/xsessions"
+  ],
   "template-name": "",
   "time-format": "%H:%M:%S"
 }

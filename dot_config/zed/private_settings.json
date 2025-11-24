@@ -54,6 +54,9 @@
   "cursor_blink": true,
   "cursor_shape": "bar",
   "disable_ai": false,
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "enable_language_server": true,
   "ensure_final_newline_on_save": true,
   "extend_comment_on_newline": true,
@@ -157,14 +160,18 @@
     "LaTeX": {
       "formatter": {
         "external": {
-          "arguments": ["--stdin"],
+          "arguments": [
+            "--stdin"
+          ],
           "command": "tex-fmt"
         }
       }
     },
     "Markdown": {
       "formatter": "prettier",
-      "language_servers": ["markdown-oxide"]
+      "language_servers": [
+        "markdown-oxide"
+      ]
     },
     "Python": {
       "format_on_save": "on",
@@ -181,17 +188,28 @@
           }
         }
       ],
-      "language_servers": ["ruff", "ty"]
+      "language_servers": [
+        "ruff",
+        "ty"
+      ]
     },
     "R": {
-      "language_servers": ["air", "r_language_server"],
+      "language_servers": [
+        "air",
+        "r_language_server"
+      ],
       "use_on_type_format": false
     },
     "Shell Script": {
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+          "arguments": [
+            "--filename",
+            "{buffer_path}",
+            "--indent",
+            "2"
+          ],
           "command": "shfmt"
         }
       }
@@ -238,12 +256,21 @@
         "require_config_file": true
       }
     },
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "ja-JP"
+        }
+      }
+    },
     "ruff": {
       "initialization_options": {
         "settings": {
           "lineLength": 80,
           "lint": {
-            "extendSelect": ["I"]
+            "extendSelect": [
+              "I"
+            ]
           }
         }
       }
@@ -252,18 +279,7 @@
       "settings": {
         "texlab": {
           "build": {
-            "args": [
-              "-X",
-              "compile",
-              "%f",
-              "--untrusted",
-              "--synctex",
-              "--keep-logs",
-              "--keep-intermediates"
-            ],
-            "executable": "tectonic",
-            "forwardSearchAfter": true,
-            "onSave": true
+            "onSave": false
           }
         }
       }
@@ -271,7 +287,9 @@
     "ty": {
       "settings": {
         "binary": {
-          "arguments": ["server"],
+          "arguments": [
+            "server"
+          ],
           "path": "ty"
         },
         "ty": {
@@ -288,7 +306,9 @@
           },
           "keyOrdering": true,
           "schemas": {
-            "http://json.schemastore.org/composer": ["/*"]
+            "http://json.schemastore.org/composer": [
+              "/*"
+            ]
           }
         }
       }
@@ -348,7 +368,9 @@
     "sticky_scroll": true
   },
   "remove_trailing_whitespace_on_save": true,
-  "resize_all_panels_in_dock": ["left"],
+  "resize_all_panels_in_dock": [
+    "left"
+  ],
   "restore_on_file_reopen": true,
   "restore_on_startup": "last_session",
   "rounded_selection": true,
@@ -386,7 +408,12 @@
     "detect_venv": {
       "on": {
         "activate_script": "default",
-        "directories": [".env", "env", ".venv", "venv"]
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ]
       }
     },
     "dock": "bottom",

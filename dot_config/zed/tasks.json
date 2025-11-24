@@ -1,0 +1,26 @@
+[
+  {
+    "args": ["-e", "lualatex", "--synctex=1", "$ZED_FILE"],
+    "command": "cluttex",
+    "cwd": "$ZED_DIRNAME",
+    "label": "ClutTeX (LuaLaTeX)",
+    "tags": ["latex-build"],
+    "use_new_terminal": true
+  },
+  {
+    "args": [
+      "-X",
+      "compile",
+      "$ZED_FILENAME",
+      "--untrusted",
+      "--synctex",
+      "--keep-logs",
+      "--keep-intermediates"
+    ],
+    "command": "tectonic",
+    "cwd": "$ZED_DIRNAME",
+    "label": "tectonic",
+    "tags": ["latex-build"],
+    "use_new_terminal": true
+  }
+]

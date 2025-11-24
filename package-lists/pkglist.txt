@@ -27,7 +27,6 @@ fd
 ffmpeg
 fish
 fisher
-#floorp-bin
 font-manager
 fzf
 gcc-fortran
@@ -37,6 +36,7 @@ git-delta
 github-cli
 gnome-disk-utility
 gnome-online-accounts-gtk
+gopeed-bin
 gparted
 gvfs
 gvfs-afc
@@ -94,12 +94,11 @@ speech-dispatcher
 spoofdpi
 starship
 sudo-rs
-tectonic
+texlive-full
 tk
 topgrade-git
 ttf-hackgen
 ttf-opensans
-typobuster
 ufw
 unityhub
 uutils-coreutils
