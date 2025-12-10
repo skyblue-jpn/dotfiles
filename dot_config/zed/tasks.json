@@ -1,9 +1,23 @@
 [
   {
-    "args": ["-e", "lualatex", "--synctex=1", "$ZED_FILE"],
+    "args": ["--engine=lualatex", "--synctex=1", "--shell-escape", "$ZED_FILE"],
     "command": "cluttex",
     "cwd": "$ZED_DIRNAME",
     "label": "ClutTeX (LuaLaTeX)",
+    "tags": ["latex-build"],
+    "use_new_terminal": true
+  },
+  {
+    "args": [
+      "--engine=lualatex",
+      "--synctex=1",
+      "--shell-escape",
+      "--biber",
+      "$ZED_FILE"
+    ],
+    "command": "cluttex",
+    "cwd": "$ZED_DIRNAME",
+    "label": "ClutTeX (LuaLaTeX) with Biber",
     "tags": ["latex-build"],
     "use_new_terminal": true
   },
@@ -22,5 +36,13 @@
     "label": "tectonic",
     "tags": ["latex-build"],
     "use_new_terminal": true
+  },
+  {
+    "allow_concurrent_runs": true,
+    "command": "zathura \"$ZED_STEM.pdf\"",
+    "cwd": "$ZED_DIRNAME",
+    "label": "Open PDF in Zathura",
+    "tags": ["latex-build"],
+    "use_new_terminal": false
   }
 ]

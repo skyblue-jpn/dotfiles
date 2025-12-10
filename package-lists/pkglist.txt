@@ -2,6 +2,7 @@
 baobab
 bat
 bat-extras
+biber
 bitwarden
 blender
 bottles
@@ -59,6 +60,7 @@ libreoffice-fresh
 libreoffice-fresh-ja
 linux-cachyos-headers
 linux-cachyos-lts-headers
+miktex
 mise
 navi
 ncurses
@@ -94,7 +96,6 @@ speech-dispatcher
 spoofdpi
 starship
 sudo-rs
-texlive-full
 tk
 topgrade-git
 ttf-hackgen
