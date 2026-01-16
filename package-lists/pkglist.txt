@@ -26,6 +26,7 @@ fcitx5-mozc-ext-neologd
 fcitx5-qt
 fd
 ffmpeg
+fingwit
 fish
 fisher
 font-manager
@@ -101,6 +102,7 @@ tk
 topgrade-git
 ttf-hackgen
 ttf-opensans
+udiskie
 ufw
 unityhub
 uutils-coreutils

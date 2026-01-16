@@ -10,3 +10,7 @@ export QT_STYLE_OVERRIDE="kvantum"
 export TERMINAL="ghostty"
 export VISUAL="helix"
 export XMODIFIERS="@im=fcitx"
+export PROTON_ENABLE_WAYLAND=1
+export PROTON_NO_WM_DECORATION=1
+export PROTON_ENABLE_HDR=1
+export PROTON_USE_NTSYNC=1
