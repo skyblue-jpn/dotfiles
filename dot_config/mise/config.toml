@@ -10,7 +10,6 @@ cargo-binstall = "latest"
 ghq = "latest"
 java = "latest"
 node = "latest"
-r = "latest"
 shellcheck = "latest"
 shfmt = "latest"
 usage = "latest"
@@ -25,7 +24,7 @@ plugin_autoupdate_last_check_duration = "1d"
 binstall = true
 
 [settings.npm]
-bun = true
+package_manager = "bun"
 
 [settings.pipx]
 uvx = true

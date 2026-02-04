@@ -22,7 +22,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-input-support
 fcitx5-lua
-fcitx5-mozc-ext-neologd
+fcitx5-mozc-ut
 fcitx5-qt
 fd
 ffmpeg
@@ -66,7 +66,6 @@ navi
 ncurses
 nemo
 nemo-fileroller
-nemo-preview
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -87,6 +86,7 @@ prettier
 proton-cachyos-slr
 python-black
 qalculate-gtk
+r
 reflector
 resvg
 ripgrep
@@ -115,7 +115,6 @@ vlc
 waydroid
 waydroid-helper
 xdg-user-dirs-gtk
-xplayer
 xviewer
 yazi-git
 zathura-pdf-mupdf
