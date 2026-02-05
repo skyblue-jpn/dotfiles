@@ -1,4 +1,5 @@
 7zip
+appmenu-gtk-module
 baobab
 bat
 bat-extras
@@ -37,6 +38,7 @@ gimp
 git-delta
 github-cli
 gnome-disk-utility
+gnome-keyring
 gnome-online-accounts-gtk
 gopeed-bin
 gparted
@@ -57,8 +59,10 @@ jq
 kdeconnect
 kvantum
 kvantum-qt5
+libdbusmenu-glib
 libreoffice-fresh
 libreoffice-fresh-ja
+libsecret
 linux-cachyos-headers
 linux-cachyos-lts-headers
 mise
@@ -90,6 +94,7 @@ r
 reflector
 resvg
 ripgrep
+seahorse
 shfmt
 sl
 speech-dispatcher

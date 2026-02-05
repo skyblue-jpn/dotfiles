@@ -1,37 +1,30 @@
 [tools]
+"aqua:astral-sh/ty" = "latest"
+"aqua:astral-sh/uv" = "latest"
+"aqua:biomejs/biome" = "latest"
+"aqua:cargo-bins/cargo-binstall" = "latest"
+"aqua:jdx/usage" = "latest"
+"aqua:koalaman/shellcheck" = "latest"
+"aqua:mvdan/sh" = "latest"
+"aqua:x-motemen/ghq" = "latest"
 "cargo:tex-fmt" = "latest"
+"core:bun" = "latest"
+"core:java" = "latest"
+"core:node" = "latest"
 "npm:json-sort-cli" = "latest"
 "npm:openupm-cli" = "latest"
 "pipx:radian" = "latest"
-"pipx:ty" = "latest"
-biome = "latest"
-bun = "latest"
-cargo-binstall = "latest"
-ghq = "latest"
-java = "latest"
-node = "latest"
-shellcheck = "latest"
-shfmt = "latest"
-usage = "latest"
-uv = "latest"
 
 [settings]
+color_theme = "catppuccin"
+disable_default_registry = true
 experimental = true
 jobs = 10
 plugin_autoupdate_last_check_duration = "1d"
 
-[settings.cargo]
-binstall = true
-
 [settings.npm]
 package_manager = "bun"
-
-[settings.pipx]
-uvx = true
 
 [settings.python]
 compile = true
 uv_venv_auto = true
-
-[env]
-R_EXTRA_CONFIGURE_OPTIONS = "--enable-R-shlib --with-cairo"

@@ -30,3 +30,4 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=border:#6E738D,label:#CAD3F5"
 
 set sponge_purge_only_on_exit true
+fish_config theme choose "Catppuccin Macchiato"
