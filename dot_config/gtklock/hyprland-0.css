@@ -1,12 +1,12 @@
 * {
   border-radius: 0;
-  border: none;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7)
+  border: none;
 }
 
 button {
-  background: none;
   padding: 10px
+  background: none;
 }
 
 #clock-label {
@@ -14,22 +14,22 @@ button {
 }
 
 #unlock-button {
-  border: 1px solid #000;
   background-color: rgba(37, 37, 37, 0.95)
+  border: 1px solid #000;
 }
 
 #powerbar-box {
-  border: 1px solid #000;
   background-color: rgba(37, 37, 37, 0.95)
+  border: 1px solid #000;
 }
 
 #input-field {
-  border: 1px solid #000;
   background-color: rgba(37, 37, 37, 0.95)
+  border: 1px solid #000;
 }
 
 #playerctl-box {
-  border: 1px solid #000;
   margin: 20px;
   background-color: rgba(37, 37, 37, 0.8)
+  border: 1px solid #000;
 }

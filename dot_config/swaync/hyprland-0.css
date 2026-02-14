@@ -17,25 +17,25 @@
 }
 
 .notification {
-  border-radius: 3px;
-  margin: 6px 6px;
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
   padding: 0;
+  margin: 6px 6px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 .notification-content {
-  background: transparent;
   padding: 6px;
+  background: transparent;
   border-radius: 3px;
 }
 
 .close-button {
-  background: rgba(0, 0, 0, 0.7);
+  padding: 0;
   color: white;
   text-shadow: none;
-  padding: 0;
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 100%;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
 }
 .close-button:hover {
   background: rgb(30, 30, 30);
@@ -62,14 +62,14 @@
 
 /* When alternative actions are visible */
 .notification-default-action:not(:only-child) {
-  border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .notification-action {
-  border-radius: 0;
   border-top: none;
   border-right: none;
+  border-radius: 0;
 }
 
 /* add bottom border radius to eliminate clipping */
@@ -101,24 +101,24 @@
 }
 
 .body {
-  background: transparent;
   color: white;
   text-shadow: none;
+  background: transparent;
 }
 
 .top-action-title {
-  color: #eee;
   text-shadow: none;
   padding: 10px
+  color: #eee;
 }
 
 .control-center-clear-all {
   color: white;
   text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
   background: @bg;
   border: 1px solid @border-color;
-  box-shadow: none;
-  border-radius: 3px;
 }
 .control-center-clear-all:hover {
   background: @bg-hover;
@@ -126,9 +126,9 @@
 
 .control-center-dnd {
   border-radius: 3px;
+  box-shadow: none;
   background: @bg;
   border: 1px solid @border-color;
-  box-shadow: none;
 }
 
 .control-center-dnd:checked {
@@ -142,8 +142,8 @@
   background-color: rgba (20, 20, 20, 0.95);
 }
 .control-center-list {
-  background: transparent;
   padding: 6px
+  background: transparent;
 }
 
 .floating-notifications {

@@ -10,13 +10,13 @@ button {
 /* SwayTaskBar and SwayWorkspaces use custom widgets, that need this and the next name
    to highlight currently focused task / workspace. */
 #task-box {
-    padding-left: 4px;
     padding-right: 4px
+    padding-left: 4px;
 }
 #task-box-focused {
     background-color: rgba(255, 255, 255, 0.12);
-    padding-left: 4px;
     padding-right: 4px
+    padding-left: 4px;
 }
 
 
@@ -33,28 +33,28 @@ button {
 #button-custom:hover {
     border: none;
     border-radius: 3px;
-    background: #cd7ebf;
     color: #fff
+    background: #cd7ebf;
 }
 
 /* Top panel in sample config uses this name */
 #panel-top {
-    background: #030303;
     border-radius: 0;
     color: #eeeeee
+    background: #030303;
 }
 
 /* Bottom panel in sample config uses this name */
 #panel-bottom {
-    background-color: #213540;
     border-radius: 0;
     color: #eeeeee
+    background-color: #213540;
 }
 
 /* Controls window in sample config uses this name */
 #controls-window {
-    background-color: rgba(23, 53, 63, 0.95);
     color: #eeeeee
+    background-color: rgba(23, 53, 63, 0.95);
 }
 
 /* Executors usually behave better in monospace fonts */
@@ -81,27 +81,27 @@ button {
 }
 
 #dwl-tag-occupied {
+	padding-right: 3px;
+    padding-left: 3px;
 	font-family: monospace;
 	color: #eee;
     background-color: #006699;
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 #dwl-tag-free {
+	padding-right: 3px;
+    padding-left: 3px;
 	font-family: monospace;
 	color: #eee;
     background-color: rgba(32, 50, 90, 1.0);
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 #dwl-tag-urgent {
+	padding-right: 3px;
+    padding-left: 3px;
 	font-family: monospace;
 	color: #eee;
     background-color: #ee6600;
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 #dwl-tag-selected {
@@ -112,6 +112,6 @@ button {
 *:selected {
     border: none;
     border-radius: 3px;
-    background: #cd7ebf;
     color: #fff
+    background: #cd7ebf;
 }

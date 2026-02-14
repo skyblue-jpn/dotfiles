@@ -1,12 +1,12 @@
 * {
-  border: none;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7)
+  border: none;
 }
 
 button {
   border-radius: 10px;
-  background: none;
   padding: 10px
+  background: none;
 }
 
 #clock-label {
@@ -14,18 +14,18 @@ button {
 }
 
 #unlock-button {
-  border-radius: 10px;
   background: #31373A
+  border-radius: 10px;
 }
 
 #powerbar-box {
-  border-radius: 10px;
   background: #31373A
+  border-radius: 10px;
 }
 
 #input-field {
-  border-radius: 10px;
   background: #31373A
+  border-radius: 10px;
 }
 
 #playerctl-box {
