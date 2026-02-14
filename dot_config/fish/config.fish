@@ -18,6 +18,7 @@ abbr -a chcd "chezmoi cd"
 abbr -a gcl "git clone"
 abbr -a zed "zeditor"
 abbr -a r "radian"
+abbr -a bi "biome check --write"
 
 abbr -a ghr "gh api --paginate /user/repos --jq '.[].full_name' | fzf"
 abbr -a ghq-cd "cd \$(ghq root)/\$(ghq list | fzf)"
