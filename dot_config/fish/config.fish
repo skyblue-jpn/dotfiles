@@ -10,6 +10,12 @@ alias cd "z"
 alias ci "zi"
 alias cp "cp -g"
 alias mv "mv -g"
+alias oxidize "sudo oxidizr-arch use --commit --assume-yes coreutils && sudo oxidizr-arch use --commit --assume-yes findutils && sudo oxidizr-arch use --commit --assume-yes sudo && oxidizr-arch status"
+
+alias bi "biome check --write"
+alias bicp "cp ~/biome.json ."
+alias birm "rm ./biome.json"
+alias bionce "bicp && bi && birm"
 
 abbr -a aba "abbr -a"
 abbr -a chap "chezmoi apply"
@@ -18,10 +24,11 @@ abbr -a chcd "chezmoi cd"
 abbr -a gcl "git clone"
 abbr -a zed "zeditor"
 abbr -a r "radian"
-abbr -a bi "biome check --write"
 
 abbr -a ghr "gh api --paginate /user/repos --jq '.[].full_name' | fzf"
 abbr -a ghq-cd "cd \$(ghq root)/\$(ghq list | fzf)"
+
+abbr -a ox "oxidize"
 
 set -Ux FZF_DEFAULT_OPTS "\
 --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
