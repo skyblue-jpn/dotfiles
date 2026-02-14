@@ -12,7 +12,7 @@ alias cp "cp -g"
 alias mv "mv -g"
 alias oxidize "sudo oxidizr-arch use --commit --assume-yes coreutils && sudo oxidizr-arch use --commit --assume-yes findutils && sudo oxidizr-arch use --commit --assume-yes sudo && oxidizr-arch status"
 
-alias bi "biome check --write"
+alias bi "biome check --write --max-diagnostics=999"
 alias bicp "cp ~/biome.json ."
 alias birm "rm ./biome.json"
 alias bionce "bicp && bi && birm"

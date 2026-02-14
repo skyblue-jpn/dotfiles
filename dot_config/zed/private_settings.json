@@ -1,354 +1,354 @@
 {
-	"agent": {
-		"button": true,
-		"default_model": {
-			"model": "gpt-5",
-			"provider": "copilot_chat"
-		},
-		"default_profile": "ask",
-		"default_width": 640,
-		"dock": "right",
-		"enabled": true
-	},
-	"agent_ui_font_size": null,
-	"always_treat_brackets_as_autoclosed": false,
-	"auto_indent": true,
-	"auto_indent_on_paste": true,
-	"auto_install_extensions": {
-		"air": true,
-		"biome": true,
-		"catppuccin": true,
-		"catppuccin-icons": true,
-		"fish": true,
-		"git-firefly": true,
-		"graphql": true,
-		"html": true,
-		"ini": true,
-		"latex": true,
-		"log": true,
-		"ltex": true,
-		"markdown-oxide": true,
-		"markdownlint": true,
-		"nix": true,
-		"r": true,
-		"rainbow-csv": true,
-		"tombi": true,
-		"xml": true,
-		"yaml": true
-	},
-	"auto_update": false,
-	"base_keymap": "VSCode",
-	"bottom_dock_layout": "contained",
-	"buffer_font_family": "HackGen Console NF",
-	"buffer_font_size": 14,
-	"buffer_line_height": "comfortable",
-	"close_on_file_delete": false,
-	"collaboration_panel": {
-		"button": true,
-		"default_width": 240,
-		"dock": "left"
-	},
-	"confirm_quit": false,
-	"current_line_highlight": "all",
-	"cursor_blink": true,
-	"cursor_shape": "bar",
-	"disable_ai": false,
-	"edit_predictions": {
-		"mode": "subtle",
-		"provider": "copilot"
-	},
-	"enable_language_server": true,
-	"ensure_final_newline_on_save": true,
-	"extend_comment_on_newline": true,
-	"file_scan_exclusions": [],
-	"format_on_save": "on",
-	"formatter": "auto",
-	"git_panel": {
-		"button": true,
-		"collapse_untracked_diff": false,
-		"default_width": 240,
-		"dock": "left",
-		"fallback_branch_name": "main",
-		"scrollbar": {
-			"show": "system"
-		},
-		"sort_by_path": false,
-		"status_style": "icon"
-	},
-	"hard_tabs": false,
-	"hide_mouse": "on_typing_and_movement",
-	"hover_popover_delay": 300,
-	"hover_popover_enabled": true,
-	"icon_theme": "Catppuccin Macchiato",
-	"image_viewer": {
-		"unit": "binary"
-	},
-	"indent_guides": {
-		"active_line_width": 1,
-		"background_coloring": "indent_aware",
-		"coloring": "fixed",
-		"enabled": true,
-		"line_width": 1
-	},
-	"inline_code_actions": true,
-	"languages": {
-		"CSS": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"GraphQL": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"HTML": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"JavaScript": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"JSON": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"JSONC": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"LaTeX": {
-			"formatter": {
-				"external": {
-					"arguments": ["--stdin"],
-					"command": "tex-fmt"
-				}
-			},
-			"tab_size": 2
-		},
-		"Markdown": {
-			"formatter": "prettier",
-			"language_servers": ["markdown-oxide"]
-		},
-		"Python": {
-			"code_actions_on_format": {
-				"source.fixAll.ruff": true,
-				"source.organizeImports.ruff": true
-			},
-			"language_servers": ["ty", "!basedpyright", "..."]
-		},
-		"R": {
-			"language_servers": ["air", "r_language_server"],
-			"use_on_type_format": false
-		},
-		"Shell Script": {
-			"format_on_save": "on",
-			"formatter": {
-				"external": {
-					"arguments": ["--filename", "{buffer_path}", "--indent", "2"],
-					"command": "shfmt"
-				}
-			}
-		},
-		"TSX": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"TypeScript": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true
-			},
-			"formatter": { "language_server": { "name": "biome" } }
-		},
-		"YAML": {
-			"formatter": "language_server"
-		}
-	},
-	"linked_edits": true,
-	"lsp": {
-		"biome": {
-			"binary": {
-				"arguments": ["lsp-proxy"],
-				"path": "biome"
-			},
-			"settings": {
-				"config_path": "~/biome.json",
-				"require_config_file": true
-			}
-		},
-		"ltex": {
-			"settings": {
-				"ltex": {
-					"language": "ja-JP"
-				}
-			}
-		},
-		"ruff": {
-			"initialization_options": {
-				"settings": {
-					"lineLength": 80,
-					"lint": {
-						"extendSelect": ["I"]
-					}
-				}
-			}
-		},
-		"texlab": {
-			"settings": {
-				"texlab": {
-					"build": {
-						"onSave": false
-					}
-				}
-			}
-		},
-		"yaml-language-server": {
-			"settings": {
-				"yaml": {
-					"format": {
-						"enable": true,
-						"singleQuote": false
-					},
-					"keyOrdering": true,
-					"schemas": {
-						"http://json.schemastore.org/composer": ["/*"]
-					}
-				}
-			}
-		}
-	},
-	"lsp_document_colors": "inlay",
-	"message_editor": {
-		"auto_replace_emoji_shortcode": true
-	},
-	"minimap": {
-		"show": "never"
-	},
-	"notification_panel": {
-		"button": true,
-		"default_width": 380,
-		"dock": "right"
-	},
-	"on_last_window_closed": "platform_default",
-	"outline_panel": {
-		"auto_fold_dirs": true,
-		"auto_reveal_entries": true,
-		"button": true,
-		"default_width": 240,
-		"dock": "left",
-		"expand_outlines_with_depth": 100,
-		"file_icons": true,
-		"folder_icons": true,
-		"git_status": true,
-		"indent_guides": {
-			"show": "always"
-		},
-		"indent_size": 20,
-		"scrollbar": {
-			"show": "system"
-		}
-	},
-	"project_panel": {
-		"auto_fold_dirs": false,
-		"auto_reveal_entries": true,
-		"button": true,
-		"default_width": 240,
-		"dock": "left",
-		"drag_and_drop": true,
-		"entry_spacing": "comfortable",
-		"file_icons": true,
-		"folder_icons": true,
-		"git_status": true,
-		"hide_root": false,
-		"indent_guides": {
-			"show": "always"
-		},
-		"indent_size": 20,
-		"scrollbar": {
-			"show": "system"
-		},
-		"show_diagnostics": "all",
-		"sticky_scroll": true
-	},
-	"remove_trailing_whitespace_on_save": true,
-	"resize_all_panels_in_dock": ["left"],
-	"restore_on_file_reopen": true,
-	"restore_on_startup": "last_session",
-	"rounded_selection": true,
-	"scrollbar": {
-		"axes": {
-			"horizontal": true,
-			"vertical": true
-		},
-		"cursors": true,
-		"diagnostics": "all",
-		"git_diff": true,
-		"search_results": true,
-		"selected_symbol": true,
-		"selected_text": true,
-		"show": "system"
-	},
-	"selection_highlight": true,
-	"show_call_status_icon": true,
-	"show_completion_documentation": true,
-	"show_completions_on_input": true,
-	"show_edit_predictions": true,
-	"show_whitespaces": "all",
-	"snippet_sort_order": "inline",
-	"soft_wrap": "editor_width",
-	"status_bar": {
-		"active_language_button": true,
-		"cursor_position_button": true
-	},
-	"tab_size": 4,
-	"terminal": {
-		"blinking": "on",
-		"button": true,
-		"cursor_shape": "bar",
-		"default_height": 320,
-		"detect_venv": {
-			"on": {
-				"activate_script": "default",
-				"directories": [".env", "env", ".venv", "venv"]
-			}
-		},
-		"dock": "bottom",
-		"font_family": "HackGen Console NF",
-		"font_size": 14,
-		"font_weight": 400,
-		"line_height": "standard",
-		"max_scroll_history_lines": 10000,
-		"scrollbar": {
-			"show": "system"
-		},
-		"shell": "system",
-		"working_directory": "current_project_directory"
-	},
-	"theme": {
-		"dark": "Catppuccin Macchiato",
-		"light": "Catppuccin Latte",
-		"mode": "dark"
-	},
-	"ui_font_family": "Noto Sans CJK JP",
-	"ui_font_size": 15,
-	"use_auto_surround": true,
-	"use_autoclose": true,
-	"use_on_type_format": true,
-	"use_system_path_prompts": true,
-	"use_system_prompts": true,
-	"vim_mode": false,
-	"when_closing_with_no_tabs": "platform_default"
+  "agent": {
+    "button": true,
+    "default_model": {
+      "model": "gpt-5.2-codex",
+      "provider": "copilot_chat"
+    },
+    "default_profile": "ask",
+    "default_width": 640,
+    "dock": "right",
+    "enabled": true
+  },
+  "agent_ui_font_size": null,
+  "always_treat_brackets_as_autoclosed": false,
+  "auto_indent": true,
+  "auto_indent_on_paste": true,
+  "auto_install_extensions": {
+    "air": true,
+    "biome": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "fish": true,
+    "git-firefly": true,
+    "graphql": true,
+    "html": true,
+    "ini": true,
+    "latex": true,
+    "log": true,
+    "ltex": true,
+    "markdown-oxide": true,
+    "markdownlint": true,
+    "nix": true,
+    "r": true,
+    "rainbow-csv": true,
+    "tombi": true,
+    "xml": true,
+    "yaml": true
+  },
+  "auto_update": false,
+  "base_keymap": "VSCode",
+  "bottom_dock_layout": "contained",
+  "buffer_font_family": "HackGen Console NF",
+  "buffer_font_size": 14,
+  "buffer_line_height": "comfortable",
+  "close_on_file_delete": false,
+  "collaboration_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "left"
+  },
+  "confirm_quit": false,
+  "current_line_highlight": "all",
+  "cursor_blink": true,
+  "cursor_shape": "bar",
+  "disable_ai": false,
+  "edit_predictions": {
+    "mode": "subtle",
+    "provider": "copilot"
+  },
+  "enable_language_server": true,
+  "ensure_final_newline_on_save": true,
+  "extend_comment_on_newline": true,
+  "file_scan_exclusions": [],
+  "format_on_save": "on",
+  "formatter": "auto",
+  "git_panel": {
+    "button": true,
+    "collapse_untracked_diff": false,
+    "default_width": 240,
+    "dock": "left",
+    "fallback_branch_name": "main",
+    "scrollbar": {
+      "show": "system"
+    },
+    "sort_by_path": false,
+    "status_style": "icon"
+  },
+  "hard_tabs": false,
+  "hide_mouse": "on_typing_and_movement",
+  "hover_popover_delay": 300,
+  "hover_popover_enabled": true,
+  "icon_theme": "Catppuccin Macchiato",
+  "image_viewer": {
+    "unit": "binary"
+  },
+  "indent_guides": {
+    "active_line_width": 1,
+    "background_coloring": "indent_aware",
+    "coloring": "fixed",
+    "enabled": true,
+    "line_width": 1
+  },
+  "inline_code_actions": true,
+  "languages": {
+    "CSS": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "GraphQL": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "HTML": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JSON": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JSONC": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "LaTeX": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin"],
+          "command": "tex-fmt"
+        }
+      },
+      "tab_size": 2
+    },
+    "Markdown": {
+      "formatter": "prettier",
+      "language_servers": ["markdown-oxide"]
+    },
+    "Python": {
+      "code_actions_on_format": {
+        "source.fixAll.ruff": true,
+        "source.organizeImports.ruff": true
+      },
+      "language_servers": ["ty", "!basedpyright", "..."]
+    },
+    "R": {
+      "language_servers": ["air", "r_language_server"],
+      "use_on_type_format": false
+    },
+    "Shell Script": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+          "command": "shfmt"
+        }
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "YAML": {
+      "formatter": "language_server"
+    }
+  },
+  "linked_edits": true,
+  "lsp": {
+    "biome": {
+      "binary": {
+        "arguments": ["lsp-proxy"],
+        "path": "biome"
+      },
+      "settings": {
+        "config_path": "~/biome.json",
+        "require_config_file": true
+      }
+    },
+    "ltex": {
+      "settings": {
+        "ltex": {
+          "language": "ja-JP"
+        }
+      }
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 80,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": false
+          }
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "format": {
+            "enable": true,
+            "singleQuote": false
+          },
+          "keyOrdering": true,
+          "schemas": {
+            "http://json.schemastore.org/composer": ["/*"]
+          }
+        }
+      }
+    }
+  },
+  "lsp_document_colors": "inlay",
+  "message_editor": {
+    "auto_replace_emoji_shortcode": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "notification_panel": {
+    "button": true,
+    "default_width": 380,
+    "dock": "right"
+  },
+  "on_last_window_closed": "platform_default",
+  "outline_panel": {
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "expand_outlines_with_depth": 100,
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_guides": {
+      "show": "always"
+    },
+    "indent_size": 20,
+    "scrollbar": {
+      "show": "system"
+    }
+  },
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "auto_reveal_entries": true,
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "drag_and_drop": true,
+    "entry_spacing": "comfortable",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "hide_root": false,
+    "indent_guides": {
+      "show": "always"
+    },
+    "indent_size": 20,
+    "scrollbar": {
+      "show": "system"
+    },
+    "show_diagnostics": "all",
+    "sticky_scroll": true
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "resize_all_panels_in_dock": ["left"],
+  "restore_on_file_reopen": true,
+  "restore_on_startup": "last_session",
+  "rounded_selection": true,
+  "scrollbar": {
+    "axes": {
+      "horizontal": true,
+      "vertical": true
+    },
+    "cursors": true,
+    "diagnostics": "all",
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "selected_text": true,
+    "show": "system"
+  },
+  "selection_highlight": true,
+  "show_call_status_icon": true,
+  "show_completion_documentation": true,
+  "show_completions_on_input": true,
+  "show_edit_predictions": true,
+  "show_whitespaces": "all",
+  "snippet_sort_order": "inline",
+  "soft_wrap": "editor_width",
+  "status_bar": {
+    "active_language_button": true,
+    "cursor_position_button": true
+  },
+  "tab_size": 4,
+  "terminal": {
+    "blinking": "on",
+    "button": true,
+    "cursor_shape": "bar",
+    "default_height": 320,
+    "detect_venv": {
+      "on": {
+        "activate_script": "default",
+        "directories": [".env", "env", ".venv", "venv"]
+      }
+    },
+    "dock": "bottom",
+    "font_family": "HackGen Console NF",
+    "font_size": 14,
+    "font_weight": 400,
+    "line_height": "standard",
+    "max_scroll_history_lines": 10000,
+    "scrollbar": {
+      "show": "system"
+    },
+    "shell": "system",
+    "working_directory": "current_project_directory"
+  },
+  "theme": {
+    "dark": "Catppuccin Macchiato",
+    "light": "Catppuccin Latte",
+    "mode": "dark"
+  },
+  "ui_font_family": "Noto Sans CJK JP",
+  "ui_font_size": 15,
+  "use_auto_surround": true,
+  "use_autoclose": true,
+  "use_on_type_format": true,
+  "use_system_path_prompts": true,
+  "use_system_prompts": true,
+  "vim_mode": false,
+  "when_closing_with_no_tabs": "platform_default"
 }

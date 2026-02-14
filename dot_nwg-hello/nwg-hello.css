@@ -1,55 +1,55 @@
 window {
-	background-image: url("/etc/nwg-hello/bkg3_bkg5.png");
-	background-size: auto 100%;
+  background-image: url("/etc/nwg-hello/bkg3_bkg5.png");
+  background-size: auto 100%;
 }
 
 #form-wrapper {
-	background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 entry {
-	padding: 12px;
-	background-color: rgba(255, 255, 255, 0.1);
-	border: 1px solid #eee;
-	border-radius: 18px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #eee;
+  border-radius: 18px;
 }
 
 button {
-	padding: 12px;
-	background: rgba(255, 255, 255, 0.1) none;
-	border: 1px solid #eee;
-	border-radius: 18px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1) none;
+  border: 1px solid #eee;
+  border-radius: 18px;
 }
 
 button:hover {
-	background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 #power-button {
-	background: none;
-	border: none;
-	border-radius: 18px;
+  background: none;
+  border: none;
+  border-radius: 18px;
 }
 
 #power-button:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #power-button:active {
-	background-color: rgba(255, 255, 0, 0.2);
+  background-color: rgba(255, 255, 0, 0.2);
 }
 
 #welcome-label {
-	font-size: 48px;
+  font-size: 48px;
 }
 
 #clock-label {
-	font-family: monospace;
-	font-size: 30px;
+  font-family: monospace;
+  font-size: 30px;
 }
 
 #date-label {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 #form-label {

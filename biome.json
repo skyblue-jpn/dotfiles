@@ -34,7 +34,6 @@
     "enabled": true,
     "expand": "auto",
     "formatWithErrors": false,
-    "includes": [],
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "auto",
