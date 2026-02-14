@@ -2,7 +2,7 @@
   "agent": {
     "button": true,
     "default_model": {
-      "model": "gpt-5.2-codex",
+      "model": "gpt-5.2",
       "provider": "copilot_chat"
     },
     "default_profile": "ask",
@@ -63,6 +63,11 @@
   "file_scan_exclusions": [],
   "format_on_save": "on",
   "formatter": "auto",
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": false
+    }
+  },
   "git_panel": {
     "button": true,
     "collapse_untracked_diff": false,
@@ -96,37 +101,43 @@
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "GraphQL": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "HTML": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "JavaScript": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "JSON": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "JSONC": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "LaTeX": {
       "formatter": {
@@ -139,14 +150,21 @@
     },
     "Markdown": {
       "formatter": "prettier",
-      "language_servers": ["markdown-oxide"]
+      "language_servers": ["markdown-oxide"],
+      "tab_size": 2
     },
     "Python": {
       "code_actions_on_format": {
         "source.fixAll.ruff": true,
         "source.organizeImports.ruff": true
       },
-      "language_servers": ["ty", "!basedpyright", "..."]
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      },
+      "language_servers": ["ruff", "ty", "!basedpyright"],
+      "tab_size": 4
     },
     "R": {
       "language_servers": ["air", "r_language_server"],
@@ -159,22 +177,26 @@
           "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
           "command": "shfmt"
         }
-      }
+      },
+      "tab_size": 2
     },
     "TSX": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "TypeScript": {
       "code_actions_on_format": {
         "source.fixAll.biome": true
       },
-      "formatter": { "language_server": { "name": "biome" } }
+      "formatter": { "language_server": { "name": "biome" } },
+      "tab_size": 2
     },
     "YAML": {
-      "formatter": "language_server"
+      "formatter": "language_server",
+      "tab_size": 2
     }
   },
   "linked_edits": true,
@@ -185,7 +207,6 @@
         "path": "biome"
       },
       "settings": {
-        "config_path": "~/biome.json",
         "require_config_file": true
       }
     },
@@ -199,10 +220,28 @@
     "ruff": {
       "initialization_options": {
         "settings": {
+          "codeAction": {
+            "disableRuleComment": {
+              "enable": true
+            },
+            "fixViolation": {
+              "enable": true
+            }
+          },
+          "configurationPreference": "filesystemFirst",
+          "fixall": true,
+          "format": {
+            "backend": "internal",
+            "preview": true
+          },
           "lineLength": 80,
           "lint": {
-            "extendSelect": ["I"]
-          }
+            "enable": true,
+            "preview": true
+          },
+          "logLevel": "debug",
+          "organizeImports": true,
+          "showSyntaxErrors": true
         }
       }
     },
@@ -222,10 +261,7 @@
             "enable": true,
             "singleQuote": false
           },
-          "keyOrdering": true,
-          "schemas": {
-            "http://json.schemastore.org/composer": ["/*"]
-          }
+          "keyOrdering": true
         }
       }
     }
@@ -302,6 +338,9 @@
     "show": "system"
   },
   "selection_highlight": true,
+  "session": {
+    "trust_all_worktrees": true
+  },
   "show_call_status_icon": true,
   "show_completion_documentation": true,
   "show_completions_on_input": true,
@@ -337,16 +376,19 @@
     "shell": "system",
     "working_directory": "current_project_directory"
   },
-  "theme": {
-    "dark": "Catppuccin Macchiato",
-    "light": "Catppuccin Latte",
-    "mode": "dark"
+  "theme": "Catppuccin Macchiato",
+  "toolbar": {
+    "agent_review": true,
+    "breadcrumbs": true,
+    "code_actions": true,
+    "quick_actions": true,
+    "selections_menu": true
   },
   "ui_font_family": "Noto Sans CJK JP",
   "ui_font_size": 15,
   "use_auto_surround": true,
   "use_autoclose": true,
-  "use_on_type_format": true,
+  "use_on_type_format": false,
   "use_system_path_prompts": true,
   "use_system_prompts": true,
   "vim_mode": false,
