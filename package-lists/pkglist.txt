@@ -10,7 +10,6 @@ bottles
 bottom
 cachyos-gaming-applications
 cachyos-gaming-meta
-cava
 cbonsai
 chezmoi
 clang
@@ -57,14 +56,13 @@ imagemagick
 inkscape
 jq
 kdeconnect
-kvantum
-kvantum-qt5
 libdbusmenu-glib
 libreoffice-fresh
 libreoffice-fresh-ja
 libsecret
 linux-cachyos-headers
 linux-cachyos-lts-headers
+millennium
 mise
 navi
 ncurses

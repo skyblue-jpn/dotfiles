@@ -1,33 +1,14 @@
 #!/bin/bash
-# Install Hyprland and nwg-shell configuration
 
 set -euo pipefail
 
 # Install Hyprland and dependencies
 echo "🔄 Installing Hyprland and dependencies..."
-paru -S --noconfirm --needed hyprland uwsm hyprpolkitagent nwg-shell nwg-dock-hyprland nwg-bar xdg-desktop-portal-gtk xdg-desktop-portal-hyprland blueman batsignal
-nwg-shell-installer -r
+paru -S --noconfirm --needed adw-gtk-theme blueman cava cliphist ddcutil evolution-data-server hyprland hyprpolkitagent hyprshot noctalia-shell python3 qt6ct-kde uwsm wlsunset xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install Hyprland and dependencies. Exiting script, chezmoi apply will continue."
   exit 0
 fi
 echo "✅ Hyprland and dependencies installed successfully."
-
-# Enable user systemd services (batsignal)
-echo "🔧 Configuring user systemd services..."
-if command -v systemctl >/dev/null 2>&1; then
-  systemctl --user daemon-reload || true
-
-  if systemctl --user cat batsignal.service >/dev/null 2>&1; then
-    echo "➡️  Enabling and starting batsignal.service (user)..."
-    systemctl --user enable --now batsignal.service || true
-  else
-    echo "ℹ️  batsignal.service not found, skipping enable."
-  fi
-else
-  echo "⚠️  systemctl not available, skipping user service enable."
-fi
-
-echo "✅ User systemd services configured."
 
 # End of script

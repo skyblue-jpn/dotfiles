@@ -20,7 +20,7 @@
   "form_on_monitors": [],
   "gtk-cursor-theme": "Colloid-dark-cursors",
   "gtk-icon-theme": "Colloid-Purple-Catppuccin-Dark",
-  "gtk-theme": "Catppuccin-Mauve-Dark-Compact-Macchiato",
+  "gtk-theme": "adw-gtk3",
   "keyboard-mode": "exclusive",
   "lang": "",
   "layer": "overlay",

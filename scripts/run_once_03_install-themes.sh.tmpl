@@ -4,33 +4,33 @@
 set -euo pipefail
 
 # Prerequisite: gtk-engine-murrine
-if ! pacman -Q gtk-engine-murrine &>/dev/null; then
-  echo "🔍 gtk-engine-murrine not found, installing..."
-  paru -S --noconfirm --needed gtk-engine-murrine
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to install gtk-engine-murrine. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "✅ gtk-engine-murrine is already installed."
-fi
+#if ! pacman -Q gtk-engine-murrine &>/dev/null; then
+#  echo "🔍 gtk-engine-murrine not found, installing..."
+#  paru -S --noconfirm --needed gtk-engine-murrine
+#  if [ $? -ne 0 ]; then
+#    echo "❌ Failed to install gtk-engine-murrine. Exiting script, chezmoi apply will continue."
+#    exit 0
+#  fi
+#else
+#  echo "✅ gtk-engine-murrine is already installed."
+#fi
 
 # Setting up GTK themes
-echo "🎨 Cloning Catppuccin-GTK-Theme..."
-git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to clone Catppuccin-GTK-Theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-cd ./Catppuccin-GTK-Theme/themes
-echo "🛠️ Installing Catppuccin GTK theme..."
-./install.sh --tweaks macchiato macos outline float black -t mauve -l -s compact
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to install Catppuccin GTK theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-cd ../..
-rm -rf Catppuccin-GTK-Theme
+#echo "🎨 Cloning Catppuccin-GTK-Theme..."
+#git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git
+#if [ $? -ne 0 ]; then
+#  echo "❌ Failed to clone Catppuccin-GTK-Theme. Exiting script, chezmoi apply will continue."
+#  exit 0
+#fi
+#cd ./Catppuccin-GTK-Theme/themes
+#echo "🛠️ Installing Catppuccin GTK theme..."
+#./install.sh --tweaks macchiato macos outline float black -t mauve -l -s compact
+#if [ $? -ne 0 ]; then
+#  echo "❌ Failed to install Catppuccin GTK theme. Exiting script, chezmoi apply will continue."
+#  exit 0
+#fi
+#cd ../..
+#rm -rf Catppuccin-GTK-Theme
 
 # Setting up icon themes and cursors
 echo "🎨 Cloning Colloid-icon-theme..."
@@ -57,16 +57,16 @@ cd ../..
 rm -rf Colloid-icon-theme
 
 # Coping themes to root-owned directories if necessary
-if [ -d "/usr/share/themes" ] && [ -d "/usr/share/icons" ]; then
-  echo "🔧 Copying themes and icons to /usr/share/..."
-  sudo cp -rf ~/.themes/* /usr/share/themes/
-  sudo cp -rf ~/.local/share/icons/* /usr/share/icons/
-  if [ $? -ne 0 ]; then
-    echo "❌ Failed to copy themes or icons to /usr/share/. Exiting script, chezmoi apply will continue."
-    exit 0
-  fi
-else
-  echo "⚠️ /usr/share/themes or /usr/share/icons does not exist. Skipping copy step."
-fi
+#if [ -d "/usr/share/themes" ] && [ -d "/usr/share/icons" ]; then
+#  echo "🔧 Copying themes and icons to /usr/share/..."
+#  sudo cp -rf ~/.themes/* /usr/share/themes/
+#  sudo cp -rf ~/.local/share/icons/* /usr/share/icons/
+#  if [ $? -ne 0 ]; then
+#    echo "❌ Failed to copy themes or icons to /usr/share/. Exiting script, chezmoi apply will continue."
+#    exit 0
+#  fi
+#else
+#  echo "⚠️ /usr/share/themes or /usr/share/icons does not exist. Skipping copy step."
+#fi
 
 # End of script
