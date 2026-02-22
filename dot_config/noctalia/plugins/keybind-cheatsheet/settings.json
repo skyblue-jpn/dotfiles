@@ -1,0 +1,453 @@
+{
+  "cheatsheetData": [
+    {
+      "title": "CHEATSHEET",
+      "binds": [
+        {
+          "keys": "Super + F1",
+          "desc": "Toggle Keybind Cheatsheet"
+        }
+      ]
+    },
+    {
+      "title": "SYSTEM",
+      "binds": [
+        {
+          "keys": "Super + Shift + R",
+          "desc": "Reload Hyprland"
+        },
+        {
+          "keys": "Super + Shift + E",
+          "desc": "Exit Hyprland"
+        },
+        {
+          "keys": "Ctrl + Alt + L",
+          "desc": "Lock Screen"
+        },
+        {
+          "keys": "Shift + Ctrl + Alt + L",
+          "desc": "Lock Screen and Suspend"
+        }
+      ]
+    },
+    {
+      "title": "APPLICATIONS",
+      "binds": [
+        {
+          "keys": "Super + D",
+          "desc": "Open Application Launcher"
+        },
+        {
+          "keys": "Super + RETURN",
+          "desc": "Open Terminal"
+        },
+        {
+          "keys": "Super + T",
+          "desc": "Open Terminal (Alternative)"
+        },
+        {
+          "keys": "Super + B",
+          "desc": "Open Web Browser"
+        },
+        {
+          "keys": "Super + E",
+          "desc": "Open File Manager"
+        },
+        {
+          "keys": "Super + C",
+          "desc": "Open Text Editor"
+        },
+        {
+          "keys": "Super + V",
+          "desc": "Open Clipboard History"
+        },
+        {
+          "keys": "Super + S",
+          "desc": "Open Settings"
+        }
+      ]
+    },
+    {
+      "title": "WINDOW MANAGEMENT",
+      "binds": [
+        {
+          "keys": "Super + Q",
+          "desc": "Close Window"
+        },
+        {
+          "keys": "Super + F",
+          "desc": "Toggle Fullscreen"
+        },
+        {
+          "keys": "Super + Shift + F",
+          "desc": "Toggle Floating"
+        },
+        {
+          "keys": "Super + I",
+          "desc": "Toggle Pin Window"
+        }
+      ]
+    },
+    {
+      "title": "WINDOW FOCUS",
+      "binds": [
+        {
+          "keys": "Super + LEFT",
+          "desc": "Move Focus Left"
+        },
+        {
+          "keys": "Super + RIGHT",
+          "desc": "Move Focus Right"
+        },
+        {
+          "keys": "Super + UP",
+          "desc": "Move Focus Up"
+        },
+        {
+          "keys": "Super + DOWN",
+          "desc": "Move Focus Down"
+        },
+        {
+          "keys": "Super + H",
+          "desc": "Move Focus Left (Alternative)"
+        },
+        {
+          "keys": "Super + L",
+          "desc": "Move Focus Right (Alternative)"
+        },
+        {
+          "keys": "Super + K",
+          "desc": "Move Focus Up (Alternative)"
+        },
+        {
+          "keys": "Super + J",
+          "desc": "Move Focus Down (Alternative)"
+        }
+      ]
+    },
+    {
+      "title": "WORKSPACES",
+      "binds": [
+        {
+          "keys": "Super + 1",
+          "desc": "Switch to Workspace 1"
+        },
+        {
+          "keys": "Super + 2",
+          "desc": "Switch to Workspace 2"
+        },
+        {
+          "keys": "Super + 3",
+          "desc": "Switch to Workspace 3"
+        },
+        {
+          "keys": "Super + 4",
+          "desc": "Switch to Workspace 4"
+        },
+        {
+          "keys": "Super + 5",
+          "desc": "Switch to Workspace 5"
+        },
+        {
+          "keys": "Super + 6",
+          "desc": "Switch to Workspace 6"
+        },
+        {
+          "keys": "Super + 7",
+          "desc": "Switch to Workspace 7"
+        },
+        {
+          "keys": "Super + 8",
+          "desc": "Switch to Workspace 8"
+        },
+        {
+          "keys": "Super + 9",
+          "desc": "Switch to Workspace 9"
+        },
+        {
+          "keys": "Super + 0",
+          "desc": "Switch to Workspace 10"
+        },
+        {
+          "keys": "Super + Scroll Down",
+          "desc": "Switch to Next Workspace"
+        },
+        {
+          "keys": "Super + Scroll Up",
+          "desc": "Switch to Previous Workspace"
+        }
+      ]
+    },
+    {
+      "title": "WORKSPACES (MOVE WINDOW)",
+      "binds": [
+        {
+          "keys": "Super + Shift + 1",
+          "desc": "Move Window to Workspace 1 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 2",
+          "desc": "Move Window to Workspace 2 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 3",
+          "desc": "Move Window to Workspace 3 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 4",
+          "desc": "Move Window to Workspace 4 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 5",
+          "desc": "Move Window to Workspace 5 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 6",
+          "desc": "Move Window to Workspace 6 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 7",
+          "desc": "Move Window to Workspace 7 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 8",
+          "desc": "Move Window to Workspace 8 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 9",
+          "desc": "Move Window to Workspace 9 (Silent)"
+        },
+        {
+          "keys": "Super + Shift + 0",
+          "desc": "Move Window to Workspace 10 (Silent)"
+        },
+        {
+          "keys": "Shift + Alt + 1",
+          "desc": "Move Window to Workspace 1"
+        },
+        {
+          "keys": "Shift + Alt + 2",
+          "desc": "Move Window to Workspace 2"
+        },
+        {
+          "keys": "Shift + Alt + 3",
+          "desc": "Move Window to Workspace 3"
+        },
+        {
+          "keys": "Shift + Alt + 4",
+          "desc": "Move Window to Workspace 4"
+        },
+        {
+          "keys": "Shift + Alt + 5",
+          "desc": "Move Window to Workspace 5"
+        },
+        {
+          "keys": "Shift + Alt + 6",
+          "desc": "Move Window to Workspace 6"
+        },
+        {
+          "keys": "Shift + Alt + 7",
+          "desc": "Move Window to Workspace 7"
+        },
+        {
+          "keys": "Shift + Alt + 8",
+          "desc": "Move Window to Workspace 8"
+        },
+        {
+          "keys": "Shift + Alt + 9",
+          "desc": "Move Window to Workspace 9"
+        },
+        {
+          "keys": "Shift + Alt + 0",
+          "desc": "Move Window to Workspace 10"
+        }
+      ]
+    },
+    {
+      "title": "WINDOW MOVEMENT",
+      "binds": [
+        {
+          "keys": "Super + Shift + UP",
+          "desc": "Move Window Up"
+        },
+        {
+          "keys": "Super + Shift + DOWN",
+          "desc": "Move Window Down"
+        },
+        {
+          "keys": "Super + Shift + LEFT",
+          "desc": "Move Window Left"
+        },
+        {
+          "keys": "Super + Shift + RIGHT",
+          "desc": "Move Window Right"
+        },
+        {
+          "keys": "Super + Shift + K",
+          "desc": "Move Window Up (Alternative)"
+        },
+        {
+          "keys": "Super + Shift + J",
+          "desc": "Move Window Down (Alternative)"
+        },
+        {
+          "keys": "Super + Shift + H",
+          "desc": "Move Window Left (Alternative)"
+        },
+        {
+          "keys": "Super + Shift + L",
+          "desc": "Move Window Right (Alternative)"
+        }
+      ]
+    },
+    {
+      "title": "MOUSE",
+      "binds": [
+        {
+          "keys": "Super + Left Click",
+          "desc": "Move Window (Mouse)"
+        },
+        {
+          "keys": "Super + Right Click",
+          "desc": "Resize Window (Mouse)"
+        }
+      ]
+    },
+    {
+      "title": "LAYOUT",
+      "binds": [
+        {
+          "keys": "Super + P",
+          "desc": "Toggle Layout Pseudotile"
+        },
+        {
+          "keys": "Super + Shift + P",
+          "desc": "Toggle Layout Split"
+        }
+      ]
+    },
+    {
+      "title": "RESIZE MODE",
+      "binds": [
+        {
+          "keys": "Super + R",
+          "desc": "Enter Resize Mode"
+        },
+        {
+          "keys": "RIGHT",
+          "desc": "Resize Window Width +50"
+        },
+        {
+          "keys": "LEFT",
+          "desc": "Resize Window Width -50"
+        },
+        {
+          "keys": "UP",
+          "desc": "Resize Window Height +50"
+        },
+        {
+          "keys": "DOWN",
+          "desc": "Resize Window Height -50"
+        },
+        {
+          "keys": "L",
+          "desc": "Resize Window Width +50 (Alternative)"
+        },
+        {
+          "keys": "H",
+          "desc": "Resize Window Width -50 (Alternative)"
+        },
+        {
+          "keys": "K",
+          "desc": "Resize Window Height +50 (Alternative)"
+        },
+        {
+          "keys": "J",
+          "desc": "Resize Window Height -50 (Alternative)"
+        },
+        {
+          "keys": "ESCAPE",
+          "desc": "Exit Resize Mode"
+        }
+      ]
+    },
+    {
+      "title": "AUDIO",
+      "binds": [
+        {
+          "keys": "Vol Up",
+          "desc": "Increase Volume"
+        },
+        {
+          "keys": "Vol Down",
+          "desc": "Decrease Volume"
+        },
+        {
+          "keys": "Mute",
+          "desc": "Toggle Output Mute"
+        },
+        {
+          "keys": "Mic Mute",
+          "desc": "Toggle Microphone Mute"
+        }
+      ]
+    },
+    {
+      "title": "MEDIA",
+      "binds": [
+        {
+          "keys": "Play",
+          "desc": "Toggle Play/Pause"
+        },
+        {
+          "keys": "Next",
+          "desc": "Next Track"
+        },
+        {
+          "keys": "Prev",
+          "desc": "Previous Track"
+        }
+      ]
+    },
+    {
+      "title": "BACKLIGHT",
+      "binds": [
+        {
+          "keys": "Bright Up",
+          "desc": "Increase Brightness"
+        },
+        {
+          "keys": "Bright Down",
+          "desc": "Decrease Brightness"
+        }
+      ]
+    },
+    {
+      "title": "SCREENSHOTS",
+      "binds": [
+        {
+          "keys": "Super + Shift + Ctrl + PrtSc",
+          "desc": "Capture Window Screenshot"
+        },
+        {
+          "keys": "Ctrl + PrtSc",
+          "desc": "Capture Display Screenshot"
+        },
+        {
+          "keys": "Shift + Ctrl + PrtSc",
+          "desc": "Capture Area Screenshot"
+        },
+        {
+          "keys": "Super + Shift + S",
+          "desc": "Capture Area Screenshot (Alternative)"
+        }
+      ]
+    }
+  ],
+  "detectedCompositor": "hyprland",
+  "niriConfigPath": "~/.config/niri/config.kdl",
+  "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+  "modKeyVariable": "$mainMod",
+  "windowHeight": 850,
+  "windowWidth": 1500
+}

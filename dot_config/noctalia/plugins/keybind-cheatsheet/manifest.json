@@ -1,0 +1,31 @@
+{
+  "author": "blacku",
+  "dependencies": {
+    "plugins": []
+  },
+  "description": "Universal keyboard shortcuts keymap that automatically detects and displays keybindings for Hyprland or Niri compositors.",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "main": "Main.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "id": "keybind-cheatsheet",
+  "license": "MIT",
+  "metadata": {
+    "defaultSettings": {
+      "autoHeight": true,
+      "cheatsheetData": [],
+      "columnCount": 3,
+      "detectedCompositor": "",
+      "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
+      "modKeyVariable": "$mod",
+      "niriConfigPath": "~/.config/niri/config.kdl",
+      "windowHeight": 0,
+      "windowWidth": 1400
+    }
+  },
+  "minNoctaliaVersion": "3.6.0",
+  "name": "Keybind Cheatsheet",
+  "version": "3.2.2"
+}

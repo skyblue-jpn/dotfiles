@@ -1,0 +1,46 @@
+{
+  "history": {
+    "action": {
+      "started": "Rozpoczęto",
+      "stopped": "Zatrzymano"
+    },
+    "clear": "Wyczyść",
+    "empty": "Brak ostatnich dostępów",
+    "title": "Historia dostępu"
+  },
+  "menu": {
+    "settings": "Ustawienia widżetu"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Kolor ikon, gdy są aktywne.",
+      "label": "Kolor aktywnej ikony"
+    },
+    "hideInactive": {
+      "desc": "Ukryj ikony mikrofonu, kamery i ekranu, gdy są nieaktywne.",
+      "label": "Ukryj nieaktywne stany"
+    },
+    "iconSpacing": {
+      "desc": "Ustaw odstęp między ikonami.",
+      "label": "Odstępy ikon"
+    },
+    "inactiveColor": {
+      "desc": "Kolor ikon, gdy są nieaktywne.",
+      "label": "Kolor nieaktywnej ikony"
+    },
+    "removeMargins": {
+      "desc": "Usuń wszystkie zewnętrzne marginesy widżetu.",
+      "label": "Usuń marginesy"
+    }
+  },
+  "toast": {
+    "cam-on": "Kamera jest aktywna",
+    "mic-on": "Mikrofon jest aktywny",
+    "screen-on": "Udostępnianie ekranu jest aktywne"
+  },
+  "tooltip": {
+    "cam-on": "Kamera: {apps}",
+    "mic-on": "Mikrofon: {apps}",
+    "screen-on": "Udostępnianie ekranu: {apps}"
+  }
+}

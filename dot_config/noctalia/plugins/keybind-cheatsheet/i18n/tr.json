@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Kopya kağıdını aç",
+      "settings": "Eklenti ayarları",
+      "tooltip": "Kısayol Kopya Kağıdı"
+    },
+    "default-category": "Kısayol tuşları",
+    "error": {
+      "labwc-detail": "LabWC bu eklentiyle uyumlu olmayan XML yapılandırma formatı kullanıyor",
+      "labwc-not-supported": "LabWC desteklenmiyor",
+      "mango-detail": "MangoWC yapılandırma formatı bu eklentiyle uyumlu değil",
+      "mango-not-supported": "MangoWC desteklenmiyor",
+      "sway-detail": "Sway desteği gelecekteki bir güncellemede eklenebilir (Hyprland'a benzer format)",
+      "sway-not-supported": "Sway henüz desteklenmiyor",
+      "unknown-compositor": "Bilinmeyen kompozitör algılandı",
+      "unknown-detail": "Bu eklenti yalnızca Hyprland ve Niri kompozitörlerini destekler",
+      "unsupported-compositor": "Desteklenmeyen kompozitör"
+    },
+    "panel": {
+      "loading": "Yukleniyor...",
+      "title": "Tuş haritası",
+      "title-hyprland": "Hyprland tuş haritası",
+      "title-niri": "Niri tuş haritası",
+      "workspace-mouse": "ÇALIŞMA ALANLARI - FARE",
+      "workspace-moving": "ÇALIŞMA ALANLARI - TAŞIMA",
+      "workspace-switching": "ÇALIŞMA ALANLARI - GEÇİŞ"
+    },
+    "settings": {
+      "actions": "Islemler",
+      "auto-height": "Otomatik",
+      "auto-height-hint": "'Otomatik' etkinlestirildiginde, yukseklik icerge gore otomatik olarak ayarlanir.",
+      "columns": "Sutun sayisi:",
+      "columns-hint": "Daha fazla sutun daha genis pencerelerle daha iyi calisir.",
+      "config-paths": "Yapilandirma Dosyalari",
+      "config-paths-description": "Klavye kisayolu yapilandirma dosyalariniza ozel yollar belirtin. Eklenti otomatik olarak tum include/source yonergelerini takip eder.",
+      "description": "Panel icin klavye kisayollarinin gorunumunu ve kaynaklarini yapilandirin.",
+      "height": "Yukseklik:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Beklenen format: bind = $mod, KEY, action #\"aciklama\"\nKategoriler: # 1. KATEGORI ADI",
+      "hyprland-path": "Hyprland yolu",
+      "keybind-example-hyprland": "Hyprland: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Kisayol Ayari",
+      "keybind-setup-description": "Cheatsheet'i bir klavye kisayoluyla acmak icin, bu bind'i compositor yapilandirmaniza ekleyin:",
+      "layout": "Duzen",
+      "mod-var": "Mod Tusu Degiskeni",
+      "mod-var-hint": "Super tusunuz icin kullanilan degisken adi (orn. $mod veya $mainMod).",
+      "niri-format-hint": "Kategoriler su sekilde olusturulur: // #\"Kategori adi\"\nAciklamalar: hotkey-overlay-title=\"aciklama\"",
+      "niri-path": "Niri yolu",
+      "refresh-keybinds": "Kisayollari Yenile",
+      "refresh-message": "Paneli actinizda kisayollar yeniden yuklenecektir.",
+      "reset-defaults": "Varsayilanlara Sifirla",
+      "reset-message": "Ayarlar varsayilan degerlere sifirlandi.",
+      "saved": "Ayarlar basariyla kaydedildi.",
+      "title": "Klavye Kisayollari Ayarlari",
+      "width": "Genislik:",
+      "width-range": "px (400-3000)",
+      "window-size": "Pencere Boyutu"
+    }
+  }
+}

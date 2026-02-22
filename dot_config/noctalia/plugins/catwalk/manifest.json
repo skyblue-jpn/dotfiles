@@ -1,0 +1,27 @@
+{
+  "author": "MannuVilasara",
+  "dependencies": {
+    "plugins": []
+  },
+  "description": "A cute animated cat for your bar.",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "desktopWidget": "DesktopWidget.qml",
+    "main": "Main.qml",
+    "panel": "Panel.qml",
+    "settings": "Settings.qml"
+  },
+  "id": "catwalk",
+  "license": "MIT",
+  "metadata": {
+    "defaultSettings": {
+      "hideBackground": false,
+      "minimumThreshold": 10
+    }
+  },
+  "minNoctaliaVersion": "3.6.0",
+  "name": "Catwalk",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "tags": ["Bar", "Desktop", "Panel", "Fun"],
+  "version": "1.1.6"
+}

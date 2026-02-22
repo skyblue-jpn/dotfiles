@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Súgó megnyitása",
+      "settings": "Plugin beállítások",
+      "tooltip": "Billentyűparancs súgó"
+    },
+    "default-category": "Billentyűparancsok",
+    "error": {
+      "labwc-detail": "A LabWC XML konfigurációs formátumot használ, amely nem kompatibilis ezzel a bővítménnyel",
+      "labwc-not-supported": "A LabWC nem támogatott",
+      "mango-detail": "A MangoWC konfigurációs formátum nem kompatibilis ezzel a bővítménnyel",
+      "mango-not-supported": "A MangoWC nem támogatott",
+      "sway-detail": "A Sway támogatás egy jövőbeli frissítésben hozzáadható (hasonló formátum, mint a Hyprland)",
+      "sway-not-supported": "A Sway még nem támogatott",
+      "unknown-compositor": "Ismeretlen kompozitor észlelve",
+      "unknown-detail": "Ez a bővítmény csak a Hyprland és Niri kompozitorokat támogatja",
+      "unsupported-compositor": "Nem támogatott kompozitor"
+    },
+    "panel": {
+      "loading": "Betoltes...",
+      "title": "Billentyűzetkiosztás",
+      "title-hyprland": "Hyprland billentyűzetkiosztás",
+      "title-niri": "Niri billentyűzetkiosztás",
+      "workspace-mouse": "MUNKATERÜLETEK - EGÉR",
+      "workspace-moving": "MUNKATERÜLETEK - ÁTHELYEZÉS",
+      "workspace-switching": "MUNKATERÜLETEK - VÁLTÁS"
+    },
+    "settings": {
+      "actions": "Muveletek",
+      "auto-height": "Auto",
+      "auto-height-hint": "Ha az 'Automatikus' be van kapcsolva, a magassag automatikusan igazodik a tartalomhoz.",
+      "columns": "Oszlopok szama:",
+      "columns-hint": "Tobb oszlop jobban mukodik szelessebb ablakokkal.",
+      "config-paths": "Konfiguracios Fajlok",
+      "config-paths-description": "Adjon meg egyedi utvonalakat a billentyuparancs-konfiguracios fajlokhoz. A beepulo automatikusan koveti az osszes include/source direktívat.",
+      "description": "Allitsa be a billentyuparancsok megjeleniteset es forrасait a panelhez.",
+      "height": "Magassag:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Elvart formatum: bind = $mod, KEY, action #\"leiras\"\nKategoriak: # 1. KATEGORIA NEV",
+      "hyprland-path": "Hyprland útvonal",
+      "keybind-example-hyprland": "Hyprland: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Billentyuparancs Beallitasa",
+      "keybind-setup-description": "A cheatsheet billentyuparancsal valo megnyitasahoz adja hozzá ezt a bind-ot a kompozitor konfiguraciojához:",
+      "layout": "Elrendezes",
+      "mod-var": "Mod Billentyuvaltozo",
+      "mod-var-hint": "A Super billentyuhoz hasznalt valtozó neve (pl. $mod vagy $mainMod).",
+      "niri-format-hint": "A kategoriakat így hozzuk letre: // #\"Kategoria nev\"\nLeirasok: hotkey-overlay-title=\"leiras\"",
+      "niri-path": "Niri útvonal",
+      "refresh-keybinds": "Billentyuparancsok Frissitese",
+      "refresh-message": "A billentyuparancsok ujratoltodnek a panel megnyitasakor.",
+      "reset-defaults": "Alapertelmezettek Visszaallitasa",
+      "reset-message": "A beallitasok visszaallitva az alapertelmezettre.",
+      "saved": "Beallitasok sikeresen mentve.",
+      "title": "Billentyuparancsok Beallitasai",
+      "width": "Szelesseg:",
+      "width-range": "px (400-3000)",
+      "window-size": "Ablak Merete"
+    }
+  }
+}

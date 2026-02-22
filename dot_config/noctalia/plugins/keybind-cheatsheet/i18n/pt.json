@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Abrir folha de dicas",
+      "settings": "Configurações do plugin",
+      "tooltip": "Folha de dicas de atalhos"
+    },
+    "default-category": "Atalhos de teclado",
+    "error": {
+      "labwc-detail": "LabWC usa formato de configuração XML que é incompatível com este plugin",
+      "labwc-not-supported": "LabWC não é suportado",
+      "mango-detail": "O formato de configuração do MangoWC não é compatível com este plugin",
+      "mango-not-supported": "MangoWC não é suportado",
+      "sway-detail": "O suporte ao Sway pode ser adicionado em uma atualização futura (formato semelhante ao Hyprland)",
+      "sway-not-supported": "Sway ainda não é suportado",
+      "unknown-compositor": "Compositor desconhecido detectado",
+      "unknown-detail": "Este plugin suporta apenas os compositores Hyprland e Niri",
+      "unsupported-compositor": "Compositor não suportado"
+    },
+    "panel": {
+      "loading": "Carregando...",
+      "title": "Mapa de teclas",
+      "title-hyprland": "Mapa de teclas Hyprland",
+      "title-niri": "Mapa de teclas Niri",
+      "workspace-mouse": "ESPAÇOS DE TRABALHO - MOUSE",
+      "workspace-moving": "ESPAÇOS DE TRABALHO - MOVER",
+      "workspace-switching": "ESPAÇOS DE TRABALHO - ALTERNAR"
+    },
+    "settings": {
+      "actions": "Acoes",
+      "auto-height": "Auto",
+      "auto-height-hint": "Quando 'Auto' esta ativado, a altura se ajusta automaticamente ao conteudo.",
+      "columns": "Numero de colunas:",
+      "columns-hint": "Mais colunas funcionam melhor com janelas mais largas.",
+      "config-paths": "Arquivos de Configuracao",
+      "config-paths-description": "Especifique caminhos personalizados para seus arquivos de configuracao de atalhos. O plugin seguira automaticamente todas as diretivas include/source.",
+      "description": "Configure a aparencia e as fontes de atalhos de teclado para o painel.",
+      "height": "Altura:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Formato esperado: bind = $mod, KEY, action #\"descricao\"\nCategorias: # 1. NOME DA CATEGORIA",
+      "hyprland-path": "Caminho Hyprland",
+      "keybind-example-hyprland": "Hyprland: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Configuracao de Atalho",
+      "keybind-setup-description": "Para abrir o cheatsheet com um atalho de teclado, adicione este bind a configuracao do seu compositor:",
+      "layout": "Layout",
+      "mod-var": "Variável da Tecla Mod",
+      "mod-var-hint": "O nome da variável usada para sua tecla Super (ex. $mod ou $mainMod).",
+      "niri-format-hint": "Categorias sao criadas com: // #\"Nome da categoria\"\nDescricoes: hotkey-overlay-title=\"descricao\"",
+      "niri-path": "Caminho Niri",
+      "refresh-keybinds": "Atualizar Atalhos",
+      "refresh-message": "Os atalhos serao recarregados ao abrir o painel.",
+      "reset-defaults": "Restaurar Padroes",
+      "reset-message": "As configuracoes foram restauradas para os valores padrao.",
+      "saved": "Configuracoes salvas com sucesso.",
+      "title": "Configuracoes de Atalhos de Teclado",
+      "width": "Largura:",
+      "width-range": "px (400-3000)",
+      "window-size": "Tamanho da Janela"
+    }
+  }
+}

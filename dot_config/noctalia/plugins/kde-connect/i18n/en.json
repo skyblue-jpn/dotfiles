@@ -1,0 +1,48 @@
+{
+  "bar": {
+    "tooltip": "Connected Devices"
+  },
+  "control_center": {
+    "state": {
+      "connected": "Connected",
+      "disconnected": "Disconnected",
+      "no-device": "No device",
+      "not-paired": "Not paired",
+      "unavailable": "Unavailable"
+    },
+    "state-label": "State"
+  },
+  "panel": {
+    "card": {
+      "battery": "Battery",
+      "network": "Network",
+      "notifications": "Notifications",
+      "signal-strength": "Signal Strength"
+    },
+    "find-device": "Find my Device",
+    "kdeconnect-error": {
+      "device-unavailable": "Device is currently unavailable",
+      "no-devices": "No device running KDE Connect found",
+      "unavailable-desc": "Make sure you've installed the KDE Connect Application on your system and that it has started the kdeconnectd daemon",
+      "unavailable-title": "kdeconnectd does not seem to be running!"
+    },
+    "other-devices": "Other Devices",
+    "pair": "Pair with Device",
+    "qdbus-error": {
+      "unavailable-desc": "Make sure qdbus (or qdbus6 on some systems) is installed on your system",
+      "unavailable-title": "qdbus cannot be found!"
+    },
+    "send-file": "Send File",
+    "send-file-picker": "Pick file to send to device",
+    "signal": {
+      "excellent": "Excellent",
+      "fair": "Fair",
+      "good": "Good",
+      "unknown": "Unknown",
+      "very-weak": "Very Weak",
+      "weak": "Weak"
+    },
+    "title": "Connected Devices",
+    "unpair": "Unpair Device"
+  }
+}

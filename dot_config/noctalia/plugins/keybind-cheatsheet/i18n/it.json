@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Apri scheda",
+      "settings": "Impostazioni plugin",
+      "tooltip": "Scheda scorciatoie"
+    },
+    "default-category": "Scorciatoie da tastiera",
+    "error": {
+      "labwc-detail": "LabWC utilizza un formato di configurazione XML incompatibile con questo plugin",
+      "labwc-not-supported": "LabWC non è supportato",
+      "mango-detail": "Il formato di configurazione MangoWC non è compatibile con questo plugin",
+      "mango-not-supported": "MangoWC non è supportato",
+      "sway-detail": "Il supporto per Sway potrebbe essere aggiunto in un aggiornamento futuro (formato simile a Hyprland)",
+      "sway-not-supported": "Sway non è ancora supportato",
+      "unknown-compositor": "Rilevato compositor sconosciuto",
+      "unknown-detail": "Questo plugin supporta solo i compositor Hyprland e Niri",
+      "unsupported-compositor": "Compositor non supportato"
+    },
+    "panel": {
+      "loading": "Caricamento...",
+      "title": "Mappa tasti",
+      "title-hyprland": "Mappa tasti Hyprland",
+      "title-niri": "Mappa tasti Niri",
+      "workspace-mouse": "SPAZI DI LAVORO - MOUSE",
+      "workspace-moving": "SPAZI DI LAVORO - SPOSTAMENTO",
+      "workspace-switching": "SPAZI DI LAVORO - CAMBIO"
+    },
+    "settings": {
+      "actions": "Azioni",
+      "auto-height": "Auto",
+      "auto-height-hint": "Quando 'Auto' e attivo, l'altezza si adatta automaticamente al contenuto.",
+      "columns": "Numero di colonne:",
+      "columns-hint": "Piu colonne funzionano meglio con finestre piu larghe.",
+      "config-paths": "File di Configurazione",
+      "config-paths-description": "Specifica percorsi personalizzati per i file di configurazione delle scorciatoie. Il plugin seguira automaticamente tutte le direttive include/source.",
+      "description": "Configura l'aspetto e le fonti delle scorciatoie per il pannello.",
+      "height": "Altezza:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Formato previsto: bind = $mod, KEY, action #\"descrizione\"\nCategorie: # 1. NOME CATEGORIA",
+      "hyprland-path": "Percorso Hyprland",
+      "keybind-example-hyprland": "Hyprland: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Configurazione Scorciatoia",
+      "keybind-setup-description": "Per aprire il cheatsheet con una scorciatoia, aggiungi questo bind alla configurazione del tuo compositor:",
+      "layout": "Layout",
+      "mod-var": "Variabile Tasto Mod",
+      "mod-var-hint": "Il nome della variabile usata per il tasto Super (es. $mod o $mainMod).",
+      "niri-format-hint": "Le categorie vengono create con: // #\"Nome categoria\"\nDescrizioni: hotkey-overlay-title=\"descrizione\"",
+      "niri-path": "Percorso Niri",
+      "refresh-keybinds": "Aggiorna Scorciatoie",
+      "refresh-message": "Le scorciatoie verranno ricaricate all'apertura del pannello.",
+      "reset-defaults": "Ripristina Predefiniti",
+      "reset-message": "Le impostazioni sono state ripristinate ai valori predefiniti.",
+      "saved": "Impostazioni salvate con successo.",
+      "title": "Impostazioni Scorciatoie da Tastiera",
+      "width": "Larghezza:",
+      "width-range": "px (400-3000)",
+      "window-size": "Dimensione Finestra"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "author": "WerWolv",
+  "dependencies": {
+    "plugins": []
+  },
+  "description": "A Plugin integrating your mobile devices into a panel using KDEConnect",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "controlCenterWidget": "ControlCenterWidget.qml",
+    "main": "Main.qml",
+    "panel": "Panel.qml"
+  },
+  "id": "kde-connect",
+  "license": "GPLv2",
+  "metadata": {
+    "defaultSettings": {}
+  },
+  "minNoctaliaVersion": "4.4.0",
+  "name": "KDE Connect",
+  "official": false,
+  "repository": "https://github.com/WerWolv/noctalia-kde-connect",
+  "tags": ["Bar", "Panel", "Utility", "System"],
+  "version": "1.0.2"
+}

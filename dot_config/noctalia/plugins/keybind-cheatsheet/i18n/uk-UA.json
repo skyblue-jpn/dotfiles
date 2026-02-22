@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Відкрити шпаргалку",
+      "settings": "Налаштування плагіна",
+      "tooltip": "Шпаргалка гарячих клавіш"
+    },
+    "default-category": "Гарячі клавіші",
+    "error": {
+      "labwc-detail": "LabWC використовує формат конфігурації XML, несумісний з цим плагіном",
+      "labwc-not-supported": "LabWC не підтримується",
+      "mango-detail": "Формат конфігурації MangoWC несумісний з цим плагіном",
+      "mango-not-supported": "MangoWC не підтримується",
+      "sway-detail": "Підтримку Sway може бути додано в майбутньому оновленні (формат схожий на Hyprland)",
+      "sway-not-supported": "Sway поки не підтримується",
+      "unknown-compositor": "Виявлено невідомий композитор",
+      "unknown-detail": "Цей плагін підтримує лише композитори Hyprland та Niri",
+      "unsupported-compositor": "Непідтримуваний композитор"
+    },
+    "panel": {
+      "loading": "Завантаження...",
+      "title": "Карта клавіш",
+      "title-hyprland": "Карта клавіш Hyprland",
+      "title-niri": "Карта клавіш Niri",
+      "workspace-mouse": "РОБОЧІ ОБЛАСТІ - МИША",
+      "workspace-moving": "РОБОЧІ ОБЛАСТІ - ПЕРЕМІЩЕННЯ",
+      "workspace-switching": "РОБОЧІ ОБЛАСТІ - ПЕРЕМИКАННЯ"
+    },
+    "settings": {
+      "actions": "Дії",
+      "auto-height": "Авто",
+      "auto-height-hint": "Коли увімкнено 'Авто', висота автоматично підлаштовується під вміст.",
+      "columns": "Кількість колонок:",
+      "columns-hint": "Більше колонок краще працює з ширшими вікнами.",
+      "config-paths": "Файли конфігурації",
+      "config-paths-description": "Вкажіть власні шляхи до файлів конфігурації гарячих клавіш. Плагін автоматично слідує всім директивам include/source.",
+      "description": "Налаштуйте зовнішній вигляд та джерела гарячих клавіш для панелі.",
+      "height": "Висота:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Очікуваний формат: bind = $mod, KEY, action #\"опис\"\nКатегорії: # 1. НАЗВА КАТЕГОРІЇ",
+      "hyprland-path": "Шлях Hyprland",
+      "keybind-example-hyprland": "Hyprland: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Налаштування клавіші",
+      "keybind-setup-description": "Щоб відкрити шпаргалку за допомогою клавіші, додайте цей bind до конфігурації композитора:",
+      "layout": "Макет",
+      "mod-var": "Змінна клавіші Mod",
+      "mod-var-hint": "Ім'я змінної, що використовується для клавіші Super (наприклад, $mod або $mainMod).",
+      "niri-format-hint": "Категорії створюються за допомогою: // #\"Назва категорії\"\nОписи: hotkey-overlay-title=\"опис\"",
+      "niri-path": "Шлях Niri",
+      "refresh-keybinds": "Оновити клавіші",
+      "refresh-message": "Гарячі клавіші будуть перезавантажені при відкритті панелі.",
+      "reset-defaults": "Скинути налаштування",
+      "reset-message": "Налаштування скинуто до значень за замовчуванням.",
+      "saved": "Налаштування успішно збережено.",
+      "title": "Налаштування гарячих клавіш",
+      "width": "Ширина:",
+      "width-range": "px (400-3000)",
+      "window-size": "Розмір вікна"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "history": {
+    "action": {
+      "started": "Iniciado",
+      "stopped": "Detenido"
+    },
+    "clear": "Borrar",
+    "empty": "Sin accesos recientes",
+    "title": "Historial de acceso"
+  },
+  "menu": {
+    "settings": "Configuración del widget"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Color de los iconos cuando están activos.",
+      "label": "Color de icono activo"
+    },
+    "hideInactive": {
+      "desc": "Ocultar los iconos de micrófono, cámara y pantalla cuando estén inactivos.",
+      "label": "Ocultar estados inactivos"
+    },
+    "iconSpacing": {
+      "desc": "Configurar el espacio entre los iconos.",
+      "label": "Espaciado de iconos"
+    },
+    "inactiveColor": {
+      "desc": "Color de los iconos cuando están inactivos.",
+      "label": "Color de icono inactivo"
+    },
+    "removeMargins": {
+      "desc": "Quita todos los márgenes externos del widget.",
+      "label": "Quitar márgenes"
+    }
+  },
+  "toast": {
+    "cam-on": "La cámara está activa",
+    "mic-on": "El micrófono está activo",
+    "screen-on": "Compartir pantalla está activo"
+  },
+  "tooltip": {
+    "cam-on": "Cámara: {apps}",
+    "mic-on": "Micrófono: {apps}",
+    "screen-on": "Compartir pantalla: {apps}"
+  }
+}

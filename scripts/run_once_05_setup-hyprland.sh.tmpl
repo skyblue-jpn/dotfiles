@@ -4,11 +4,25 @@ set -euo pipefail
 
 # Install Hyprland and dependencies
 echo "🔄 Installing Hyprland and dependencies..."
-paru -S --noconfirm --needed adw-gtk-theme blueman cava cliphist ddcutil evolution-data-server hyprland hyprpolkitagent hyprshot noctalia-shell python3 qt6ct-kde uwsm wlsunset xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+paru -S --noconfirm --needed adw-gtk-theme blueman cava cliphist ddcutil evolution-data-server hyprland hyprpolkitagent hyprshot noctalia-shell python3 qt6ct-kde uwsm wlsunset xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland wtype
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install Hyprland and dependencies. Exiting script, chezmoi apply will continue."
   exit 0
 fi
 echo "✅ Hyprland and dependencies installed successfully."
+
+# Create wallpaper directory if it doesn't exist
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+if [ ! -d "$WALLPAPER_DIR" ]; then
+  echo "📁 Creating wallpaper directory at $WALLPAPER_DIR..."
+  mkdir -p "$WALLPAPER_DIR"
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to create wallpaper directory. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+  echo "✅ Wallpaper directory created successfully."
+else
+  echo "📁 Wallpaper directory already exists at $WALLPAPER_DIR. Skipping creation."
+fi
 
 # End of script

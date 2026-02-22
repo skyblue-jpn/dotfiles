@@ -1,0 +1,46 @@
+{
+  "history": {
+    "action": {
+      "started": "Started",
+      "stopped": "Stopped"
+    },
+    "clear": "Clear",
+    "empty": "No recent access",
+    "title": "Access History"
+  },
+  "menu": {
+    "settings": "Widget settings"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Color of the icons when active.",
+      "label": "Active icon color"
+    },
+    "hideInactive": {
+      "desc": "Îkonên mîkrofon, kamera û ekranê dema ku neçalak bin veşêre.",
+      "label": "Rewşa neçalak veşêre"
+    },
+    "iconSpacing": {
+      "desc": "Cihê di navbera îkonan de diyar bike.",
+      "label": "Dûrahiya îkonan"
+    },
+    "inactiveColor": {
+      "desc": "Color of the icons when inactive.",
+      "label": "Inactive icon color"
+    },
+    "removeMargins": {
+      "desc": "Hemû marjînalên derveyî yên widgetê rake.",
+      "label": "Derdestên derxînin"
+    }
+  },
+  "toast": {
+    "cam-on": "Kamera çalak e",
+    "mic-on": "Mîkrofon çalak e",
+    "screen-on": "Parvekirina ekranê çalak e"
+  },
+  "tooltip": {
+    "cam-on": "Kamera: {apps}",
+    "mic-on": "Mîkrofon: {apps}",
+    "screen-on": "Parvekirina ekranê: {apps}"
+  }
+}

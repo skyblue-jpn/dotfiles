@@ -1,0 +1,44 @@
+{
+  "bar": {
+    "tooltip": "Verbundene Geräte"
+  },
+  "control_center": {
+    "state": {
+      "connected": "Verbunden",
+      "disconnected": "Getrennt",
+      "no-device": "Kein Gerät",
+      "not-paired": "Nicht gekoppelt",
+      "unavailable": "Nicht verfügbar"
+    },
+    "state-label": "Status"
+  },
+  "panel": {
+    "card": {
+      "battery": "Akkustand",
+      "network": "Netzwerk",
+      "notifications": "Benachrichtigungen",
+      "signal-strength": "Signalstärke"
+    },
+    "find-device": "Mein Gerät suchen",
+    "kdeconnect-error": {
+      "device-unavailable": "Das Gerät ist derzeit nicht verfügbar.",
+      "no-devices": "Kein Gerät mit KDE Connect gefunden",
+      "unavailable-desc": "Sicherstellen, dass die KDE Connect-Anwendung auf Ihrem System installiert ist und dass der kdeconnectd-Daemon gestartet wurde",
+      "unavailable-title": "kdeconnectd scheint nicht zu laufen!"
+    },
+    "other-devices": "Andere Geräte",
+    "pair": "Mit Gerät koppeln",
+    "send-file": "Datei senden",
+    "send-file-picker": "Datei zum Senden an Gerät auswählen",
+    "signal": {
+      "excellent": "Ausgezeichnet",
+      "fair": "Okay",
+      "good": "Gut",
+      "unknown": "Unbekannt",
+      "very-weak": "Sehr schwach",
+      "weak": "Schwach"
+    },
+    "title": "Verbundene Geräte",
+    "unpair": "Gerät entkoppeln"
+  }
+}

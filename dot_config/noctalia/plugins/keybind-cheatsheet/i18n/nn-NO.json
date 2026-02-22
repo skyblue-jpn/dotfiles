@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Opne jukselapp",
+      "settings": "Programtillegg-innstillingar",
+      "tooltip": "Tastesnarveg-jukselapp"
+    },
+    "default-category": "Tastebindingar",
+    "error": {
+      "labwc-detail": "LabWC brukar XML-konfigurasjonsformat som er inkompatibelt med denne plugin-en",
+      "labwc-not-supported": "LabWC er ikkje støtta",
+      "mango-detail": "MangoWC-konfigurasjonsformatet er ikkje kompatibelt med denne plugin-en",
+      "mango-not-supported": "MangoWC er ikkje støtta",
+      "sway-detail": "Sway-støtte kan leggast til i ei framtidig oppdatering (liknande format som Hyprland)",
+      "sway-not-supported": "Sway er ikkje støtta enno",
+      "unknown-compositor": "Ukjend compositor oppdaga",
+      "unknown-detail": "Denne plugin-en støttar berre Hyprland- og Niri-compositorar",
+      "unsupported-compositor": "Ikkje støtta compositor"
+    },
+    "panel": {
+      "loading": "Lastar...",
+      "title": "Tastatur-kart",
+      "title-hyprland": "Hyprland tastatur-kart",
+      "title-niri": "Niri tastatur-kart",
+      "workspace-mouse": "ARBEIDSOMRÅDE - MUS",
+      "workspace-moving": "ARBEIDSOMRÅDE - FLYTTE",
+      "workspace-switching": "ARBEIDSOMRÅDE - BYTTE"
+    },
+    "settings": {
+      "actions": "Handlingar",
+      "auto-height": "Auto",
+      "auto-height-hint": "Når 'Auto' er aktivert, justerer høgda seg automatisk basert på innhald.",
+      "columns": "Tal på kolonnar:",
+      "columns-hint": "Fleire kolonnar fungerer betre med breiare vindauge.",
+      "config-paths": "Konfigurasjonsfiler",
+      "config-paths-description": "Spesifiser eigne stiar til tastesnarveg-konfigurasjonsfilene dine. Programtillegget vil automatisk parse rett fil basert på kompositoren din.",
+      "description": "Konfigurer utsjånad og tastesnarveg-kjelder for jukselapp-panelet.",
+      "height": "Høgde:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Forventa format: bind = $mod, KEY, action #\"description\"\nKategoriar: # 1. CATEGORY NAME",
+      "hyprland-path": "Hyprland-sti",
+      "keybind-example-hyprland": "Hyprland eksempel: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin togglePanel keybind-cheatsheet",
+      "keybind-example-niri": "Niri eksempel: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Tastesnarveg-oppsett",
+      "keybind-setup-description": "For å opne tastesnarveg-jukselappen med ein hurtigtast, legg til denne bindinga i kompositor-konfigurasjonen din:",
+      "layout": "Oppsett",
+      "mod-var": "Mod-tast variabel",
+      "mod-var-hint": "Variabelnamnet brukt for Super-tasten din (t.d. $mod eller $mainMod).",
+      "niri-format-hint": "Kategoriar: // #\"Category Name\"\nSkildringar: hotkey-overlay-title=\"description\"",
+      "niri-path": "Niri-sti",
+      "refresh-keybinds": "Oppdater tastesnarvegar",
+      "refresh-message": "Tastesnarvegar vil bli lasta på nytt når du opnar panelet.",
+      "reset-defaults": "Tilbakestill til standard",
+      "reset-message": "Innstillingar er tilbakestilt til standard.",
+      "saved": "Innstillingar lagra.",
+      "title": "Tastesnarveg-jukselapp Innstillingar",
+      "width": "Breidde:",
+      "width-range": "px (400-3000)",
+      "window-size": "Vindaugsstorleik"
+    }
+  }
+}

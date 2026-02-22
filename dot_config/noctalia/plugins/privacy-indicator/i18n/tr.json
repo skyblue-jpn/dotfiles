@@ -1,0 +1,46 @@
+{
+  "history": {
+    "action": {
+      "started": "Başlatıldı",
+      "stopped": "Durduruldu"
+    },
+    "clear": "Temizle",
+    "empty": "Yakın zamanda erişim yok",
+    "title": "Erişim Geçmişi"
+  },
+  "menu": {
+    "settings": "Bileşen ayarları"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Aktif olduğunda simgelerin rengi.",
+      "label": "Aktif simge rengi"
+    },
+    "hideInactive": {
+      "desc": "Mikrofon, kamera ve ekran simgelerini pasif olduklarında gizle.",
+      "label": "Pasif durumları gizle"
+    },
+    "iconSpacing": {
+      "desc": "Simgeler arasındaki boşluğu ayarla.",
+      "label": "Simge aralığı"
+    },
+    "inactiveColor": {
+      "desc": "Devre dışı olduğunda simgelerin rengi.",
+      "label": "Pasif simge rengi"
+    },
+    "removeMargins": {
+      "desc": "Widget’ın tüm dış kenar boşluklarını kaldırır.",
+      "label": "Kenarlıkları kaldır"
+    }
+  },
+  "toast": {
+    "cam-on": "Kamera aktif",
+    "mic-on": "Mikrofon aktif",
+    "screen-on": "Ekran paylaşımı aktif"
+  },
+  "tooltip": {
+    "cam-on": "Kamera: {apps}",
+    "mic-on": "Mikrofon: {apps}",
+    "screen-on": "Ekran paylaşımı: {apps}"
+  }
+}

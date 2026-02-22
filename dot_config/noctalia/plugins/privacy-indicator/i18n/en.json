@@ -1,0 +1,50 @@
+{
+  "history": {
+    "action": {
+      "started": "Started",
+      "stopped": "Stopped"
+    },
+    "clear": "Clear",
+    "empty": "No recent access",
+    "title": "Access History"
+  },
+  "menu": {
+    "settings": "Widget settings"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Color of the icons when active.",
+      "label": "Active icon color"
+    },
+    "enableToast": {
+      "desc": "Show toast messages when one of the states changes.",
+      "label": "Enable toast notifications"
+    },
+    "hideInactive": {
+      "desc": "Hide microphone, camera, and screen icons when there are inactive.",
+      "label": "Hide inactive states"
+    },
+    "iconSpacing": {
+      "desc": "Set the spacing between the icons.",
+      "label": "Icon spacing"
+    },
+    "inactiveColor": {
+      "desc": "Color of the icons when inactive.",
+      "label": "Inactive icon color"
+    },
+    "removeMargins": {
+      "desc": "Remove all outer margins of the widget.",
+      "label": "Remove margins"
+    }
+  },
+  "toast": {
+    "cam-on": "Camera is active",
+    "mic-on": "Microphone is active",
+    "screen-on": "Screen sharing is active"
+  },
+  "tooltip": {
+    "cam-on": "Camera: {apps}",
+    "mic-on": "Microphone: {apps}",
+    "screen-on": "Screen sharing: {apps}"
+  }
+}

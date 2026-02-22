@@ -1,0 +1,46 @@
+{
+  "history": {
+    "action": {
+      "started": "Elindítva",
+      "stopped": "Leállítva"
+    },
+    "clear": "Törlés",
+    "empty": "Nincs nemrégiben történt hozzáférés",
+    "title": "Hozzáférési előzmények"
+  },
+  "menu": {
+    "settings": "Widget beállítások"
+  },
+  "settings": {
+    "activeColor": {
+      "desc": "Az ikonok színe, amikor aktívak.",
+      "label": "Aktív ikon színe"
+    },
+    "hideInactive": {
+      "desc": "Mikrofon, kamera és képernyő ikonok elrejtése, ha éppen nincsenek használatban.",
+      "label": "Inaktív állapotok elrejtése"
+    },
+    "iconSpacing": {
+      "desc": "Állítsa be az ikonok közötti távolságot.",
+      "label": "Ikon távolság"
+    },
+    "inactiveColor": {
+      "desc": "Az ikonok színe, amikor inaktívak.",
+      "label": "Inaktív ikon színe"
+    },
+    "removeMargins": {
+      "desc": "Távolítsd el a widget összes külső margóját.",
+      "label": "Margók eltávolítása"
+    }
+  },
+  "toast": {
+    "cam-on": "A kamera aktív",
+    "mic-on": "A mikrofon aktív",
+    "screen-on": "Képernyőmegosztás aktív"
+  },
+  "tooltip": {
+    "cam-on": "Kamera: {apps}",
+    "mic-on": "Mikrofon: {apps}",
+    "screen-on": "Képernyőmegosztás: {apps}"
+  }
+}

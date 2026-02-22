@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Öppna fuskblad",
+      "settings": "Plugin-inställningar",
+      "tooltip": "Tangentbordsgenvägar"
+    },
+    "default-category": "Tangentbindningar",
+    "error": {
+      "labwc-detail": "LabWC använder XML-konfigurationsformat som är inkompatibelt med detta plugin",
+      "labwc-not-supported": "LabWC stöds inte",
+      "mango-detail": "MangoWC-konfigurationsformatet är inte kompatibelt med detta plugin",
+      "mango-not-supported": "MangoWC stöds inte",
+      "sway-detail": "Sway-stöd kan läggas till i en framtida uppdatering (liknande format som Hyprland)",
+      "sway-not-supported": "Sway stöds ännu inte",
+      "unknown-compositor": "Okänd compositor upptäckt",
+      "unknown-detail": "Detta plugin stöder endast Hyprland- och Niri-compositors",
+      "unsupported-compositor": "Compositor stöds inte"
+    },
+    "panel": {
+      "loading": "Laddar...",
+      "title": "Tangentkarta",
+      "title-hyprland": "Hyprland tangentkarta",
+      "title-niri": "Niri tangentkarta",
+      "workspace-mouse": "ARBETSYTOR - MUS",
+      "workspace-moving": "ARBETSYTOR - FLYTTA",
+      "workspace-switching": "ARBETSYTOR - BYTA"
+    },
+    "settings": {
+      "actions": "Åtgärder",
+      "auto-height": "Auto",
+      "auto-height-hint": "När 'Auto' är aktiverat justeras höjden automatiskt baserat på innehåll.",
+      "columns": "Antal kolumner:",
+      "columns-hint": "Fler kolumner fungerar bättre med bredare fönster.",
+      "config-paths": "Konfigurationsfiler",
+      "config-paths-description": "Ange anpassade sökvägar till dina tangentbordsgenvägskonfigurationsfiler. Tillägget kommer automatiskt att tolka rätt fil baserat på din compositor.",
+      "description": "Konfigurera utseende och tangentbordsgenvägskällor för fuskbladspanelen.",
+      "height": "Höjd:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Förväntat format: bind = $mod, KEY, action #\"description\"\nKategorier: # 1. CATEGORY NAME",
+      "hyprland-path": "Hyprland-sökväg",
+      "keybind-example-hyprland": "Hyprland exempel: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin togglePanel keybind-cheatsheet",
+      "keybind-example-niri": "Niri exempel: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Tangentbordsgenväg inställning",
+      "keybind-setup-description": "För att öppna tangentbordsgenvägsfuskbladet med en kortkommando, lägg till denna bindning i din compositor-konfiguration:",
+      "layout": "Layout",
+      "mod-var": "Mod-tangent variabel",
+      "mod-var-hint": "Variabelnamnet som används för din Super-tangent (t.ex. $mod eller $mainMod).",
+      "niri-format-hint": "Kategorier: // #\"Category Name\"\nBeskrivningar: hotkey-overlay-title=\"description\"",
+      "niri-path": "Niri-sökväg",
+      "refresh-keybinds": "Uppdatera tangentbordsgenvägar",
+      "refresh-message": "Tangentbordsgenvägar laddas om när du öppnar panelen.",
+      "reset-defaults": "Återställ till standard",
+      "reset-message": "Inställningarna har återställts till standard.",
+      "saved": "Inställningar sparade.",
+      "title": "Tangentbordsgenvägar Inställningar",
+      "width": "Bredd:",
+      "width-range": "px (400-3000)",
+      "window-size": "Fönsterstorlek"
+    }
+  }
+}

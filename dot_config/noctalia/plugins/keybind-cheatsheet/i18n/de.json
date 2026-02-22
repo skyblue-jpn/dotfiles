@@ -1,0 +1,62 @@
+{
+  "keybind-cheatsheet": {
+    "barwidget": {
+      "open": "Spickzettel öffnen",
+      "settings": "Plugin-Einstellungen",
+      "tooltip": "Tastenkürzel-Spickzettel"
+    },
+    "default-category": "Tastenkürzel",
+    "error": {
+      "labwc-detail": "LabWC verwendet das XML-Konfigurationsformat, das mit diesem Plugin nicht kompatibel ist.",
+      "labwc-not-supported": "LabWC wird nicht unterstützt.",
+      "mango-detail": "Das MangoWC-Konfigurationsformat ist mit diesem Plugin nicht kompatibel",
+      "mango-not-supported": "MangoWC wird nicht unterstützt",
+      "sway-detail": "Sway-Unterstützung wird möglicherweise in einem zukünftigen Update hinzugefügt (ähnliches Format wie Hyprland)",
+      "sway-not-supported": "Sway wird noch nicht unterstützt",
+      "unknown-compositor": "Unbekannter Compositor erkannt",
+      "unknown-detail": "Dieses Plugin unterstützt nur Niri und Hyprland als Compositor",
+      "unsupported-compositor": "Nicht unterstützter Compositor"
+    },
+    "panel": {
+      "loading": "Laden...",
+      "title": "Tastenbelegung",
+      "title-hyprland": "Hyprland Tastenbelegung",
+      "title-niri": "Niri Tastenbelegung",
+      "workspace-mouse": "ARBEITSBEREICHE - MAUS",
+      "workspace-moving": "ARBEITSBEREICHE - VERSCHIEBEN",
+      "workspace-switching": "ARBEITSBEREICHE - WECHSELN"
+    },
+    "settings": {
+      "actions": "Aktionen",
+      "auto-height": "Auto",
+      "auto-height-hint": "Wenn 'Auto' aktiviert ist, passt sich die Höhe automatisch an den Inhalt an.",
+      "columns": "Anzahl der Spalten:",
+      "columns-hint": "Mehr Spalten funktionieren besser mit breiteren Fenstern.",
+      "config-paths": "Konfigurationsdateien",
+      "config-paths-description": "Geben Sie benutzerdefinierte Pfade zu Ihren Tastenkürzel-Konfigurationsdateien an. Das Plugin folgt automatisch allen include/source Direktiven.",
+      "description": "Konfigurieren Sie das Aussehen und die Quellen der Tastenkürzel fur das Panel.",
+      "height": "Höhe:",
+      "height-range": "px (300-2000)",
+      "hyprland-format-hint": "Erwartetes Format: bind = $mod, KEY, action #\"beschreibung\"\nKategorien: # 1. KATEGORIENAME",
+      "hyprland-path": "Hyprland Pfad",
+      "keybind-example-hyprland": "Hyprland Beispiel: bind = $mod, F1, exec, qs -c \"noctalia-shell\" ipc call plugin:keybind-cheatsheet toggle",
+      "keybind-example-niri": "Niri Beispiel: Super+F1 { spawn \"qs\" \"-c\" \"noctalia-shell\" \"ipc\" \"call\" \"plugin\" \"togglePanel\" \"keybind-cheatsheet\"; }",
+      "keybind-setup": "Tastenkürzel-Einrichtung",
+      "keybind-setup-description": "Um die Übersicht mit einer Tastenkombination zu öffnen, fuge diese Bindung zu deiner Compositor-Konfiguration hinzu:",
+      "layout": "Layout",
+      "mod-var": "Mod-Tasten-Variable",
+      "mod-var-hint": "Der Variablenname für Ihre Super-Taste (z.B. $mod oder $mainMod).",
+      "niri-format-hint": "Kategorien werden erstellt mit: // #\"Kategoriename\"\nBeschreibungen: hotkey-overlay-title=\"beschreibung\"",
+      "niri-path": "Niri Pfad",
+      "refresh-keybinds": "Tastenkürzel aktualisieren",
+      "refresh-message": "Tastenkürzel werden beim Öffnen des Panels neu geladen.",
+      "reset-defaults": "Auf Standard zurücksetzen",
+      "reset-message": "Einstellungen wurden auf Standard zurückgesetzt.",
+      "saved": "Einstellungen erfolgreich gespeichert.",
+      "title": "Tastenkürzel-Ubersicht Einstellungen",
+      "width": "Breite:",
+      "width-range": "px (400-3000)",
+      "window-size": "Fenstergröße"
+    }
+  }
+}
