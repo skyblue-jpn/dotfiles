@@ -6,48 +6,86 @@ set -eufo pipefail
 # Installing Plymouth if not already installed
 if ! pacman -Q plymouth &>/dev/null; then
   echo "🔍 Plymouth not found, installing..."
-  paru -S --noconfirm --needed plymouth
-  if [ $? -ne 0 ]; then
+  paru -S --noconfirm --needed plymouth || {
     echo "❌ Failed to install Plymouth. Exiting script, chezmoi apply will continue."
     exit 0
-  fi
+  }
 else
   echo "✅ Plymouth is already installed."
 fi
 
 # Installing Plymouth themes
-# Download plymouth-theme-catppuccin-macchiato from AUR if not already installed
-if
-  ! pacman -Q plymouth-theme-catppuccin-macchiato-git &
-  >/dev/null
-then
+if ! pacman -Q plymouth-theme-catppuccin-macchiato-git &>/dev/null; then
   echo "🔍 plymouth catppuccin-macchiato theme not found, installing..."
-  paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git
-  if [ $? -ne 0 ]; then
+  paru -S --noconfirm --needed plymouth-theme-catppuccin-macchiato-git || {
     echo "❌ Failed to install plymouth catppuccin-macchiato theme. Exiting script, chezmoi apply will continue."
     exit 0
-  fi
+  }
 else
   echo "✅ plymouth catppuccin-macchiato theme is already installed."
 fi
+
 # Set Plymouth theme to catppuccin-macchiato
-# Check if the theme is already set
 if ! plymouth-set-default-theme -l | grep -q "catppuccin-macchiato"; then
   echo "🎨 Setting Plymouth theme to catppuccin-macchiato..."
-  sudo plymouth-set-default-theme -R catppuccin-macchiato
-  if [ $? -ne 0 ]; then
+  sudo plymouth-set-default-theme -R catppuccin-macchiato || {
     echo "❌ Failed to set Plymouth theme. Exiting script, chezmoi apply will continue."
     exit 0
-  fi
+  }
 else
   echo "✅ Plymouth theme is already set to catppuccin-macchiato."
 fi
+
 # Update initramfs to apply Plymouth theme
 echo "🔄 Updating initramfs to apply Plymouth theme..."
-sudo mkinitcpio -P
-if [ $? -ne 0 ]; then
+sudo mkinitcpio -P || {
   echo "❌ Failed to update initramfs. Exiting script, chezmoi apply will continue."
   exit 0
+}
+
+# Installing Limine themes
+if ! pacman -Q limine &>/dev/null; then
+  echo "🔍 Limine bootloader not found, installing..."
+  paru -S --noconfirm --needed limine || {
+    echo "❌ Failed to install Limine bootloader. Exiting script, chezmoi apply will continue."
+    exit 0
+  }
+else
+  echo "✅ Limine bootloader is already installed."
 fi
+
+# Set Limine theme (term_palette etc.) without overwriting /boot/limine.conf
+echo "🎨 Installing Limine theme file (catppuccin-macchiato)..."
+
+tmpdir="$(mktemp -d)"
+trap 'rm -rf "$tmpdir"' EXIT
+
+git clone --depth=1 https://github.com/catppuccin/limine.git "$tmpdir/limine" || {
+  echo "❌ Failed to clone Limine themes. Exiting script, chezmoi apply will continue."
+  exit 0
+}
+
+sudo install -m 0644 "$tmpdir/limine/themes/catppuccin-macchiato.conf" /boot/limine-theme.conf || {
+  echo "❌ Failed to install /boot/limine-theme.conf. Exiting script, chezmoi apply will continue."
+  exit 0
+}
+
+# Ensure /boot/limine.conf includes the theme at the end so it overrides existing term_palette: lines
+if ! sudo test -f /boot/limine.conf; then
+  echo "❌ /boot/limine.conf not found. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+if ! sudo grep -qE '^\s*#:\s*include\s+/boot/limine-theme\.conf\s*$' /boot/limine.conf; then
+  echo "➕ Appending theme include to /boot/limine.conf..."
+  printf '\n#:include /boot/limine-theme.conf\n' | sudo tee -a /boot/limine.conf >/dev/null || {
+    echo "❌ Failed to append include line to /boot/limine.conf. Exiting script, chezmoi apply will continue."
+    exit 0
+  }
+else
+  echo "✅ /boot/limine.conf already includes /boot/limine-theme.conf"
+fi
+
+echo "✅ Limine theme setup complete."
 
 # End of script

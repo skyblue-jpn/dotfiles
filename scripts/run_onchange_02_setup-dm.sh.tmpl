@@ -1,0 +1,38 @@
+#!/bin/bash
+# This script sets up the greeter for the user
+# This script will run when ANY of the watched files changes,
+# because their hashes are embedded below.
+
+{{- $files := list
+"dot_ly/config.ini"
+}}
+# ---- watched file hashes (do not edit manually) ----
+{{- range $f := $files }}
+# {{$f}} sha256: {{ include $f | sha256sum }}
+{{- end }}
+# ----------------------------------------------------
+
+set -euo pipefail
+# Installing ly or its dependencies if not already installed
+if ! pacman -Q ly brightnessctl durdraw &>/dev/null; then
+  echo "🔍 ly or its dependencies not found, installing..."
+  paru -S --noconfirm --needed ly brightnessctl durdraw
+  if [ $? -ne 0 ]; then
+    echo "❌ Failed to install ly or its dependencies. Exiting script, chezmoi apply will continue."
+    exit 0
+  fi
+else
+  echo "✅ ly and its dependencies are already installed."
+fi
+
+# Configuring greetd
+echo "🔧 Configuring greetd..."
+sudo install -Dm644 ~/.local/share/chezmoi/dot_ly/config.ini /etc/ly/config.ini
+
+# Enable and start ly
+echo "🚀 Enabling and starting ly..."
+sudo systemctl disable getty@tty1.service
+sudo systemctl enable ly@tty1.service
+echo "✅ ly has been configured and started successfully."
+
+# End of script
