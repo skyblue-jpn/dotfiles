@@ -17,13 +17,6 @@ cmatrix
 entr
 eza
 fastfetch
-fcitx5
-fcitx5-configtool
-fcitx5-gtk
-fcitx5-input-support
-fcitx5-lua
-fcitx5-mozc-ut
-fcitx5-qt
 fd
 ffmpeg
 fingwit
