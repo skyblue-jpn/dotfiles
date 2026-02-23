@@ -1,0 +1,60 @@
+#!/bin/bash
+set -euo pipefail
+
+LIMINE_DEFAULTS="/etc/default/limine"
+
+TTY_PALETTE_ARGS='vt.default_red=36,237,166,238,138,245,139,184,91,237,166,238,138,245,139,165 vt.default_grn=39,135,218,212,173,189,213,192,96,135,218,212,173,189,213,173 vt.default_blu=58,150,149,159,244,230,202,224,120,150,149,159,244,230,202,203'
+
+if ! sudo test -f "$LIMINE_DEFAULTS"; then
+  echo "❌ $LIMINE_DEFAULTS not found; cannot set tty palette."
+  exit 0
+fi
+
+tmp="$(mktemp)"
+trap 'rm -f "$tmp"' EXIT
+
+sudo cat "$LIMINE_DEFAULTS" >"$tmp"
+
+if ! grep -qE '^KERNEL_CMDLINE\[default\]\+=' "$tmp"; then
+  echo "❌ $LIMINE_DEFAULTS does not contain KERNEL_CMDLINE[default]+= ; not touching the file."
+  exit 0
+fi
+
+new="$(awk -v palette="$TTY_PALETTE_ARGS" '
+  BEGIN { updated=0 }
+  {
+    if ($0 ~ /^KERNEL_CMDLINE\[default\]\+=".*"$/) {
+      line=$0
+      gsub(/ vt\.default_red=[^ "]+/, "", line)
+      gsub(/ vt\.default_grn=[^ "]+/, "", line)
+      gsub(/ vt\.default_blu=[^ "]+/, "", line)
+      sub(/"$/, " " palette "\"", line)
+      print line
+      updated=1
+    } else {
+      print $0
+    }
+  }
+  END { if (updated==0) exit 2 }
+' "$tmp")" || {
+  echo "❌ Failed to update KERNEL_CMDLINE[default]+=. (unexpected formatting?)"
+  exit 0
+}
+
+if diff -q "$tmp" <(printf '%s\n' "$new") >/dev/null; then
+  echo "✅ tty palette already present in $LIMINE_DEFAULTS; nothing to do."
+  exit 0
+fi
+
+printf '%s\n' "$new" | sudo tee "$LIMINE_DEFAULTS" >/dev/null
+echo "✅ Updated $LIMINE_DEFAULTS (vt.default_* applied)."
+
+if command -v limine-mkinitcpio >/dev/null 2>&1; then
+  echo "🔄 Running limine-mkinitcpio..."
+  sudo limine-mkinitcpio || {
+    echo "❌ limine-mkinitcpio failed; limine.conf may not be updated."
+    exit 0
+  }
+else
+  echo "⚠️ limine-mkinitcpio not found; skipping regeneration."
+fi

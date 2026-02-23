@@ -29,10 +29,10 @@ fi
 echo "🔧 Configuring greetd..."
 sudo install -Dm644 ~/.local/share/chezmoi/dot_ly/config.ini /etc/ly/config.ini
 
-# Enable and start ly
-echo "🚀 Enabling and starting ly..."
+# Enable ly
+echo "🚀 Enabling ly..."
 sudo systemctl disable getty@tty1.service
 sudo systemctl enable ly@tty1.service
-echo "✅ ly has been configured and started successfully."
+echo "✅ ly has been configured successfully."
 
 # End of script
