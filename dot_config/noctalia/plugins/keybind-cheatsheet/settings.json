@@ -34,8 +34,12 @@
       "title": "APPLICATIONS",
       "binds": [
         {
-          "keys": "Super + D",
+          "keys": "Super + SUPER_L",
           "desc": "Open Application Launcher"
+        },
+        {
+          "keys": "Super + D",
+          "desc": "Open Application Launcher (Alternative)"
         },
         {
           "keys": "Super + RETURN",
@@ -449,5 +453,6 @@
   "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
   "modKeyVariable": "$mainMod",
   "windowHeight": 850,
-  "windowWidth": 1500
+  "windowWidth": 1500,
+  "autoHeight": true
 }
