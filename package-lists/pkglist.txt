@@ -96,6 +96,7 @@ speech-dispatcher
 spoofdpi
 starship
 sudo-rs
+tabby-bin
 texlive
 texlive-lang
 tk
