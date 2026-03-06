@@ -8,6 +8,7 @@ bitwarden-bin
 blender
 bottles
 bottom
+bpftune-git
 cachyos-gaming-applications
 cachyos-gaming-meta
 catppuccin-fcitx5-git
@@ -82,6 +83,7 @@ pipes-rs
 pix
 poppler
 prettier
+profile-sync-daemon
 proton-cachyos-slr
 python-black
 qalculate-gtk
