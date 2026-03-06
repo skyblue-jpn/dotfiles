@@ -4,7 +4,7 @@ set -euo pipefail
 
 # Install Hyprland and dependencies
 echo "🔄 Installing Hyprland and dependencies..."
-paru -S --noconfirm --needed adw-gtk-theme blueman cava cliphist ddcutil evolution-data-server hypridle hyprland hyprpolkitagent hyprshot noctalia-shell-git python3 qt6ct-kde uwsm wlsunset xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland wtype
+paru -S --noconfirm --needed adw-gtk-theme blueman cava cliphist ddcutil evolution-data-server hypridle hyprland hyprpolkitagent hyprshot noctalia-shell-git nwg-look python3 qt6ct-kde uwsm wlsunset xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland wtype
 if [ $? -ne 0 ]; then
   echo "❌ Failed to install Hyprland and dependencies. Exiting script, chezmoi apply will continue."
   exit 0

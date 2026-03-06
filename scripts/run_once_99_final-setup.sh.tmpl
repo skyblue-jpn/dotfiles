@@ -87,7 +87,7 @@ else
 fi
 
 echo "🔄 Running topgrade for final upgrades..."
-topgrade --disable chezmoi
+topgrade --disable chezmoi hyprpm
 if [ $? -ne 0 ]; then
   echo "❌ Failed to run topgrade. Exiting script, chezmoi apply will continue."
   exit 0
