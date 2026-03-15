@@ -1,0 +1,14 @@
+[[plugins]]
+repo = "decors/fish-ghq"
+
+[[plugins]]
+repo = "franciscolourenco/done"
+
+[[plugins]]
+repo = "givensuman/fish-eza"
+
+[[plugins]]
+repo = "jorgebucaran/autopair.fish"
+
+[[plugins]]
+repo = "meaningful-ooo/sponge"

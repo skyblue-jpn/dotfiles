@@ -15,21 +15,18 @@ else
   fi
 fi
 
-echo "🎨 Applying Catppuccin Macchiato theme to fish shell..."
-fish -c "fisher install catppuccin/fish"
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to install Catppuccin theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-yes | fish -c 'fish_config theme save "Catppuccin Macchiato"' || true
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to apply fish theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
 echo "🐟 Changing default shell to fish..."
 chsh -s /bin/fish
 if [ $? -ne 0 ]; then
   echo "❌ Failed to change default shell. Exiting script, chezmoi apply will continue."
+  exit 0
+fi
+
+echo "🐟 Installing fish plugins via pez..."
+mise exec cargo:pez -- pez install
+mise exec cargo:pez -- pez list --format table
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to install fish plugins. Exiting script, chezmoi apply will continue."
   exit 0
 fi
 

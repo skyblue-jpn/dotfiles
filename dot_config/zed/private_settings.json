@@ -1,18 +1,17 @@
 {
   "agent": {
-    "button": true,
     "default_model": {
-      "model": "gpt-5.2",
+      "effort": "high",
+      "enable_thinking": true,
+      "model": "gpt-5.1-codex-max",
       "provider": "copilot_chat"
     },
-    "default_profile": "ask",
-    "default_width": 640,
-    "dock": "right",
-    "enabled": true
+    "favorite_models": [],
+    "model_parameters": []
   },
   "agent_ui_font_size": null,
   "always_treat_brackets_as_autoclosed": false,
-  "auto_indent": true,
+  "auto_indent": "syntax_aware",
   "auto_indent_on_paste": true,
   "auto_install_extensions": {
     "air": true,
@@ -91,7 +90,7 @@
   "indent_guides": {
     "active_line_width": 1,
     "background_coloring": "indent_aware",
-    "coloring": "fixed",
+    "coloring": "indent_aware",
     "enabled": true,
     "line_width": 1
   },

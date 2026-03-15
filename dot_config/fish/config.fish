@@ -1,5 +1,6 @@
 starship init fish | source
 mise activate fish | source
+pez activate fish | source
 zoxide init fish | source
 fzf --fish | source
 pay-respects fish --alias | source
@@ -38,4 +39,4 @@ set -Ux FZF_DEFAULT_OPTS "\
 --color=border:#6E738D,label:#CAD3F5"
 
 set sponge_purge_only_on_exit true
-fish_config theme choose "Catppuccin Macchiato"
+fish_config theme choose catppuccin-macchiato --color-theme=dark
