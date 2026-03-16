@@ -24,13 +24,14 @@ fcitx5-lua
 fcitx5-mozc-ut
 fd
 ffmpeg
+fig2dev
 fingwit
 fish
 font-manager
 fzf
 gcc-fortran
 ghostty
-gimp
+gimp-devel
 git-delta
 github-cli
 gnome-disk-utility
@@ -59,7 +60,6 @@ libreoffice-fresh-ja
 libsecret
 linux-cachyos-headers
 linux-cachyos-lts-headers
-millennium
 mise
 navi
 ncurses
@@ -71,6 +71,7 @@ noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
 opentabletdriver
+optipng
 osu-lazer-bin
 otf-stix
 oxidizr-arch
@@ -90,6 +91,7 @@ r
 reflector
 resvg
 ripgrep
+scribus
 seahorse
 shfmt
 sl
@@ -104,6 +106,7 @@ tk
 topgrade-git
 ttf-hackgen
 ttf-opensans
+typst
 udiskie
 ufw
 unityhub
