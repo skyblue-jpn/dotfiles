@@ -166,11 +166,13 @@
       "tab_size": 4
     },
     "R": {
-      "language_servers": ["air", "r_language_server"],
-      "use_on_type_format": false
+      "language_servers": ["air", "r_language_server"]
+    },
+    "Rust": {
+      "formatter": "language_server",
+      "tab_size": 4
     },
     "Shell Script": {
-      "format_on_save": "on",
       "formatter": {
         "external": {
           "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
@@ -241,6 +243,24 @@
           "logLevel": "debug",
           "organizeImports": true,
           "showSyntaxErrors": true
+        }
+      }
+    },
+    "rust-analyzer": {
+      "enable_lsp_tasks": true,
+      "initialization_options": {
+        "inlayHints": {
+          "closureReturnTypeHints": {
+            "enable": "always"
+          },
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "maxLength": null
+        },
+        "rust": {
+          "analyzerTargetDir": true
         }
       }
     },

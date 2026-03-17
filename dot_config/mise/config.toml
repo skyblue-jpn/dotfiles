@@ -12,6 +12,7 @@
 "core:bun" = "latest"
 "core:java" = "latest"
 "core:node" = "latest"
+"core:rust" = "latest"
 "npm:openupm-cli" = "latest"
 "pipx:radian" = "latest"
 
