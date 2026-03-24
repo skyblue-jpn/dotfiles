@@ -10,6 +10,6 @@ window-padding-y = 10
 window-padding-balance = true
 window-theme = ghostty
 background-opacity = 0.85
-background-blur-radius = 20
+background-blur = true
 
 mouse-hide-while-typing = true

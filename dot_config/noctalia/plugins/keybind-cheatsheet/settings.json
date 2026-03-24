@@ -133,6 +133,10 @@
       "title": "WORKSPACES",
       "binds": [
         {
+          "keys": "Super + TAB",
+          "desc": "Toggle Workspace Overview"
+        },
+        {
           "keys": "Super + 1",
           "desc": "Switch to Workspace 1"
         },
