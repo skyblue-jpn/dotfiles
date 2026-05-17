@@ -1,13 +1,4 @@
 {
-  "history": {
-    "action": {
-      "started": "Started",
-      "stopped": "Stopped"
-    },
-    "clear": "Clear",
-    "empty": "No recent access",
-    "title": "Access History"
-  },
   "menu": {
     "settings": "Widget settings"
   },
@@ -15,36 +6,53 @@
     "activeColor": {
       "desc": "Color of the icons when active.",
       "label": "Active icon color"
+    },  
+    "hideInactive": {
+      "desc": "Hide microphone, camera, and screen icons when there are inactive.",
+      "label": "Hide inactive states"
     },
     "enableToast": {
       "desc": "Show toast messages when one of the states changes.",
       "label": "Enable toast notifications"
     },
-    "hideInactive": {
-      "desc": "Hide microphone, camera, and screen icons when there are inactive.",
-      "label": "Hide inactive states"
+    "inactiveColor": {
+      "desc": "Color of the icons when inactive.",
+      "label": "Inactive icon color"
     },
     "iconSpacing": {
       "desc": "Set the spacing between the icons.",
       "label": "Icon spacing"
     },
-    "inactiveColor": {
-      "desc": "Color of the icons when inactive.",
-      "label": "Inactive icon color"
-    },
     "removeMargins": {
       "desc": "Remove all outer margins of the widget.",
       "label": "Remove margins"
+    },
+    "micFilterRegex": {
+      "desc": "Regex pattern to filter out microphone applications. Matching apps are completely excluded from detection.",
+      "label": "Microphone filter regex"
+    },
+    "camFilterRegex": {
+      "desc": "Regex pattern to filter out camera applications. Matching apps are completely excluded from detection.",
+      "label": "Camera filter regex"
     }
+  },
+  "tooltip": {
+    "cam-on": "Camera: {apps}",
+    "mic-on": "Microphone: {apps}",
+    "screen-on": "Screen sharing: {apps}"
   },
   "toast": {
     "cam-on": "Camera is active",
     "mic-on": "Microphone is active",
     "screen-on": "Screen sharing is active"
   },
-  "tooltip": {
-    "cam-on": "Camera: {apps}",
-    "mic-on": "Microphone: {apps}",
-    "screen-on": "Screen sharing: {apps}"
+  "history": {
+    "title": "Access History",
+    "empty": "No recent access",
+    "clear": "Clear",
+    "action": {
+      "started": "Started",
+      "stopped": "Stopped"
+    }
   }
 }

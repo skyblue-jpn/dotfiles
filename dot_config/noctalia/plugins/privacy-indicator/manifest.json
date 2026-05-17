@@ -1,31 +1,37 @@
 {
+  "id": "privacy-indicator",
+  "name": "Privacy Indicator",
+  "version": "1.2.12",
+  "minNoctaliaVersion": "3.6.0",
   "author": "Noctalia Team",
-  "dependencies": {
-    "plugins": []
-  },
+  "official": true,
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
   "description": "A privacy indicator widget that shows when microphone, camera or screen sharing is active.",
+  "tags": [
+    "Bar",
+    "Privacy",
+    "Indicator"
+  ],
   "entryPoints": {
-    "barWidget": "BarWidget.qml",
     "main": "Main.qml",
+    "barWidget": "BarWidget.qml",
     "panel": "Panel.qml",
     "settings": "Settings.qml"
   },
-  "id": "privacy-indicator",
-  "license": "MIT",
+  "dependencies": {
+    "plugins": []
+  },
   "metadata": {
     "defaultSettings": {
-      "activeColor": "primary",
-      "enableToast": true,
       "hideInactive": false,
+      "enableToast": true,
+      "removeMargins": false,
       "iconSpacing": 4,
+      "activeColor": "primary",
       "inactiveColor": "none",
-      "removeMargins": false
+      "micFilterRegex": "",
+      "camFilterRegex": ""
     }
-  },
-  "minNoctaliaVersion": "3.6.0",
-  "name": "Privacy Indicator",
-  "official": true,
-  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
-  "tags": ["Bar", "Privacy", "Indicator"],
-  "version": "1.2.5"
+  }
 }

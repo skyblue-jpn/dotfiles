@@ -33,28 +33,30 @@ set -euo pipefail
 #rm -rf Catppuccin-GTK-Theme
 
 # Setting up icon themes and cursors
-echo "🎨 Cloning Colloid-icon-theme..."
-git clone https://github.com/vinceliuice/Colloid-icon-theme.git
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to clone Colloid-icon-theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-cd ./Colloid-icon-theme
-echo "🛠️ Installing Colloid icon theme..."
-./install.sh -s catppuccin -t purple
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to install Colloid icon theme. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-cd cursors
-echo "🖱️ Installing Colloid cursors..."
-./install.sh
-if [ $? -ne 0 ]; then
-  echo "❌ Failed to install Colloid cursors. Exiting script, chezmoi apply will continue."
-  exit 0
-fi
-cd ../..
-rm -rf Colloid-icon-theme
+#echo "🎨 Cloning Colloid-icon-theme..."
+#git clone https://github.com/vinceliuice/Colloid-icon-theme.git
+#if [ $? -ne 0 ]; then
+#  echo "❌ Failed to clone Colloid-icon-theme. Exiting script, chezmoi apply will continue."
+#  exit 0
+#fi
+#cd ./Colloid-icon-theme
+#echo "🛠️ Installing Colloid icon theme..."
+#./install.sh -s catppuccin -t purple
+#if [ $? -ne 0 ]; then
+#  echo "❌ Failed to install Colloid icon theme. Exiting script, chezmoi apply will continue."
+#  exit 0
+#fi
+#cd cursors
+#echo "🖱️ Installing Colloid cursors..."
+#./install.sh
+#if [ $? -ne 0 ]; then
+#  echo "❌ Failed to install Colloid cursors. Exiting script, chezmoi apply will continue."
+#  exit 0
+#fi
+#cd ../..
+#rm -rf Colloid-icon-theme
+#
+paru -S --noconfirm --needed colloid-catppuccin-theme-git colloid-cursors-git
 
 # Coping themes to root-owned directories if necessary
 #if [ -d "/usr/share/themes" ] && [ -d "/usr/share/icons" ]; then

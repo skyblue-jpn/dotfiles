@@ -1,12 +1,12 @@
 {
   "agent": {
+    "dock": "right",
     "default_model": {
       "effort": "high",
       "enable_thinking": true,
       "model": "gpt-5.1-codex-max",
       "provider": "copilot_chat"
     },
-    "dock": "right",
     "favorite_models": [],
     "model_parameters": []
   },
@@ -81,7 +81,7 @@
     "status_style": "icon"
   },
   "hard_tabs": false,
-  "hide_mouse": "on_typing_and_action",
+  "hide_mouse": "on_typing_and_movement",
   "hover_popover_delay": 300,
   "hover_popover_enabled": true,
   "icon_theme": "Catppuccin Macchiato",
@@ -292,6 +292,11 @@
   },
   "minimap": {
     "show": "never"
+  },
+  "notification_panel": {
+    "button": true,
+    "default_width": 380,
+    "dock": "right"
   },
   "on_last_window_closed": "platform_default",
   "outline_panel": {

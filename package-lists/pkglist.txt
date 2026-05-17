@@ -43,7 +43,6 @@ gparted
 gvfs
 gvfs-afc
 gvfs-goa
-gvfs-google
 gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
@@ -71,6 +70,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+open-vm-tools
 opentabletdriver
 optipng
 osu-lazer-bin
@@ -118,11 +118,14 @@ uutils-util-linux-git
 ventoy-bin
 vim
 vlc
+vmware-keymaps
+vmware-workstation
 waydroid
 waydroid-helper
 xdg-user-dirs-gtk
 xviewer
 yazi-git
+yt-dlp
 zathura-pdf-mupdf
 zed-preview-bin
 zen-browser-bin
