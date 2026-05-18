@@ -1,9 +1,9 @@
 {
   "agent": {
     "default_model": {
-      "effort": "high",
+      "effort": "xhigh",
       "enable_thinking": true,
-      "model": "gpt-5.1-codex-max",
+      "model": "gpt-5.2-codex",
       "provider": "copilot_chat"
     },
     "dock": "right",
