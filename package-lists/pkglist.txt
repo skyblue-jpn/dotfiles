@@ -49,7 +49,6 @@ gvfs-nfs
 gvfs-onedrive
 gvfs-smb
 gvfs-wsdd
-helix
 imagemagick
 inkscape
 jq
@@ -70,6 +69,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
+nvim
 open-vm-tools
 opentabletdriver
 optipng

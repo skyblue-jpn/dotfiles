@@ -6,6 +6,7 @@
 "aqua:jdx/usage" = "latest"
 "aqua:koalaman/shellcheck" = "latest"
 "aqua:mvdan/sh" = "latest"
+"aqua:JohnnyMorganz/StyLua" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "bun" = "latest"
 "cargo:pez" = "latest"

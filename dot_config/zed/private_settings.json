@@ -1,14 +1,18 @@
 {
   "agent": {
-    "default_model": {
-      "effort": "xhigh",
-      "enable_thinking": true,
-      "model": "gpt-5.2-codex",
-      "provider": "copilot_chat"
-    },
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
+    "sidebar_side": "right"
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "default_config_options": {
+        "allow_all": "on",
+        "reasoning_effort": "high"
+      },
+      "type": "registry"
+    }
   },
   "agent_ui_font_size": null,
   "always_treat_brackets_as_autoclosed": false,
@@ -18,6 +22,7 @@
     "air": true,
     "biome": true,
     "catppuccin": true,
+    "catppuccin-blur": false,
     "catppuccin-icons": true,
     "fish": true,
     "git-firefly": true,
@@ -33,6 +38,7 @@
     "r": true,
     "rainbow-csv": true,
     "tombi": true,
+    "toml": true,
     "xml": true,
     "yaml": true
   },
@@ -42,6 +48,7 @@
   "buffer_font_family": "HackGen Console NF",
   "buffer_font_size": 14,
   "buffer_line_height": "comfortable",
+  "cli_default_open_behavior": "existing_window",
   "close_on_file_delete": false,
   "collaboration_panel": {
     "button": true,
@@ -54,6 +61,9 @@
   "cursor_shape": "bar",
   "disable_ai": false,
   "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
     "mode": "subtle",
     "provider": "copilot"
   },
@@ -147,6 +157,23 @@
         }
       },
       "tab_size": 2
+    },
+    "languages": {
+      "Lua": {
+        "format_on_save": "on",
+        "formatter": {
+          "external": {
+            "arguments": [
+              "--syntax=Lua54",
+              "--respect-ignores",
+              "--stdin-filepath",
+              "{buffer_path}",
+              "-"
+            ],
+            "command": "stylua"
+          }
+        }
+      }
     },
     "Markdown": {
       "formatter": "prettier",
